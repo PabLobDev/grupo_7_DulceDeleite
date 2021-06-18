@@ -6,7 +6,7 @@
 Pasteles, postres, tartas, cupcakes, etc.   
 Las posibilidades de la **pastelería** son casi infinitas y, en nuestra web, ofrecemos una gran variedad de ellas, así que, sin más, adelante! compruébelo y que tenga un*... **¡DULCE DELITE!**
 ___
-# `REFERENTES`
+### `REFERENTES`
 >[*GOLOMAX*](https://www.golomax.com.ar/?gclid=Cj0KCQjw5auGBhDEARIsAFyNm9F6cYkFAEnIFkcIu5BKbL26TcOCxBD3YfvWMtA7yzI30MduS6WRbhIaAqPFEALw_wcB "Enlace")   
 
 *Se destacó por sus funcionalidades, lo que la hace una página muy práctica y fácil de usar para el potencial cliente*. 
