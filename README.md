@@ -32,8 +32,10 @@ Que el usuario encuentre un sitio ágil, intuitivo, útil, práctico, sin dejar 
 ___
 ___ 
 ### **`INTEGRADO POR:`** 
-> - : woman:Patricia Velazquez: 23 años,es de la Provincia de Jujuy, estudiante de programación, como pasatiempo le gusta leer libros y salir a trotar. 
+> - woman:Patricia Velazquez: 23 años,es de la Provincia de Jujuy, estudiante de programación, como pasatiempo le gusta leer libros y salir a trotar. 
 
+___
+___
  ![Pasteles](/images/pasteles.jpg "¡Dulce Deleite!") 
 
 
