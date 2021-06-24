@@ -31,6 +31,9 @@ Cuál es ese *objetivo*?
 Que el usuario encuentre un sitio ágil, intuitivo, útil, práctico, sin dejar de lado la calidad visual, en síntesis, buscamos que el **usuario** tenga una experiencia agradable para todos los sentidos.
 ___
 ___ 
+### **`INTEGRADO POR:`** 
+> - : woman:Patricia Velazquez: 23 años,es de la Provincia de Jujuy, estudiante de programación, como pasatiempo le gusta leer libros y salir a trotar. 
+
  ![Pasteles](/images/pasteles.jpg "¡Dulce Deleite!") 
 
 
