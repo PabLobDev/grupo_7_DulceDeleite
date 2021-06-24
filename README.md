@@ -33,7 +33,7 @@ ___
 ___ 
 ### **`INTEGRADO POR:`** 
 - **Patricia Velazquez**: 23 años, de la Provincia de Jujuy, Argentina, estudiante de programación, en su tiempo libre le gusta leer libros y salir a trotar. 
-- **Pablo Lobai**: 38 años, de Buenos Aires,Argentina, estudiante de programación en su tiempo libre le gusta hacer deportes.  
+- **Pablo Lobai**: 38 años, de Buenos Aires,Argentina, estudiante de programación, en su tiempo libre le gusta hacer deportes.  
 
 ___
 ___
