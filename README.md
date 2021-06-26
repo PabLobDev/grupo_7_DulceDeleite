@@ -36,6 +36,7 @@ ___
 - **Pablo Lobai**: 38 años, de Buenos Aires,Argentina, estudiante de programación, en su tiempo libre le gusta hacer deportes.  
 - **Paulina Campos**: Soy de Lanus, Provincia de Buenos Aires. 
 Tengo 38 años. Actualmente estudio programacion. Me gusta leer, ir al cine y viajar.
+- **Joaquin Leguizamón**: 18 años, de Misiones,Argentina, estudiante de programación. Cuando no tengo nada que hacer me gusta tocar la guitarra. 
 ___
 ___
  ![Pasteles](/images/pasteles.jpg "¡Dulce Deleite!") 
