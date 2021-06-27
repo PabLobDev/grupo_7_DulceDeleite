@@ -1,10 +1,11 @@
  >#  **DULCE DELEITE**  
-  ![Dulce Deleite](/images/pastel-chocolate-portada.png "¡Dulce Deleite!")
+  ![Dulce Deleite](/images/logo-Dulce-Deleite.png "¡Dulce Deleite!")
  ___ 
 ## **`NOSOTROS`**   
 *Somos una empresa dedicada a la **pastelería** que día a día trata de acercarse a consumidores que desean encontrar un aliado, aunque hay gente mas golosa que otra, a nadie le amarga un **dulce** de vez en cuándo.
 Pasteles, postres, tartas, cupcakes, etc.   
 Las posibilidades de la **pastelería** son casi infinitas y, en nuestra web, ofrecemos una gran variedad de ellas, así que, sin más, adelante! compruébelo y que tenga un*... **¡DULCE DELEITE!**
+![pasteles](/images/pastel-chocolate-portada.png 'mmm...que deleite!')
 ___
 ### **`REFERENTES`**
 >[*GOLOMAX*](https://www.golomax.com.ar/?gclid=Cj0KCQjw5auGBhDEARIsAFyNm9F6cYkFAEnIFkcIu5BKbL26TcOCxBD3YfvWMtA7yzI30MduS6WRbhIaAqPFEALw_wcB "Enlace")   
