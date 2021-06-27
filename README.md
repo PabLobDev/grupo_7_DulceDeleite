@@ -1,6 +1,7 @@
- >#  **DULCE DELEITE**  
+ >#  **DULCE DELEITE** 
+  
   ![Dulce Deleite](/images/logo-Dulce-Deleite.png "¡Dulce Deleite!")
- ___ 
+  
 ## **`NOSOTROS`**   
 *Somos una empresa dedicada a la **pastelería** que día a día trata de acercarse a consumidores que desean encontrar un aliado, aunque hay gente mas golosa que otra, a nadie le amarga un **dulce** de vez en cuándo.
 Pasteles, postres, tartas, cupcakes, etc.   
