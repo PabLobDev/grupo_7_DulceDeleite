@@ -1,0 +1,237 @@
+.cart{
+    background-color: var(--color-rosa-claro);
+}
+.cart h1{
+    font-family: var(--font-titulos);
+    font-weight: bold;
+    margin-left: 15px;
+    padding: 15px 0px ;
+}
+.cart .carrito i{
+    color: sienna;
+    font-size: 35px; 
+    font-weight: 600;
+    position: relative;
+    left: 280px;
+    bottom: 50px;
+}
+.cart .categorias, .cart .categorias1{
+    background-color: var(--color-rosa);
+    display: grid;
+    grid-template-rows: 150px 50px 50px 50px;
+    
+}
+.cart .categorias li, .cart .categorias1 li{
+    display: flex;
+    border-bottom: 1px dotted black;
+}
+.cart .categorias li a, .cart .categorias1 li a{
+    color:black;
+    font-size: 16px;
+    align-self: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.cart #cantidad{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    font-size: 18px;
+    margin: 3px;
+}
+.cart .mobile{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 1px dotted black;
+    margin: 15px;
+}
+.cart .articulo{
+    display: grid;
+    grid-template-rows: 150px 50px 50px 50px;
+    background-color: white;
+}
+.cart .menos, .cart .mas{
+    background-color: black;
+    color: #fff;
+font-size: 18px;
+border-radius: 30%;
+padding: 5px;
+width: 20px;
+}
+.cart .precio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+   
+}
+.cart .image img{
+    max-height: 70%;
+    max-width: 70%;
+}
+
+
+.cart .button-cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart .articulo div{
+    border-bottom: 1px dotted black;
+ }
+.cart .total{
+    display: grid;
+    grid-template-columns: 79% 21%;
+    border: 1px solid black;
+    grid-template-rows: 50px;
+    background-color: var(--color-amarillo);
+   margin: 15px;
+}
+.cart .titulo-total{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 25px;
+}
+
+/*Botones Finales*/
+.cart .button-continuar button:hover {
+    background-color: sienna;
+    color: wheat;
+}
+.cart .button-continuar button{
+    background-color:wheat;
+    color: sienna;
+    text-transform: uppercase;
+    margin: 15px 10px;
+    width: 40%;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    align-self:flex-end;
+    font-size:14px;
+    font-family:var(--font-secundaria);
+    font-weight:bold;
+    padding-bottom:5px;
+    cursor:pointer;
+    transition: all 0.5s;
+}
+.cart .confirmar button{
+    background-color:sienna;
+    color: wheat;
+    text-transform: uppercase;
+    width: 90%;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    font-family:var(--font-secundaria);
+    font-weight:bold;
+    padding-bottom:5px;
+    cursor:pointer;
+    transition: all 0.5s;
+}
+.cart .confirmar button:hover {
+    background-color: sienna;
+    color: wheat;
+}
+.cart .button-continuar{
+    text-align: center;
+}
+.cart .image i{
+    position: absolute;
+    top:365px;
+    right:22px;
+    display: block;
+}
+
+
+/*tablet*/
+@media (min-width:768px){
+.cart h1{
+    font-size: 40px;
+    margin: 30px 30px;
+}
+.cart .carrito i{
+    left: 360px;
+    bottom: 83px;
+}
+.cart .mobile{
+    display: initial;
+}
+.cart .categorias{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    background-color: var(--color-rosa);
+    height: 50px;
+    margin: 0px 20px;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 40px;
+}
+.cart .categorias li a{
+    color: black;
+    font-size: 25px;
+   
+}
+.cart .articulo{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    text-align: center;
+    margin: 0px 20px;
+    border: 1px solid black;
+    grid-template-rows: 200px;
+    grid-column-gap: 10px;
+}
+.cart .categorias li{
+    display: flex;
+   border: none;
+}
+.cart .button-continuar{
+    display:grid ;
+    text-align: center;
+    grid-template-columns: 25% 25% 50%;
+} .cart .button-continuar button{
+    height: 40px;
+    width: 90%;
+    margin-top: 20px;
+}
+.cart .confirmar button{
+height: 40px;
+width: 80%;
+}
+.cart .categorias1{
+    display: none;
+}
+.cart .image{
+    display: inline-flex;
+    flex-direction: column;
+    }
+.cart .image img{
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width:1024px){
+   
+}

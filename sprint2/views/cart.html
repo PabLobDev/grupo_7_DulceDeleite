@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrito de compras</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="/images/logodd.jpg" alt="140px" width="140px"></div>
+        <section class="container">
+            <div class="menu-hamburguesa">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <nav >
+                    <ul class="menu-desplegable">
+                        <li><a href="#">inicio</a></li>
+                        <li><a href="#">categorias</a>
+                            <ul id="sub-menu">
+                                <li><a href="#">postres</a></li>
+                                <li><a href="#">tortas y tartas</a></li>
+                                <li><a href="#">cookies y barras</a></li>
+                                <li><a href="#">budines y muffins</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">recetas</a></li>
+                        <li><a href="#">nosotros</a></li>
+                        <li><a href="#">contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="barra-busqueda">
+                <form><input type="text" class="nav-search-input" aria-label="Ingresá lo que quieras encontrar"
+                        name="as_word" placeholder="Buscar productos, marcas y más…" maxlength="120" autofocus=""
+                        autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="2">
+                </form>
+                <a href="" class="boton"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="menu-derecho">
+                <nav>
+                    <ul>
+                        <li><a href="">Mi Cuenta</a></li>
+                        <li><a href="">Registrarme</a></li>
+                        <a href="" class="carrito"><i class="far fa-shopping-cart"></i></a>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+
+    <main class="cart">
+        <div>
+            <h1>Mi Carrito de Compras</h1>
+            <a href="" class="carrito"><i class="far fa-shopping-cart"></i></a>
+        </div>
+
+        <section class="mobile">
+            <div>
+                <ul class="categorias">
+                    <li><a href="">Producto</a></li>
+                    <li><a href="">Precio</a></li>
+                    <li><a href="">Cantidad</a></li>
+                    <li><a href="">SubTotal</a></li>
+                </ul>
+            </div>
+            <article class="articulo">
+                <div class="image">
+                    <i class="fas fa-trash-alt"></i>
+                    <img src="/images/main.jpg" alt="" width="">
+                    <h4>nombre producto</h4>
+                </div>
+                <div class="precio">
+                    <p>$1111</p>
+                </div>
+                <div class="button-cantidad">
+                    <button type="button" class="menos">-</button>
+                    <input type="number" name="cantidad" id="cantidad">
+                    <button type="button" class="mas">+</button>
+                </div>
+                <div class="precio">
+                    <p>$1111</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="mobile">
+            <div>
+                <ul class="categorias1">
+                    <li><a href="">Producto</a></li>
+                    <li><a href="">Precio</a></li>
+                    <li><a href="">Cantidad</a></li>
+                    <li><a href="">SubTotal</a></li>
+                </ul>
+            </div>
+            <article class="articulo">
+                <div class="image">
+                    <i class="fas fa-trash-alt"></i>
+                    <img src="/images/images (1).jpg" alt="" width="">
+                    <h4>nombre producto</h4>
+                </div>
+                <div class="precio">
+                    <p>$1111</p>
+                </div>
+                <div class="button-cantidad">
+                    <button type="button" class="menos">-</button>
+                    <input type="number" name="cantidad" id="cantidad">
+                    <button type="button" class="mas">+</button>
+                </div>
+                <div class="precio">
+                    <p>$1111</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="total">
+            <span class="titulo-total">total:</span>
+            <span class="precio">$11111</span>
+        </section>
+
+        <section class="button-continuar">
+            <button type="button">Seguir Comprando</button>
+            <button type="reset">Limpiar Carrito</button>
+            <div class="confirmar"><button type="submit">Confirmar</button></div>
+        </section>
+    </main>
+</body>
+
+</html>
