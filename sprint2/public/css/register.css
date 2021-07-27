@@ -1,0 +1,78 @@
+.register main{
+    width: 350px;
+    margin: 0 auto;
+}
+
+.register .logo{ 
+  text-align: center;
+  margin: 50px auto ;
+}
+
+.register .logo img{
+width: 30%;
+height: 30%;
+border-radius: 20px;
+}
+
+.register h1{
+    text-align: center;
+    font-family: var(--font-titulos);
+}
+
+body{ 
+    background-color: #f9d6d5;
+}
+
+.register .box-form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.register h4{
+    margin: 20px 0;
+}
+
+.register .box-form input, select{
+    margin: 5px 0;
+    height: 25px;
+}
+
+.register .box-form small{
+    color:red;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.register .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register .options label{
+    font-size: 14px;
+}
+
+.register .box-form textarea{
+    resize: none;
+}
+
+.register .box-button{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0; 
+}
+.register .box-button button{
+    padding: 8px 0;
+    color: black;
+    background-color: #ffda9e;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.register .box-button button:hover{
+    background-color: #b2e2f2;
+    border-radius: 3px;
+}
