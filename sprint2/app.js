@@ -14,4 +14,4 @@ app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views','regis
 
 
 
-app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
+app.listen(port,()=> console.log('Servidor corriendo en el puerto ' + port));

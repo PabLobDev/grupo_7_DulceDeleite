@@ -1,0 +1,308 @@
+
+/* body */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+}
+/* cierre body */
+
+
+
+/* imagen futuro carrusel */
+
+ .prdts-cats {  
+    width: 100%;
+    display: block;
+    bottom: 0;
+    overflow: hidden;
+    object-fit: cover;
+    background-image: url('/images/slidegondlieri1-m.jpg');
+    background-repeat: no-repeat;
+}
+ 
+/* sección productos categorias */
+ .prdts-cats{ 
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    position: relative; 
+}
+
+.home-container h2{
+    width: 100%;
+    height: 90px;
+    background-color: #e69fa4;
+    font-family: var(--font-titulos);
+    font-size: 3.5rem;
+    padding-top: 10px;
+    color: #fff; 
+}
+
+.prdts-cats .prdts-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: auto; 
+}
+
+/* lista de categorias */
+.prdts-cats .prdts-cont .prdts-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    gap: 7px;
+    padding: 0 3rem;
+    bottom: 0;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    justify-content: space-between;
+}
+/* item de  lista */
+.prdts-cats .prdts-list .prdts-list-item{
+    border: 5px solid rgb(194, 119, 119);
+    background-color:#e69fa4f1;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50%;
+    height: 90%;
+    width: 120px;
+    align-items: center;
+    margin:0;
+    padding: 0;
+}
+
+.prdts-list .prdts-list-item:hover{ 
+    background-color: rgba(255, 248, 220, 0.918);
+}
+
+.prdts-cats .prdts-list .prdts-list-item a{
+    font-weight: bold;
+    font-size: 1.9rem;
+    font-family: var(--font-titulos);
+    margin: 0 auto;
+    color: #6A3625;
+}
+
+/* banner dulce deleite */
+
+.banner-img{
+    margin-top: 5px;
+    display: block;
+}
+
+/* contenedor de productos destacados*/
+.prdts-destac .destac-container{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    justify-content: center;
+    background: url(https://chocolatesaguila.com/images/back-310.gif)
+}
+
+/* caja producto individual */
+.prdts-destac .destac-container article{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #000 ;
+    width: 330px;
+    margin: 15px 0;
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+}
+
+.destac-container .destac-img{ 
+    width: 100%;
+    height: 391px;
+    border-bottom: 3px solid #000;
+    margin: 0;
+    padding: 0; 
+}
+
+article .imagen{
+    object-fit: cover;
+    width: 100%;
+}
+
+/* precio */
+.destac-info span{
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .5s;
+    padding-left: 5px;
+    
+}
+
+.destac-info span:hover{
+    font-size: 20px;
+    color: sienna;
+    font-weight: bold;
+    transition: all .5s;
+    padding: 0 auto;
+    
+}
+/* termina precio */
+
+.destac-info h4{
+    margin: 0 auto;
+}
+
+.destac-info{
+    background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.2rem;
+    color: #000;
+    gap: 10px;
+    padding: 5px;
+}
+/* termina caja de productos destacados */
+
+/* boton */
+
+.destac-info button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    align-self: flex-end;
+    background-color: wheat;
+    margin: 15px 10px;
+    color: sienna;
+    font-size: 1.4rem;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    padding-bottom: 5px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.destac-info button:hover {
+    background-color: sienna;
+    color:wheat;
+}
+ /* productos novedades */
+.novedades{
+    background-color: var(--color-rosa-claro);
+  
+}
+
+.nov-list-cont .list-cont-ul{
+    max-width: 400px ;
+    height: 50px;
+    margin: 10px auto 2px ;
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.nov-list-cont .list-cont-ul li{
+    display: flex;
+    width: 120px;
+    background-color: wheat;
+    height: 35px;
+    align-items: center;
+    border-radius: 4px;
+    transition: all .4s;
+}
+
+.nov-list-cont .list-cont-ul li:hover{
+    background-color: cornsilk;
+    transform: scale(1);
+    
+}
+
+.nov-list-cont .list-cont-ul a{
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: var(--font-titulos);
+    margin: 0 auto;
+    color: #6A3625;
+}
+
+.novedades .prdts-novedades{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding: 10px;
+}
+
+.novedades .prdts-novedades article{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #000 ;
+    width: 330px;
+    margin: 15px 0;
+    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+}
+
+
+
+/* falta novedades */
+
+@media (min-width: 500px) {
+
+    /* sección productos categorias */
+   
+
+    .prdts-cats .prdts-cont .prdts-list{
+        max-width: 768px;
+        justify-content: space-between;
+        padding: 0 5rem;
+    }
+
+    .prdts-destac .destac-container{
+        grid-template-columns: auto auto;
+        padding: 0 10px;
+    }
+
+    .banner{
+        display: block;
+    }
+
+    .banner .banner-img{
+        width: 100%;
+        max-height: 300px;
+        object-fit:fill;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 768px ) {
+    .prdts-destac .destac-container{
+        grid-template-columns: auto auto auto;
+      
+    }
+
+    .prdts-destac .destac-container:last-child{
+        
+    
+    }
+}
+
+/* Trabajando en tuRama
+Git add .
+Git commit -m'mensaje'
+Git push origin tuRama (para subir tus cambios a tu rama)
+Git checkout main (cambias a la rama principal)
+Git merge tuRama (desde la rama principal unis los cambios actualizados de tuRama)
+Git push origin main (ya actualizada la rama principal los subis)
+Git checkout tuRama (volves a tuRama a seguir trabajando)
+Y asi se repite 
+ */
