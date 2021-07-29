@@ -161,6 +161,9 @@ width: 20px;
 
 /*tablet*/
 @media (min-width:768px){
+.cart{
+    padding-top: 0;
+}    
 .cart h1{
     font-size: 40px;
     margin: 30px 30px;
@@ -181,6 +184,7 @@ width: 20px;
     margin: 0px 20px;
     align-items: center;
     justify-content: center;
+    justify-items: center;
     grid-template-rows: 40px;
 }
 .cart .categorias li a{
