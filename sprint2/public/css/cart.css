@@ -1,5 +1,6 @@
 .cart{
     background-color: var(--color-rosa-claro);
+    padding-top: 200px;
 }
 .cart h1{
     font-family: var(--font-titulos);
@@ -224,14 +225,4 @@ width: 80%;
         max-width: 70%;
         max-height: 70%;
     }
-}
-
-
-
-
-
-
-
-@media (min-width:1024px){
-   
 }
