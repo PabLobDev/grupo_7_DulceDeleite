@@ -1,0 +1,182 @@
+header{
+    background-color: wheat;
+    width: 100%;
+    position: fixed;
+    height: 200px;
+    left: 0;
+    top: 0;
+}
+
+/*logo*/
+header .logo {
+    text-align: center;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    padding-top: 7px;
+}
+header .logo img{
+    width: 140px;
+    height: 140px;
+}
+/*contenedor*/
+header .header-container{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin-top:10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+header .menu-derecho{
+    display:none;
+}
+/*menu-hamburguesa*/
+header #menu{
+    display: none;
+}
+header #menu:checked ~ .menu-desplegable {
+    margin: 0;
+}
+header div label{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    background-color:wheat ;
+    color: sienna;
+    font-size: 33px;
+    padding:0px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.menu-desplegable {
+    position: absolute;
+    background:sienna;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 1s ;
+    text-align: center;
+}
+header .menu-desplegable ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.menu-desplegable ul li{
+    border-top:1px solid #fff ;
+    
+}
+header .menu-desplegable li a{
+    display: block;
+    padding: 10px 20px;
+    color:white;
+    font-family: var(--font-titulos);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header #sub-menu {
+    display:none;
+}
+ /*carrito*/
+header .carrito i{
+    color:sienna;
+    font-size: 31px; 
+    font-weight: 600;
+    position:absolute;
+    right:12px;
+    bottom: 50px;
+}
+
+/*barra de busqueda*/
+header .barra-busqueda input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5%;
+    border: 1px solid beige;
+}
+header .barra-busqueda{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+header .boton i{
+    background-color: white;
+    width: 30px;
+    height: 35px;
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    padding-top: 8px;
+}
+
+
+@media (min-width:768px){
+    .menu-desplegable {
+        position: absolute;
+        background:sienna;
+        width: 40%;
+        margin-left: -100%;
+        transition: all 1s ;
+        text-align: center;
+    }
+    header .barra-busqueda{
+        width: 70%;
+        justify-self: center;
+    }
+    header div label{
+        bottom:5px;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+    }
+    header .menu-desplegable{
+        top: 40px;
+    }
+    header .carrito i{
+        bottom: 5px;
+        font-size: 40px;
+    }
+}
+
+
+@media (min-width:1024px){
+header .barra-busqueda{
+    width: 70%;
+    justify-self: flex-end;
+}
+header .menu-derecho{
+    display: block;
+}
+header .menu-derecho nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+header .menu-derecho nav ul li{
+    margin-bottom: 0;
+    border-right: 2px solid sienna;
+}
+header .menu-derecho nav ul li a{
+    font-size: 22px;
+    font-family: var(--font-titulos);
+    font-weight: bold;
+    color: sienna;
+    padding-right: 10px;
+}
+header .carrito-desktop i{
+    color:sienna;
+    font-size: 31px; 
+    font-weight: 600;
+}
+header .carrito {
+    display: none;
+}
+header .header-container{
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+}
+header label:hover{
+    cursor:pointer;
+}
+}
