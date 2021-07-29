@@ -63,7 +63,7 @@ header .menu-desplegable ul{
     display: flex;
     flex-direction: column;
 }
-.menu-desplegable ul li{
+header .menu-desplegable ul li{
     border-top:1px solid #fff ;
     
 }
