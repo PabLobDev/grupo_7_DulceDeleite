@@ -113,7 +113,10 @@ header .boton i{
 
 
 @media (min-width:768px){
-    .menu-desplegable {
+    header{
+        z-index: 0;
+    }
+    header .menu-desplegable {
         position: absolute;
         background:sienna;
         width: 40%;
