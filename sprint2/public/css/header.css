@@ -5,6 +5,7 @@ header{
     height: 200px;
     left: 0;
     top: 0;
+    z-index:10;
 }
 /*logo*/
 header .logo {
@@ -112,7 +113,10 @@ header .boton i{
 
 
 @media (min-width:768px){
-    .menu-desplegable {
+    header{
+        z-index: 0;
+    }
+    header .menu-desplegable {
         position: absolute;
         background:sienna;
         width: 40%;
