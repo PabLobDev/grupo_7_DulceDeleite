@@ -1,40 +1,18 @@
 
-/* body */
-.home-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+
+main {
     width: 100%;
+    min-height: 100%;
     text-align: center;
-    background-color: #fff;
-    position: relative;
-    box-sizing: border-box;
-}
-/* cierre body */
-
-
-
-/* imagen futuro carrusel */
-
- .prdts-cats {  
-    width: 100%;
-    display: block;
-    bottom: 0;
-    overflow: hidden;
-    object-fit: cover;
-    background-image: url('/images/slidegondlieri1-m.jpg');
-    background-repeat: no-repeat;
-}
- 
-/* sección productos categorias */
- .prdts-cats{ 
-    display: flex;
-    flex-direction: column;
-    height: 450px;
-    position: relative; 
+    display: grid;
+    grid-template-areas: 
+    'nav-head'
+    'banner'
+    'products-destac'
+    'novedades';
 }
 
-.home-container h2{
+main h2{
     width: 100%;
     height: 90px;
     background-color: #e69fa4;
@@ -44,47 +22,76 @@
     color: #fff; 
 }
 
-.prdts-cats .prdts-cont{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: auto; 
-}
 
-/* lista de categorias */
-.prdts-cats .prdts-cont .prdts-list{
+.nav-head{
+    grid-area: nav-head;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: 150px;
+    justify-content: center;
+    padding: 0;
+    margin-top: 205px; 
     align-items: center;
-    gap: 7px;
-    padding: 0 3rem;
-    bottom: 0;
     flex-direction: column;
-    position: absolute;
+    height: 400px;
     overflow: hidden;
-    justify-content: space-between;
+    position: relative; 
 }
-/* item de  lista */
-.prdts-cats .prdts-list .prdts-list-item{
+
+  
+/* imagen header */
+.nav-head .nav-head-img{
+    width: 100%;
+    max-height: 400px;
+}
+
+.nav-head-img .back-img{
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.nav-head nav {
+    display: grid;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    margin: 0 auto;
+    justify-content: center;
+    
+}
+
+.nav-head nav ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 130px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-head ul li{
     border: 5px solid rgb(194, 119, 119);
-    background-color:#e69fa4f1;
+    background-color:#e69fa4da;
     display: flex;
     flex-wrap: wrap;
     border-radius: 50%;
-    height: 90%;
-    width: 120px;
+    height: 80%;
+    width: 110px;
     align-items: center;
-    margin:0;
-    padding: 0;
+    margin-left: 5px;
+    transition: all 1s;
 }
 
-.prdts-list .prdts-list-item:hover{ 
-    background-color: rgba(255, 248, 220, 0.918);
+.nav-head ul li:hover{
+    background-color: rgba(255, 248, 220, 0.89);
+    transition: all .3s;
 }
 
-.prdts-cats .prdts-list .prdts-list-item a{
+.nav-head ul li a{
     font-weight: bold;
     font-size: 1.9rem;
     font-family: var(--font-titulos);
@@ -92,95 +99,132 @@
     color: #6A3625;
 }
 
-/* banner dulce deleite */
+/* banner */
+.banner{
+    grid-area: banner;
+    width: 100%;
+    height: 220px;
+    margin: 5px auto;
+}
 
-.banner-img{
-    margin-top: 5px;
+.banner .banner-img{
     display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
 }
 
-/* contenedor de productos destacados*/
-.prdts-destac .destac-container{
-    display: grid;
-    grid-template-columns: auto;
-    gap: 10px;
-    justify-content: center;
-    background: url(https://chocolatesaguila.com/images/back-310.gif)
-}
-
-/* caja producto individual */
-.prdts-destac .destac-container article{
+/* sección productos destacados */
+.products-destac{
+    grid-area: products-destac;
+    background: url(https://chocolatesaguila.com/images/back-310.gif);
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid #000 ;
-    width: 330px;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+} 
+
+.products-destac article, .news .news-products article{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #000 ;
+    width: 282px;
     margin: 15px 0;
     box-shadow: 0px 0px 15px rgb(100, 100, 100);
 }
 
-.destac-container .destac-img{ 
+/* imágen de producto */
+.products-destac .product-caja-img {
     width: 100%;
-    height: 391px;
+    height: 350px;
     border-bottom: 3px solid #000;
     margin: 0;
     padding: 0; 
 }
 
-article .imagen{
+.products-destac .product-caja-img img, .news .news-products img{
     object-fit: cover;
     width: 100%;
 }
 
-/* precio */
-.destac-info span{
-    font-family: var(--font-secundaria);
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all .5s;
-    padding-left: 5px;
-    
-}
-
-.destac-info span:hover{
-    font-size: 20px;
-    color: sienna;
-    font-weight: bold;
-    transition: all .5s;
-    padding: 0 auto;
-    
-}
-/* termina precio */
-
-.destac-info h4{
-    margin: 0 auto;
-}
-
-.destac-info{
+/* información de producto */
+.products-destac .product-info {
     background-color: cornsilk;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
     align-items: center;
     font-family: var(--font-secundaria);
     font-size: 1.2rem;
     color: #000;
     gap: 10px;
     padding: 5px;
+    position: relative;
 }
-/* termina caja de productos destacados */
 
-/* boton */
+.products-destac .product-info h4{
+  text-align: center;
+  font-family: var(--font-titulos);
+  font-size: 1.8rem;
+  transition: all .5s;
+}
 
-.destac-info button{
+.products-destac .product-info:hover h4{
+    color: sienna;
+    font-size: 2.2rem;
+    transition: all .5s;
+}
+
+.products-destac .product-info a{
+    color: sienna;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    background: wheat;
+    border-radius: 5px;
+    height: 40px;
+    width: 140px;
+    padding: 7px 0;
+    margin: 0 auto;
+    transition: all .5s;
+}
+
+.products-destac .product-info a:hover {
+    background-color: sienna;
+    color: wheat;
+    transition: all .5s;
+}
+
+.products-destac .product-info span {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .5s;
+    padding-left: 5px;
+}
+
+.products-destac .product-info:hover > span{
+    font-size: 22px;
+    color: sienna;
+    font-weight: bold;
+    transition: all .5s;
+    padding: 0 auto;
+}
+
+/* boton de producto */
+
+.products-destac .product-info button{
     width: 140px;
     height: 40px;
     border: none;
     border-radius: 5px;
-    align-self: flex-end;
     background-color: wheat;
     margin: 15px 10px;
     color: sienna;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: var(--font-secundaria);
     font-weight: bold;
     padding-bottom: 5px;
@@ -188,18 +232,24 @@ article .imagen{
     cursor: pointer;
 }
 
-.destac-info button:hover {
+.products-destac .product-info button:hover {
     background-color: sienna;
     color:wheat;
-}
- /* productos novedades */
-.novedades{
-    background-color: var(--color-rosa-claro);
-  
+    transition: all .5s;
 }
 
-.nov-list-cont .list-cont-ul{
-    max-width: 400px ;
+/* sección últimas novedades */
+.news{
+    grid-area: novedades;
+    background-color: var(--color-rosa-claro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* lista de novedades */
+.news .news-list ul{ 
+    min-width: 500px;
     height: 50px;
     margin: 10px auto 2px ;
     display: grid;
@@ -208,101 +258,116 @@ article .imagen{
     padding: 5px;
 }
 
-.nov-list-cont .list-cont-ul li{
-    display: flex;
-    width: 120px;
+.news .news-list ul li {
+    display: grid;
+    width: 130px;
+    gap: 10px;
     background-color: wheat;
-    height: 35px;
+    height: 40px;
     align-items: center;
     border-radius: 4px;
-    transition: all .4s;
+    transition: all .4s;   
 }
 
-.nov-list-cont .list-cont-ul li:hover{
-    background-color: cornsilk;
-    transform: scale(1);
-    
+.news .news-list ul li:hover {
+    background: var(--color-amarillo);
 }
 
-.nov-list-cont .list-cont-ul a{
+.news .news-list ul li a{
     font-weight: bold;
     font-size: 1.3rem;
-    font-family: var(--font-titulos);
+    font-family: var(--font-secundaria);
     margin: 0 auto;
-    color: #6A3625;
+    color: sienna;
 }
 
-.novedades .prdts-novedades{
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    padding: 10px;
-}
-
-.novedades .prdts-novedades article{
+/* novedades productos */
+.news .news-products {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid #000 ;
-    width: 330px;
-    margin: 15px 0;
-    box-shadow: 0px 0px 15px rgb(100, 100, 100);
+    justify-content: center;
+    gap: 10px;
 }
 
+.news .news-products .news-info{
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: #000;
+    border-top: 2px solid #000;
+    gap: 5px;
+}
+
+.news .news-products .news-info h4{
+    text-align: center;
+  font-family: var(--font-titulos);
+  font-size: 1.8rem;
+  color: sienna;
+  
+}
+
+.news-products .news-info span{
+    color: sienna;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+/* imagen producto novedades */
+.news .news-products .product-caja-img{
+    height: 350px;
+}
+
+.news .news-products .product-caja-img .news-img{
+    height: 350px;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* fin del home */
 
 
-/* falta novedades */
+/* inicio media queries */
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
 
-    /* sección productos categorias */
-   
-
-    .prdts-cats .prdts-cont .prdts-list{
-        max-width: 768px;
-        justify-content: space-between;
-        padding: 0 5rem;
+    
+    .nav-head nav ul{
+        width: 650px;
+        padding: 0;
+        
     }
-
-    .prdts-destac .destac-container{
-        grid-template-columns: auto auto;
-        padding: 0 10px;
+    
+    .nav-head ul li{
+        justify-content: center;
+        height: 85%;
+        width: 120px;
+        margin-left: 18px;
+        
+    }
+    
+    .nav-head ul li:hover{
+        background-color: rgba(255, 248, 220, 0.918);
     }
 
     .banner{
-        display: block;
-    }
-
-    .banner .banner-img{
-        width: 100%;
-        max-height: 300px;
-        object-fit:fill;
-    }
-
-
-
-
-}
-
-
-@media (min-width: 768px ) {
-    .prdts-destac .destac-container{
-        grid-template-columns: auto auto auto;
-      
-    }
-
-    .prdts-destac .destac-container:last-child{
         
-    
+        width: 100%;
+        height: 220px;
+        margin: 5px auto;
     }
+    
+    .banner .banner-img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 220px;
+    }
+    
+    
 }
-
-/* Trabajando en tuRama
-Git add .
-Git commit -m'mensaje'
-Git push origin tuRama (para subir tus cambios a tu rama)
-Git checkout main (cambias a la rama principal)
-Git merge tuRama (desde la rama principal unis los cambios actualizados de tuRama)
-Git push origin main (ya actualizada la rama principal los subis)
-Git checkout tuRama (volves a tuRama a seguir trabajando)
-Y asi se repite 
- */
