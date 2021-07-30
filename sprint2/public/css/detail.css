@@ -1,0 +1,133 @@
+.detail main{ 
+    padding-top: 200px;
+}
+
+.detail article{
+    width: 200px;
+    height:200px;
+}
+
+.detail{
+    background-color: var(--color-rosa-claro);
+}
+
+.detail h4{ 
+    font-family: var(--font-titulos);
+    margin: 30px 0;
+    width: 200px;
+}
+
+.detail .description{
+    font-family: var(--font-secundaria);
+    margin: 20px 0;
+    text-align: center;
+    width: 200px;
+}
+
+.detail img{
+    width: 200px;
+}
+
+.detail .button{ 
+    position: relative;
+    padding: 8px 0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    display: inline-block;
+    text-align: justify;
+}
+
+.detail .button button:hover{ 
+    background-color: red;
+    border-radius: 3px;
+}
+
+.detail .box-button button{
+    padding: 8px 0;
+    color: black;
+    background-color: #ffda9e;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    display: inline-block;
+    text-align: justify;
+}
+
+.detail .box-button button:hover{
+    background-color: azure;
+    border-radius: 3px;
+}
+.detail .precio{
+    margin: 10px 0;
+}
+
+.detail .redes{
+    text-align: center;
+}
+
+.detail .precio{
+    text-align: center;
+}
+
+/*tablet*/
+@media (min-width : 768px) {
+    .register main{ 
+        padding-top: none;
+    }
+
+    .detail h4{ 
+        font-family: var(--font-titulos);
+        margin: 30px 0;
+        width: 400px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .detail img{
+        width: 400px;
+        text-align: center;
+        margin: 10px 5px;
+        border-radius: 30px;
+    }
+
+    .detail .redes{
+        text-align: center;
+        width: 400px;
+        margin: 20px;
+    }
+
+    .detail .description{
+        text-align: center;
+        width: 400px;
+        margin: 5px;
+    }
+    .detail .precio{
+        text-align: center;
+        margin: 30px;
+        width: 350px;
+
+    }
+
+    .detail .box-button{
+        display: flex;
+        justify-content: space-around;
+         margin: 30px 0px; 
+         width: 350px;
+    }
+
+}
+
+
+@media (min-width:1024px){ 
+    .register main{
+    padding-top:none;
+    }
+    .detail img{
+        display: inline;
+        vertical-align: 20px;
+    }
+  
+}
