@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header{
     background-color: wheat;
     width: 100%;
@@ -187,12 +188,24 @@ header label:hover{
 .detail{ 
     padding-top: 200px;
 }
+=======
+.detail main{ 
+    padding-top: 200px;
+}
+
+.detail article{
+    width: 200px;
+    height:200px;
+}
+
+>>>>>>> register/Patricia
 .detail{
     background-color: var(--color-rosa-claro);
 }
 
 .detail h4{ 
     font-family: var(--font-titulos);
+<<<<<<< HEAD
     margin: 0px 5px 10px;
     width: 200px;
 }
@@ -200,6 +213,10 @@ header label:hover{
 .detail img{
     width: 200px;
     
+=======
+    margin: 30px 0;
+    width: 200px;
+>>>>>>> register/Patricia
 }
 
 .detail .description{
@@ -209,6 +226,13 @@ header label:hover{
     width: 200px;
 }
 
+<<<<<<< HEAD
+=======
+.detail img{
+    width: 200px;
+}
+
+>>>>>>> register/Patricia
 .detail .button{ 
     position: relative;
     padding: 8px 0;
@@ -242,11 +266,22 @@ header label:hover{
 }
 .detail .precio{
     margin: 10px 0;
+<<<<<<< HEAD
      text-align: left;
 }
 
 .detail .redes{
     text-align: left;
+=======
+}
+
+.detail .redes{
+    text-align: center;
+}
+
+.detail .precio{
+    text-align: center;
+>>>>>>> register/Patricia
 }
 
 /*tablet*/
@@ -286,6 +321,10 @@ header label:hover{
         text-align: center;
         margin: 30px;
         width: 350px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> register/Patricia
     }
 
     .detail .box-button{
@@ -304,6 +343,7 @@ header label:hover{
     }
     .detail img{
         display: inline;
+<<<<<<< HEAD
         vertical-align: 20px;
     }
   
@@ -402,3 +442,9 @@ ul{
     width: 100%;
 }
 }
+=======
+        vertical-align: top;
+    }
+  
+}
+>>>>>>> register/Patricia
