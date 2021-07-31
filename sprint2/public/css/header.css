@@ -49,7 +49,7 @@ header div label{
     bottom: 40px;
 }
 
-.menu-desplegable {
+header .menu-desplegable {
     position: absolute;
     background:sienna;
     width: 100%;
@@ -114,6 +114,7 @@ header .boton i{
 
 @media (min-width:768px){
     header{
+        position: inherit;
         z-index: 0;
     }
     header .menu-desplegable {
