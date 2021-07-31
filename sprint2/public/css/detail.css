@@ -187,12 +187,6 @@ header label:hover{
 .detail{ 
     padding-top: 200px;
 }
-
-.detail article{
-    width: 200px;
-    height:200px;
-}
-
 .detail{
     background-color: var(--color-rosa-claro);
 }
@@ -248,14 +242,11 @@ header label:hover{
 }
 .detail .precio{
     margin: 10px 0;
+     text-align: left;
 }
 
 .detail .redes{
-    text-align: center;
-}
-
-.detail .precio{
-    text-align: center;
+    text-align: left;
 }
 
 /*tablet*/
