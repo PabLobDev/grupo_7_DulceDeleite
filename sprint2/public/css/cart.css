@@ -1,6 +1,6 @@
 .cart{
     background-color: var(--color-rosa-claro);
-    padding-top: 200px;
+    padding-top: 130px;
 }
 .cart h1{
     font-family: var(--font-titulos);
@@ -169,11 +169,9 @@
 }    
 .cart h1{
     font-size: 40px;
-    margin: 30px 30px;
 }
 .cart .carrito i{
     left: 360px;
-    bottom: 83px;
 }
 .cart .mobile{
     display: initial;
