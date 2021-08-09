@@ -52,6 +52,11 @@
     resize: none;
 }
 
+.register .terminos{
+    text-align: center;
+    flex-direction: row;
+}
+
 .register .box-button{
     display: flex;
     justify-content: space-around;
@@ -74,13 +79,14 @@
 /*tablet*/
 @media (min-width : 768px) {
     .register main{ 
-        padding-top: none;
+        padding-top: 100px;
+
     }
 }
 
 
 @media (min-width:1024px){ 
     .register main{
-        padding-top:none;
+        padding-top:100px;
     }
 }

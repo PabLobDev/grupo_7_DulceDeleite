@@ -5,6 +5,7 @@ header{
     height: 130px;
     left: 0;
     top: 0;
+    z-index:10;
 }
 /*logo*/
 header .logo {
@@ -38,7 +39,7 @@ header div label{
     width: 40px;
     height: 40px;
     margin-left: 5px;
-    background-color:wheat ;
+    background-color: #F6EBCD;
     color: sienna;
     font-size: 30px;
     padding:0px;
