@@ -1,5 +1,7 @@
-.detail main{ 
-    padding-top: 100px;
+.detail{ 
+    padding-top: 150px;
+    text-align: center;
+    background-color: var(--color-rosa-claro);
 }
 
 .detail article{
@@ -7,17 +9,11 @@
     height:200px;
 }
 
-.detail{ 
-    padding-top: 200px;
-}
-.detail{
-    background-color: var(--color-rosa-claro);
-}
-
 .detail h4{ 
     font-family: var(--font-titulos);
-    margin: 0px 5px 10px;
+    margin: 15px;
     width: 200px;
+    text-align: center;
 }
 
 .detail img{
@@ -29,7 +25,7 @@
     font-family: var(--font-secundaria);
     margin: 20px 0;
     text-align: center;
-    width: 200px;
+    
 }
 
 .detail img{
@@ -70,7 +66,6 @@
 .detail .precio{
     margin: 10px 0;
     text-align: center;
-    ;
 }
 
 .detail .redes{
@@ -86,42 +81,11 @@
 
     .detail h4{ 
         font-family: var(--font-titulos);
-        margin: 30px 0;
+        margin: 10px 0;
         width: 400px;
         font-size: 40px;
         text-align: center;
         text-decoration: underline;
-    }
-
-    .detail img{
-        width: 400px;
-        text-align: center;
-        margin: 10px 5px;
-        border-radius: 30px;
-    }
-
-    .detail .redes{
-        text-align: center;
-        width: 400px;
-        margin: 20px;
-    }
-
-    .detail .description{
-        text-align: center;
-        width: 400px;
-        margin: 5px;
-    }
-    .detail .precio{
-        text-align: center;
-        margin: 30px;
-        width: 350px;
-    }
-
-    .detail .box-button{
-        display: flex;
-        justify-content: space-around;
-         margin: 30px 0px; 
-         width: 350px;
     }
 
 }
@@ -134,6 +98,12 @@
     .detail img{
         display: inline;
         vertical-align: 20px;
+        height: 400px;
+        width: 400px;
+    }
+
+    .detail h4{
+        text-align: center;
     }
   
 }
