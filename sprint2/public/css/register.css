@@ -1,7 +1,7 @@
 .register main{
     width: 350px;
-    padding-top: 200px;
     margin: 0 auto;
+    padding-top: 150px;
 }
 
 
@@ -9,7 +9,7 @@
 .register h1{
     text-align: center;
     font-family: var(--font-titulos);
-    margin: 30px;
+    margin: 2px;
 }
 
 .register{ 
@@ -19,12 +19,12 @@
 .register .box-form{
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .register h4{
     font-family: var(--font-secundaria);
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .register .box-form input, select{
@@ -34,7 +34,7 @@
 
 .register .box-form small{
     color:red;
-    margin: 10px 0;
+    margin: 5px 0;
     display: inline-block;
 }
 
@@ -60,7 +60,7 @@
 .register .box-button{
     display: flex;
     justify-content: space-around;
-    margin: 30px 0; 
+    margin: 10px 0; 
 }
 .register .box-button button{
     padding: 8px 0;
@@ -78,15 +78,18 @@
 
 /*tablet*/
 @media (min-width : 768px) {
-    .register main{ 
-        padding-top: 100px;
-
+    .register main{
+        width: 400px;
+        margin: 0 auto;
+        padding-top: 25px;
     }
 }
 
 
 @media (min-width:1024px){ 
     .register main{
-        padding-top:100px;
+        width: 400px;
+        margin: 0 auto;
+        padding-top: 20px;
     }
 }
