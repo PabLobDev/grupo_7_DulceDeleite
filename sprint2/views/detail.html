@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <script src="https://kit.fontawesome.com/d41001deaf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
     <header>
-        <div class="logo"><img src="/images/logodd.jpg" alt="" width=""></div>
+        <div class="logo"><a href="/"><img src="/images/logodd.jpg"></a></div>
         <section class="header-container">
             <div class="menu-hamburguesa">
                 <input type="checkbox" id="menu">
@@ -45,37 +47,50 @@
         </section>
     </header>
     <main class="detail">
-        <section> 
+        <section>
             <h4>Dulce Deleite Choc, de almendra con nuez</h4>
+            <div class="detalle">
+
                 <div>
-                  <img src="/images/nuez.jpg" alt="">  
+                    <img src="/images/nuez.jpg" alt="">
                 </div>
-                
-                <div class="button">
-                    <button type="submit">PROMO</button>
-                    <button type="submit">RINDE 6 PORCIONES</button>
+                <div class="content">
+                    <div class="redes">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+
+                    <div class="precio">
+                        <span>$450</span> <del>$600</del>
+                    </div>
+
+                    <div class="button-cantidad">
+                        <button type="button" class="menos">-</button>
+                        <input type="number" name="cantidad" id="cantidad">
+                        <button type="button" class="mas">+</button>
+                    </div>
+
+                    <div class="box-button">
+                        <button type="submit">COMPRAR AHORA</button>
+                        <button type="reset">AGREGAR<i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                    <p class="description">
+                        ¡Nos moríamos de ganas de presentarte nuestro Dulce Deleite Choc!
+                        Dicen que un primer bocado delicioso comienza por la vista. Especial para tus desayunos o
+                        meriendas.
+                        ¿Qué estás esperando para probarlo?
+                        Con un chocolate amargo que protege tu memoria, reduce el colesterol y mejora la circulación.
+                        Derretido en un suave bizcochuelo de vainilla.
+                        Y aun asi ¿Te lo vas a perder?
+                    </p>
+
                 </div>
-                
-                <div class="redes">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-telegram"></i>
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <div>
-                <p class="description">
-                    ¡Nos moríamos de ganas de presentarte nuestro Dulce Deleite Choc!
-                    Dicen que un primer bocado delicioso comienza por la vista. Especial para tus desayunos o meriendas. 
-                    ¿Qué estás esperando para probarlo?
-                </p>
-                <div class="precio">
-                <span>$450</span> <del>$600</del>
             </div>
-            <div class="box-button">
-                <button type="submit">COMPRAR AHORA</button>
-                <button type="reset">AGREGAR<i class="fas fa-shopping-cart"></i></button>
-            </div>
-            
+            <div>
+
+
         </section>
     </main>
     <footer class="footer">
@@ -119,9 +134,4 @@
                 </div>
             </div>
         </div>
-   </footer>
-
-
-    
-
-    
+    </footer>

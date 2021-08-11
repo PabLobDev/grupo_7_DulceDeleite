@@ -1,27 +1,20 @@
-.detail main{ 
-    padding-top: 100px;
-}
-
-.detail article{
-    width: 100px;
-    height:200px;
-}
-
 .detail{ 
-    padding-top: 200px;
-}
-.detail{
+    padding-top: 150px;
+    text-align: center;
     background-color: var(--color-rosa-claro);
 }
 
 .detail h4{ 
     font-family: var(--font-titulos);
-    margin: 0px 5px 10px;
-    width: 200px;
+    margin: 10px auto  ;
+    width: 200px ;
+    text-align: center;
 }
 
 .detail img{
-    width: 200px;
+    width: 300px;
+    height: 200px;
+    border: 5px;
     
 }
 
@@ -29,7 +22,7 @@
     font-family: var(--font-secundaria);
     margin: 20px 0;
     text-align: center;
-    width: 200px;
+    
 }
 
 .detail img{
@@ -45,11 +38,6 @@
     width: auto;
     display: inline-block;
     text-align: justify;
-}
-
-.detail .button button:hover{ 
-    background-color: red;
-    border-radius: 3px;
 }
 
 .detail .box-button button{
@@ -70,70 +58,95 @@
 .detail .precio{
     margin: 10px 0;
     text-align: center;
-    ;
+    font-size: 35px !important;
+}
+
+.detail .button-cantidad{
+    margin-bottom: 20px;
 }
 
 .detail .redes{
     text-align: center;
 }
 
+.detail .description{
+    text-align: center;
+    margin: 30px;
+}
+
 
 /*tablet*/
 @media (min-width : 768px) {
-    .register main{ 
-        padding-top: none;
+    .detail{ 
+        padding-top: 0px;
+        text-align: center;
+        background-color: var(--color-rosa-claro);
     }
-
     .detail h4{ 
         font-family: var(--font-titulos);
-        margin: 30px 0;
         width: 400px;
-        font-size: 40px;
+        font-size: 50px;
         text-align: center;
         text-decoration: underline;
     }
-
     .detail img{
+        display: inline;
+        vertical-align: 20px;
+        height: 400px;
         width: 400px;
-        text-align: center;
-        margin: 10px 5px;
-        border-radius: 30px;
+        position: relative;
+        top: 6em;
+        border-radius: 5px;
+        border: 20px;
     }
-
-    .detail .redes{
+    .detalle{
+        display:flex;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        width: 400px;
-        margin: 20px;
+        margin: 60px;
     }
 
     .detail .description{
         text-align: center;
-        width: 400px;
-        margin: 5px;
-    }
-    .detail .precio{
-        text-align: center;
-        margin: 30px;
-        width: 350px;
-    }
-
-    .detail .box-button{
-        display: flex;
-        justify-content: space-around;
-         margin: 30px 0px; 
-         width: 350px;
+        margin: 10px auto;
+        width: 280px;
+        
     }
 
 }
 
 
 @media (min-width:1024px){ 
-    .register main{
-    padding-top:none;
-    }
+    
     .detail img{
         display: inline;
         vertical-align: 20px;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: 2px;
+        border-radius: 5px;
+        margin: 20px;
     }
+    .detail{ 
+        padding-top: 0px;
+        text-align: center;
+        background-color: var(--color-rosa-claro);
+    }
+    .detail h4{ 
+        font-family: var(--font-titulos);
+        width: 600px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .detail .description{
+        text-align: center;
+        margin: 10px auto;
+        width: 380px;
   
+}
 }
