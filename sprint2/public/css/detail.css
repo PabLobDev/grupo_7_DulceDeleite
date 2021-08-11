@@ -4,20 +4,17 @@
     background-color: var(--color-rosa-claro);
 }
 
-.detail article{
-    width: 100px;
-    height:200px;
-}
-
 .detail h4{ 
     font-family: var(--font-titulos);
-    margin: 15px;
-    width: 200px;
+    margin: 10px auto  ;
+    width: 200px ;
     text-align: center;
 }
 
 .detail img{
-    width: 200px;
+    width: 300px;
+    height: 200px;
+    border: 5px;
     
 }
 
@@ -43,11 +40,6 @@
     text-align: justify;
 }
 
-.detail .button button:hover{ 
-    background-color: red;
-    border-radius: 3px;
-}
-
 .detail .box-button button{
     padding: 8px 0;
     color: black;
@@ -66,44 +58,95 @@
 .detail .precio{
     margin: 10px 0;
     text-align: center;
+    font-size: 35px !important;
+}
+
+.detail .button-cantidad{
+    margin-bottom: 20px;
 }
 
 .detail .redes{
     text-align: center;
 }
 
-
-/*tablet*/
-@media (min-width : 768px) {
-    .register main{ 
-        padding-top: none;
-    }
-
-    .detail h4{ 
-        font-family: var(--font-titulos);
-        margin: 10px 0;
-        width: 400px;
-        font-size: 40px;
-        text-align: center;
-        text-decoration: underline;
-    }
-
+.detail .description{
+    text-align: center;
+    margin: 30px;
 }
 
 
-@media (min-width:1024px){ 
-    .register main{
-    padding-top:none;
+/*tablet*/
+@media (min-width : 768px) {
+    .detail{ 
+        padding-top: 0px;
+        text-align: center;
+        background-color: var(--color-rosa-claro);
+    }
+    .detail h4{ 
+        font-family: var(--font-titulos);
+        width: 400px;
+        font-size: 50px;
+        text-align: center;
+        text-decoration: underline;
     }
     .detail img{
         display: inline;
         vertical-align: 20px;
         height: 400px;
         width: 400px;
+        position: relative;
+        top: 6em;
+        border-radius: 5px;
+        border: 20px;
+    }
+    .detalle{
+        display:flex;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 60px;
     }
 
-    .detail h4{
+    .detail .description{
         text-align: center;
+        margin: 10px auto;
+        width: 280px;
+        
     }
+
+}
+
+
+@media (min-width:1024px){ 
+    
+    .detail img{
+        display: inline;
+        vertical-align: 20px;
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: 2px;
+        border-radius: 5px;
+        margin: 20px;
+    }
+    .detail{ 
+        padding-top: 0px;
+        text-align: center;
+        background-color: var(--color-rosa-claro);
+    }
+    .detail h4{ 
+        font-family: var(--font-titulos);
+        width: 600px;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .detail .description{
+        text-align: center;
+        margin: 10px auto;
+        width: 380px;
   
+}
 }
