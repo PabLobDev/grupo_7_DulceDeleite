@@ -8,27 +8,28 @@
     margin-left: 15px;
     padding: 15px 0px ;
 }
-.cart .categorias, .cart .categorias1{
+.cart .categorias{
     background-color: var(--color-rosa);
     display: grid;
-    grid-template-rows: 150px 50px 50px 50px;
+    grid-template-rows: 150px 50px 50px 50px 30px;
     
 }
-.cart .categorias li, .cart .categorias1 li{
+.cart .categorias li{
     display: flex;
     border-bottom: 1px dotted black;
 }
-.cart .categorias li a, .cart .categorias1 li a{
+.cart .categorias li a{
     color:black;
     font-size: 16px;
     align-self: center;
     padding-left: 10px;
     font-weight: bold;
 }
-.cart .papelera i, .cart .papelera i{
+.cart .papelera i{
     color: black; 
     font-size: 16px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 .cart #cantidad{
@@ -46,7 +47,7 @@
 }
 .cart .articulo{
     display: grid;
-    grid-template-rows: 150px 50px 50px 50px;
+    grid-template-rows: 150px 50px 50px 50px 30px;
     background-color: white;
 }
 .cart .menos, .cart .mas{
@@ -161,15 +162,17 @@
     font-size: 40px;
 }
 .cart .mobile{
-    display: initial;
+    display: flex;
+    flex-direction: column;
+    width: 98vw;
+    margin: 10px;
 }
 .cart .categorias{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 30vw 20vw 20vw 20vw 10vw;
     text-align: center;
     background-color: var(--color-rosa);
     height: 50px;
-    margin: 0px 20px;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -182,9 +185,8 @@
 }
 .cart .articulo{
     display: grid;
-    grid-template-columns: 27% 20% 20% 20% 8%;
+    grid-template-columns: 27vw 20vw 20vw 20vw 8vw;
     text-align: center;
-    margin: 0px 20px;
     border: 1px solid black;
     grid-template-rows: 200px;
     grid-column-gap: 10px;
@@ -193,7 +195,7 @@
     display: flex;
    border: none;
 }
-.cart .categorias a, .cart .categorias1 a{
+.cart .categorias a{
     color: black; 
     font-size: 16px;
     align-self: center;
@@ -225,5 +227,15 @@ width: 80%;
 .cart .image img{
     max-width: 70%;
     max-height: 70%;
+}
+.cart .papelera i{
+    color: black; 
+    font-size: 25px;
+    font-weight: bold;
+}
+.cart .papelera{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 }
