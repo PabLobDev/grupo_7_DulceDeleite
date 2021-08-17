@@ -23,7 +23,7 @@ ul{
 	background-color: #ff9199;
     padding: 25px;
 	bottom: 0%;
-	position: fixed;
+	position: relative;
 	width: 100%;
 }
 .footer-col{
