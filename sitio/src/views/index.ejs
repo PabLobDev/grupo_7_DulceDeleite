@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<%- include('./partials/head') %> 
+
+  <body>
+
+    <header>
+      <div class="logo"><a href="/"><img src="/images/logodd.jpg"></a>
+      <section class="header-container">
+          <div class="menu-hamburguesa">
+              <input type="checkbox" id="menu">
+              <label for="menu"><i class="fas fa-bars"></i></label>
+              <nav class="menu-desplegable">
+                  <ul>
+                      <li><a href="/">Inicio</a></li>
+                      <li><a href="/detail">Detalle de Producto</a></li>
+                      <li><a href="/cart">Tu Carrito de Compras</a></li>
+                      <li><a href="/login">Ingresa</a></li>
+                      <li><a href="/register">Registrate</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="barra-busqueda">
+              <form><input type="text" class="nav-search-input" aria-label="Ingresá lo que quieras encontrar"
+                      name="as_word" placeholder="Buscar productos, marcas y más…" maxlength="120" autofocus=""
+                      autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="2">
+              </form>
+              <a href="" class="boton"><i class="fas fa-search"></i></a>
+          </div>
+          <div class="carrito"><a href="/cart"><i class="far fa-shopping-cart"></i></a></div>
+          <div class="menu-derecho">
+              <nav>
+                  <ul>
+                      <li><a href="/login">Mi Cuenta</a></li>
+                      <li><a href="/register">Registrarme</a></li>
+                      <a href="/cart" class="carrito-desktop"><i class="far fa-shopping-cart"></i></a>
+                  </ul>
+              </nav>
+          </div>
+      </section>
+  </header>
+    
+    <main class="main-products">
+      <div class="nav-head">
+        <div class="nav-head-img">
+          <img src="/images/image-2.jpeg" class="back-img" alt="" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href=""> Postres </a>
+            </li>
+
+            <li>
+              <a href=""> Mufins </a>
+            </li>
+
+            <li>
+              <a href=""> tortas </a>
+            </li>
+
+            <li>
+              <a href=""> Cupcakes </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="banner">
+        <img src="/images/banner.png" class="banner-img" alt="" />
+      </div>
+
+      <section class="products-destac">
+        <h2>Productos destacados</h2>
+
+        <article>
+          <div class="product-caja-img">
+            <img src="/images/image-8.jpg" height="349px" alt="" />
+          </div>
+          <div class="product-info">
+            <h4>Nombre</h4>
+            <a href="/detail">Ver más detalles</a>
+            <span>$99.999</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article>
+          <div class="product-caja-img">
+            <img src="/images/image-4.jpeg" height="349px" alt="" />
+          </div>
+          <div class="product-info">
+            <h4>Nombre</h4>
+            <a href="/datail">Ver más detalles</a>
+            <span>$99.999</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article>
+          <div class="product-caja-img">
+            <img src="/images/image-3.jpeg" height="349px" alt="" />
+          </div>
+          <div class="product-info">
+            <h4>Nombre</h4>
+            <a href="/detail">Ver más detalles</a>
+            <span>$99.999</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+
+        <article>
+          <div class="product-caja-img">
+            <img src="/images/image-9.jpg" height="349px" alt="" />
+          </div>
+          <div class="product-info">
+            <h4>Nombre</h4>
+            <a href="/detail">Ver más detalles</a>
+            <span>$99.999</span>
+            <button>Agregar al carrito</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="news">
+        <h2>Últimas novedades</h2>
+
+        <div class="news-list">
+          <ul>
+            <li><a href="#">Nuevo</a></li>
+            <li><a href="#">Salud</a></li>
+            <li><a href="#">Recetas</a></li>
+          </ul>
+        </div>
+
+        <div class="news-products">
+          <article>
+            <div class="product-caja-img">
+              <img src="/images/pasteles.jpg" class="news-img" alt="" />
+            </div>
+            <div class="news-info">
+              <h4>Nombre</h4>
+              <span>Ver más</span>
+            </div>
+          </article>
+
+          <article>
+            <div class="product-caja-img">
+              <img
+                src="/images/pastel-chocolate-portada.png"
+                class="news-img"
+                alt=""
+              />
+            </div>
+            <div class="news-info">
+              <h4>Nombre</h4>
+              <span>Ver más</span>
+            </div>
+          </article>
+
+          <article>
+            <div class="product-caja-img">
+              <img src="/images/image-6.jpeg" class="news-img" alt="" />
+            </div>
+            <div class="news-info">
+              <h4>Nombre</h4>
+              <span>Ver más</span>
+            </div>
+          </article>
+
+          <article>
+            <div class="product-caja-img">
+              <img src="/images/image-5.jpeg" class="news-img" alt="" />
+            </div>
+            <div class="news-info">
+              <h4>Nombre</h4>
+              <span>Ver más</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Dulce Deleite</h4>
+            <ul>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">¿Que ofrecemos?</a></li>
+              <li><a href="#"> Politica de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4> Mapa del sitio </h4>
+            <ul>
+              <li><a href="#"> Preguntas recientes</a></li>
+              <li><a href="#"> Envios </a></li>
+              <li><a href="#"> Contacto </a></li>
+              <li><a href="#"> Seguimiento de compra</a></li>
+              <li><a href="#"> Formas de pago </a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4> Tienda</h4>
+            <ul>
+              <li><a href="#"> Pasteles </a></li>
+              <li><a href="#"> Recetas </a></li>
+              <li><a href="#"> texto </a></li>
+              <li><a href="#"> texto </a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4> Nuestras redes</h4>
+            <div class="redes">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </footer>
+
+  </body>
+</html>
