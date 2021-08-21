@@ -1,2 +1,2 @@
 ### **`RETROSPECTIVA`**
-![retrospectiva] (/images/retrospectiva-jamboard.png)
+![retrospectiva](/images/retrospectiva-jamboard.png) 
