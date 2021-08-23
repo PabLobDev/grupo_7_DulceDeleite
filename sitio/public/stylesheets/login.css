@@ -2,10 +2,8 @@
 
 .caja-login{
   width: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  margin: 20px auto;
+  padding-top: 235px;
   color: black;
 }
 .caja-login h1{
