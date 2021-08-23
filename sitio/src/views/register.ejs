@@ -1,48 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+<html lang="es">
+    <%- include('./partials/head') %> 
 <body class="register">
-    <header>
-        <div class="logo"><img src="/images/logodd.jpg" alt="" width=""></div>
-        <section class="header-container">
-            <div class="menu-hamburguesa">
-                <input type="checkbox" id="menu">
-                <label for="menu"><i class="fas fa-bars"></i></label>
-                <nav class="menu-desplegable">
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/detail">Detalle de Producto</a></li>
-                        <li><a href="/cart">Tu Carrito de Compras</a></li>
-                        <li><a href="/login">Ingresa</a></li>
-                        <li><a href="/register">Registrate</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="barra-busqueda">
-                <form><input type="text" class="nav-search-input" aria-label="Ingresá lo que quieras encontrar"
-                        name="as_word" placeholder="Buscar productos, marcas y más…" maxlength="120" autofocus=""
-                        autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="off" tabindex="2">
-                </form>
-                <a href="" class="boton"><i class="fas fa-search"></i></a>
-            </div>
-            <div class="carrito"><a href="/cart"><i class="far fa-shopping-cart"></i></a></div>
-            <div class="menu-derecho">
-                <nav>
-                    <ul>
-                        <li><a href="/login">Mi Cuenta</a></li>
-                        <li><a href="/register">Registrarme</a></li>
-                        <a href="/cart" class="carrito-desktop"><i class="far fa-shopping-cart"></i></a>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </header>
+    <%- include('./partials/header') %>
     <main>
         <h1>REGISTRATE CON TUS DATOS</h1>
         <form action="">
@@ -109,47 +69,6 @@
             </div>
         </form>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Dulce Deleite</h4>
-                    <ul>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">¿Que ofrecemos?</a></li>
-                        <li><a href="#"> Politica de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4> Mapa del sitio </h4>
-                    <ul>
-                        <li><a href="#"> Preguntas recientes</a></li>
-                        <li><a href="#"> Envios </a></li>
-                        <li><a href="#"> Contacto </a></li>
-                        <li><a href="#"> Seguimiento de compra</a></li>
-                        <li><a href="#"> Formas de pago </a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4> Tienda</h4>
-                    <ul>
-                        <li><a href="#"> Pasteles </a></li>
-                        <li><a href="#"> Recetas </a></li>
-                        <li><a href="#"> texto </a></li>
-                        <li><a href="#"> texto </a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4> Nuestras redes</h4>
-                    <div class="redes">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </footer>
+    <%- include('./partials/footer') %>   
 </body>
 </html>
