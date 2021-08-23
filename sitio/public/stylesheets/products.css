@@ -1,0 +1,123 @@
+
+.box-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font-secundaria);
+    background: var(--color-amarillo);
+    border: 2px solid sienna;
+    width: 70%;
+    height: 70vh;
+    margin: 20px auto;
+    margin-top: 10px;
+}
+
+main h1{
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 100px;
+    margin-top: 135px;
+    color: sienna; 
+}
+
+.input-box-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 60px;
+    text-align: center;
+    background: #F6EBCD;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.input-box-form label {
+    padding-bottom: 5px;
+    font-size: 15px;
+}
+
+.input-box-form input {
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.description-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+
+.description-box label {
+    padding-bottom: 5px;
+}
+
+
+
+.description-box textarea {
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.box-form button{
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: wheat;
+    margin: 10px auto;
+    color: sienna;
+    font-size: 1rem;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.box-form button:hover {
+    background-color: sienna;
+    color:wheat;
+    transition: all .5s;
+}
+
+@media (min-width: 768px) {
+    .box-form{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 30% 20%;
+        width: 67%;
+        height: 60vh;
+    }
+
+    main h1{
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .input-box-form {
+        margin: 0 auto;
+    }
+
+    .description-box {
+        grid-column: 1 / 3;
+    }
+
+    .box-form button{
+        margin: 10px 60px ;
+    }
+
+    .description-box textarea {
+        width: 70%;
+        height: 100%
+         
+    }
+}
