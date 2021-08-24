@@ -16,7 +16,7 @@
     background-color: var(--color-rosa-claro);
 }
 
-.register .box-form{
+.register .box-form1{
     display: flex;
     flex-direction: column;
     margin: 10px 0;
@@ -27,12 +27,12 @@
     margin: 10px 0;
 }
 
-.register .box-form input, select{
+.register .box-form1 input, select{
     margin: 5px 0;
     height: 25px;
 }
 
-.register .box-form small{
+.register .box-form1 small{
     color:red;
     margin: 5px 0;
     display: inline-block;
@@ -48,7 +48,7 @@
     font-size: 14px;
 }
 
-.register .box-form textarea{
+.register .box-form1 textarea{
     resize: none;
 }
 
