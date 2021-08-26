@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "Nombre": "Torta Fría Oreo",
+        "Precio": 1945,
+        "Descripcion": "Base de chocolate, queso crema y trozos de oreo",
+        "Categoria": "postres",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 1
+    },
+    {
+        "id": 2,
+        "Nombre": "Torta Praline",
+        "Precio": 28622,
+        "Descripcion": "Torta de vainilla humedecida en salsa especial, mousse de queso y praline con caramelo.",
+        "Categoria": "tortas",
+        "Descuento": 10,
+        "Diabeticos": true,
+        "Celiacos": true,
+        "Imagen": 2
+    },
+    {
+        "id": 3,
+        "Nombre": "Torta Trufa",
+        "Precio": 1812,
+        "Descripcion": "Torta de chocolate humedecida, relleno con crema de chocolate y chispas de chocolate.",
+        "Categoria": "tortas",
+        "Descuento": 20,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 3
+    },
+    {
+        "id": 4,
+        "Nombre": "Selva Negra",
+        "Precio": 22908,
+        "Descripcion": "Torta de chocolate, humedecida con crema de cereza.",
+        "Categoria": "tortas",
+        "Descuento": 30,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 4
+    },
+    {
+        "id": 5,
+        "Nombre": "Rubi",
+        "Precio": 42486,
+        "Descripcion": "Physical Therapy Assistant",
+        "Categoria": "Goose, snow",
+        "Descuento": 37,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 5
+    },
+    {
+        "id": 6,
+        "Nombre": "Melisenda",
+        "Precio": 24145,
+        "Descripcion": "Research Nurse",
+        "Categoria": "Crane, sarus",
+        "Descuento": 18,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 6
+    },
+    {
+        "id": 7,
+        "Nombre": "Buddie",
+        "Precio": 16162,
+        "Descripcion": "Operator",
+        "Categoria": "Cormorant, great",
+        "Descuento": 21,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 7
+    },
+    {
+        "id": 8,
+        "Nombre": "Filide",
+        "Precio": 22477,
+        "Descripcion": "Project Manager",
+        "Categoria": "Malay squirrel (unidentified)",
+        "Descuento": 23,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 8
+    },
+    {
+        "id": 9,
+        "Nombre": "Candace",
+        "Precio": 35119,
+        "Descripcion": "Design Engineer",
+        "Categoria": "Pine snake (unidentified)",
+        "Descuento": null,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 9
+    },
+    {
+        "id": 10,
+        "Nombre": "Ali",
+        "Precio": 21212,
+        "Descripcion": "Budget/Accounting Analyst I",
+        "Categoria": "Trumpeter swan",
+        "Descuento": 14,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 10
+    },
+    {
+        "id": 11,
+        "Nombre": "Bald",
+        "Precio": 48351,
+        "Descripcion": "Programmer I",
+        "Categoria": "Thrasher, curve-billed",
+        "Descuento": 8,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 11
+    },
+    {
+        "id": 12,
+        "Nombre": "Missie",
+        "Precio": 43666,
+        "Descripcion": "Financial Analyst",
+        "Categoria": "Cheetah",
+        "Descuento": 46,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 12
+    },
+    {
+        "id": 13,
+        "Nombre": "Ulrika",
+        "Precio": 9515,
+        "Descripcion": "Analyst Programmer",
+        "Categoria": "Malabar squirrel",
+        "Descuento": 33,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 13
+    },
+    {
+        "id": 14,
+        "Nombre": "Elka",
+        "Precio": 40645,
+        "Descripcion": "Programmer IV",
+        "Categoria": "Eagle owl (unidentified)",
+        "Descuento": 38,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 14
+    },
+    {
+        "id": 15,
+        "Nombre": "Lissi",
+        "Precio": 212,
+        "Descripcion": "Professor",
+        "Categoria": "Collared lizard",
+        "Descuento": null,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 15
+    },
+    {
+        "id": 16,
+        "Nombre": "Dorisa",
+        "Precio": 24544,
+        "Descripcion": "Accounting Assistant IV",
+        "Categoria": "Brolga crane",
+        "Descuento": 13,
+        "Diabeticos": true,
+        "Celiacos": true,
+        "Imagen": 16
+    },
+    {
+        "id": 17,
+        "Nombre": "Elnore",
+        "Precio": 29448,
+        "Descripcion": "Food Chemist",
+        "Categoria": "Cape cobra",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 17
+    },
+    {
+        "id": 18,
+        "Nombre": "Huberto",
+        "Precio": 24733,
+        "Descripcion": "Junior Executive",
+        "Categoria": "Booby, blue-faced",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 18
+    },
+    {
+        "id": 19,
+        "Nombre": "Cole",
+        "Precio": 49671,
+        "Descripcion": "Sales Representative",
+        "Categoria": "Quail, gambel's",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 19
+    },
+    {
+        "id": 20,
+        "Nombre": "Idell",
+        "Precio": 4224,
+        "Descripcion": "Pharmacist",
+        "Categoria": "Crow, pied",
+        "Descuento": null,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 20
+    }
+]

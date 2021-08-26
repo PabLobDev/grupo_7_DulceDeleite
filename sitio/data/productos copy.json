@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "Nombre": "postre Oreo",
+        "Precio": 1945,
+        "Descripcion": "Base de chocolate, queso crema y trozos de oreo",
+        "Categoria": "postres",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 1
+    },
+    {
+        "id": 2,
+        "Nombre": "Praline",
+        "Precio": 28622,
+        "Descripcion": "Torta de vainilla humedecida en salsa especial, mousse de queso y praline con caramelo.",
+        "Categoria": "tortas",
+        "Descuento": 10,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 2
+    },
+    {
+        "id": 3,
+        "Nombre": "Trufa",
+        "Precio": 1812,
+        "Descripcion": "Torta de chocolate humedecida, relleno con crema de chocolate y chispas de chocolate.",
+        "Categoria": "tortas",
+        "Descuento": 20,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 3
+    },
+    {
+        "id": 4,
+        "Nombre": "Selva Negra",
+        "Precio": 22908,
+        "Descripcion": "Torta de chocolate, humedecida con crema de cereza.",
+        "Categoria": "tortas",
+        "Descuento": 30,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 4
+    },
+    {
+        "id": 5,
+        "Nombre": "Cake Pops",
+        "Precio": 400,
+        "Descripcion": "Masa de pastel de chocolate bañados",
+        "Categoria": "postres",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 5
+    },
+    {
+        "id": 6,
+        "Nombre": "Tiramisú",
+        "Precio": 1145,
+        "Descripcion": "Pastel frío, humedecido en café, espolvoreado con cacao",
+        "Categoria": "postres",
+        "Descuento": 10,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 6
+    },
+    {
+        "id": 7,
+        "Nombre": "zafin",
+        "Precio": 500,
+        "Descripcion": "Muffin de tarta de zanahorias",
+        "Categoria": "muffins cupcakes",
+        "Descuento": null,
+        "Diabeticos": true,
+        "Celiacos": true,
+        "Imagen": 7
+    },
+    {
+        "id": 8,
+        "Nombre": "Pavlova",
+        "Precio": 22477,
+        "Descripcion": "Un rico postre frutal de verano",
+        "Categoria": "postres",
+        "Descuento": 23,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 8
+    },
+    {
+        "id": 9,
+        "Nombre": "Marquise",
+        "Precio": 35119,
+        "Descripcion": "Torta de frutos rojos",
+        "Categoria": "tortas",
+        "Descuento": 30,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 9
+    },
+    {
+        "id": 10,
+        "Nombre": "Muffin marmolado",
+        "Precio": 600,
+        "Descripcion": "muffins marmolados sin lactosa x6",
+        "Categoria": "muffins cupcakes",
+        "Descuento": 14,
+        "Diabeticos": true,
+        "Celiacos": true,
+        "Imagen": 10
+    },
+    {
+        "id": 11,
+        "Nombre": "Cheesecake",
+        "Precio": 48351,
+        "Descripcion": "Base de galletitas húmedas, crema de queso y con salsa de frutos rojos.",
+        "Categoria": "tortas",
+        "Descuento": 8,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 11
+    },
+    {
+        "id": 12,
+        "Nombre": "Torta Brownie",
+        "Precio": 43666,
+        "Descripcion": "Mucho chocolate, nueces, dulce de leche, y merengue.",
+        "Categoria": "postres",
+        "Descuento": 46,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 12
+    },
+    {
+        "id": 13,
+        "Nombre": "Cupcakes temáticos",
+        "Precio": 515,
+        "Descripcion": "Muffins de Vainilla o Chocolate, rellenos de dulce de leche o ganache de chocolate.",
+        "Categoria": "muffins cupcakes",
+        "Descuento": 33,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 13
+    },
+    {
+        "id": 14,
+        "Nombre": "Coffe Dream",
+        "Precio": 1645,
+        "Descripcion": "Delicioso mousse de café, con toques de cacao",
+        "Categoria": "postres",
+        "Descuento": 5,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 14
+    },
+    {
+        "id": 15,
+        "Nombre": "Sakura Bakery",
+        "Precio": 812,
+        "Descripcion": "relleno con cookies and cream, sabor vainilla o chocolate",
+        "Categoria": "muffin cupcakes",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": false,
+        "Imagen": 15
+    },
+    {
+        "id": 16,
+        "Nombre": "Black Muffins",
+        "Precio": 24544,
+        "Descripcion": "Muffins de chocolate esponjosos, húmedos con trozos de chocolate.",
+        "Categoria": "muffins cupcakes",
+        "Descuento": 15,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 16
+    },
+    {
+        "id": 17,
+        "Nombre": "Dessert Shots",
+        "Precio": 350,
+        "Descripcion": "vasitos con mousse de Dulce de Leche, chantilly y frutillas.",
+        "Categoria": "postres",
+        "Descuento": null,
+        "Diabeticos": true,
+        "Celiacos": false,
+        "Imagen": 17
+    },
+    {
+        "id": 18,
+        "Nombre": "Red Velvet",
+        "Precio": 2330,
+        "Descripcion": "Biscochuelo de cacao Rojo y húmedo con relleno de cream cheese.",
+        "Categoria": "torta",
+        "Descuento": 20,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 18
+    },
+    {
+        "id": 19,
+        "Nombre": "Torta brownie",
+        "Precio": 2670,
+        "Descripcion": "Mousse de chocolate Con bombones, almendras y avellanas bañadas en chocolate",
+        "Categoria": "tortas",
+        "Descuento": null,
+        "Diabeticos": false,
+        "Celiacos": true,
+        "Imagen": 19
+    },
+    {
+        "id": 20,
+        "Nombre": "Almendrado",
+        "Precio": 1700,
+        "Descripcion": "Crema helada con almendras partidas y crocante de almendras.",
+        "Categoria": "postres",
+        "Descuento": 20,
+        "Diabeticos": true,
+        "Celiacos": true,
+        "Imagen": 20
+    }
+]
