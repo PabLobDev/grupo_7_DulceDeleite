@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<%- include('./partials/head') %> 
+
+  <body>
+
+    <%- include('./partials/header') %> 
+    
+    <main class="main-products">
+     
+      <section class="products-destac">
+        <h2>Administrar productos</h2>
+        
+        <% productos.forEach(producto => { %>
+            <article>
+                <div class="product-caja-img">
+                  <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
+                </div>
+                <div class="product-info">
+                  <h4><%= producto.nombre %></h4>
+                  <a href="">Eliminar</a>
+                  <a href="">Editar</a>
+                </div>
+              </article>
+        <% }) %>
+      
+
+      </section>
+    </main>
+
+  </body>
+</html>
