@@ -1,14 +1,19 @@
 var express = require('express');
 var router = express.Router();
-const {index, create, store, edit, update} = require('../controllers/adminController');
+const {index, create, store, edit, update, destroy} = require('../controllers/adminController');
+
+const upload = require('../middlewares/productImageStore');
+const productsCreateValidator = require('../validations/productsCreateValidator');
 
 router.get('/productCreate', create);
-router.get('/products', index)
+router.post('/productCreate',upload.single('imagen'),productsCreateValidator, store);
 
-router.get('/edit', edit);
+router.get('/productsList', index);
 
+router.get('/edit:id', edit);
+router.put('/edit:id', update);
 
-
+router.delete('/delete:id', destroy)
 
 
 

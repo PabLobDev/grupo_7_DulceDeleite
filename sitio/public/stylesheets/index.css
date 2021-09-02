@@ -219,14 +219,14 @@
 /* boton de producto */
 
 .products-destac .product-info button{
-    width: 140px;
+    width: 120px;
     height: 40px;
     border: none;
     border-radius: 5px;
     background-color: wheat;
-    margin: 15px 10px;
+    margin: 0 auto;
     color: sienna;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: var(--font-secundaria);
     font-weight: bold;
     padding-bottom: 5px;
@@ -333,7 +333,10 @@
 }
 /* fin del home */
 
-
+.admin-header {
+    position: relative;
+    background-color:  var(--color-rosa-claro);
+}
 
 
 /* inicio media queries */
@@ -407,8 +410,8 @@
     grid-template-rows: 1fr 1fr;
     gap:unset;  
 }
-
     
+  
 }
 
 @media (min-width: 1024px) {
