@@ -17,15 +17,12 @@
             <li>
               <a href="">Postres</a>
             </li>
-
             <li>
               <a href="">Muffins cupcakes</a>
             </li>
-
             <li>
               <a href="">Tortas</a>
             </li>
-
             <li>
               <a href="">Saludable</a>
             </li>
@@ -39,56 +36,34 @@
 
       <section class="products-destac">
         <h2>Productos destacados</h2>
+         
+        <div class="glider-contain">
+          <div class="glider">
+            <% productos.forEach(producto => { %>
 
-        <article>
-          <div class="product-caja-img">
-            <img src="/images/productos/image-8.jpg" height="349px" alt="" />
+              <% if (producto.categoria === 'Postres') { %>
+                 
+                <article>
+                    <div class="product-caja-img">
+                      <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
+                    </div>
+                    <div class="product-info">
+                      <h4><%= producto.nombre %></h4>
+                      <a href="/products/detail">Ver detalles</a>
+                      <span>$<%= producto.precio %> </span>
+                    </div>
+                  </article>
+               <% } %>
+             <% }) %>
           </div>
-          <div class="product-info">
-            <h4>Nombre</h4>
-            <a href="/products/detail">Ver detalles</a>
-            <span>$99.999</span>
-           
-          </div>
-        </article>
-
-        <article>
-          <div class="product-caja-img">
-            <img src="/images/productos/image-4.jpeg" height="349px" alt="" />
-          </div>
-          <div class="product-info">
-            <h4>Nombre</h4>
-            <a href="/products/detail">Ver detalles</a>
-            <span>$99.999</span>
-            
-          </div>
-        </article>
-
-        <article>
-          <div class="product-caja-img">
-            <img src="/images/productos/image-3.jpeg" height="349px" alt="" />
-          </div>
-          <div class="product-info">
-            <h4>Nombre</h4>
-            <a href="/products/detail">Ver detalles</a>
-            <span>$99.999</span>
-            
-          </div>
-        </article>
-
-        <article>
-          <div class="product-caja-img">
-            <img src="/images/productos/image-9.jpg" height="349px" alt="" />
-          </div>
-          <div class="product-info">
-            <h4>Nombre</h4>
-            <a href="/products/detail">Ver detalles</a>
-            <span>$99.999</span>
-            
-          </div>
-        </article>
+        
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots"></div>
+        </div>
+        
       </section>
-
+     
       <section class="news">
         <h2>Últimas novedades</h2>
 
@@ -100,55 +75,38 @@
           </ul>
         </div>
 
-        <div class="news-products">
-          <article>
-            <div class="product-caja-img">
-              <img src="/images/productos/pasteles.jpg" class="news-img" alt="" />
-            </div>
-            <div class="news-info">
-              <h4>Nombre</h4>
-              <span>Ver más</span>
-            </div>
-          </article>
+        <div class="glider-contain2">
+          <div class="glider2">
+            <% productos.forEach(producto => { %>
 
-          <article>
-            <div class="product-caja-img">
-              <img
-                src="/images/productos/pastel-chocolate-portada.png"
-                class="news-img"
-                alt=""
-              />
-            </div>
-            <div class="news-info">
-              <h4>Nombre</h4>
-              <span>Ver más</span>
-            </div>
-          </article>
-
-          <article>
-            <div class="product-caja-img">
-              <img src="/images/productos/image-6.jpeg" class="news-img" alt="" />
-            </div>
-            <div class="news-info">
-              <h4>Nombre</h4>
-              <span>Ver más</span>
-            </div>
-          </article>
-
-          <article>
-            <div class="product-caja-img">
-              <img src="/images/productos/image-5.jpeg" class="news-img" alt="" />
-            </div>
-            <div class="news-info">
-              <h4>Nombre</h4>
-              <span>Ver más</span>
-            </div>
-          </article>
+              <% if (producto.categoria === 'Tortas') { %>
+                 
+                <article>
+                    <div class="product-caja-img">
+                      <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
+                    </div>
+                    <div class="product-info">
+                      <h4><%= producto.nombre %></h4>
+                      <a href="/products/detail">Ver detalles</a>
+                      <span>$<%= producto.precio %> </span>
+                    </div>
+                  </article>
+               <% } %>
+             <% }) %>
+          </div>
+        
+          <button aria-label="Previous" class="glider-prev2">«</button>
+          <button aria-label="Next" class="glider-next2">»</button>
+          <div role="tablist" class="dots2"></div>
         </div>
+          
       </section>
     </main>
 
     <%- include('./partials/footer') %> 
-
+    <%- include('./partials/scripts') %>
+    <script src="/javascripts/index.js"></script>
+    <script src="/javascripts/index2.js"></script>
+    
   </body>
 </html>
