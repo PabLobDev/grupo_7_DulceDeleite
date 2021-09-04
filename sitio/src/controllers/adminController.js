@@ -63,7 +63,9 @@ module.exports = {
     },
 
     destroy: (req,res) => {
-       
+           let productosModificados = productos.filter(producto => producto.id !== +req.params.id)
+           fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productosModificados,null,2),'utf-8');
+            return res.redirect('/')
     }
     
 }
