@@ -15,16 +15,16 @@
         <nav>
           <ul>
             <li>
-              <a href="">Postres</a>
+              <a href="/products/categoriesPos">Postres</a>
             </li>
             <li>
-              <a href="">Muffins cupcakes</a>
+              <a href="/products/categoriesMuf">Muffins cupcakes</a>
             </li>
             <li>
-              <a href="">Tortas</a>
+              <a href="/products/categoriesTor">Tortas</a>
             </li>
             <li>
-              <a href="">Saludable</a>
+              <a href="/products/categoriesSal">Saludable </a>
             </li>
           </ul>
         </nav>
@@ -44,6 +44,9 @@
               <% if (producto.categoria === 'Postres') { %>
                  
                 <article>
+                  <% if(producto.celiacos === true){ %>
+                    <img class="tacc" src="/images/sin-tacc.png">
+                  <% } %> 
                     <div class="product-caja-img">
                       <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
                     </div>
@@ -82,6 +85,9 @@
               <% if (producto.categoria === 'Tortas') { %>
                  
                 <article>
+                  <% if(producto.celiacos === true){ %>
+                    <img class="tacc" src="/images/sin-tacc.png">
+                  <% } %> 
                     <div class="product-caja-img">
                       <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
                     </div>
