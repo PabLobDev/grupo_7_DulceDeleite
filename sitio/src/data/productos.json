@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "postre Oreo",
-    "precio": 1945,
-    "descripcion": "Base de chocolate, queso crema y trozos de oreo",
-    "categoria": "Postres",
-    "descuento": null,
-    "diabeticos": false,
-    "celiacos": false,
-    "imagen": "image-1.jpeg"
-  },
-  {
     "id": 2,
     "nombre": "Praline",
     "precio": 2620,

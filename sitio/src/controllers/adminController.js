@@ -53,11 +53,14 @@ module.exports = {
         }
 
     },
-
-    edit: (req,res) => {
-        return res.render('admin/productEdit')
+    edit : (req,res) => {
+        let producto = productos.find(producto => producto.id === +req.params.id)
+        return res.render('./admin/productEdit',{
+            productos,
+            categorias,
+            producto,
+        })
     },
-
     update: (req,res) => {
 
     },

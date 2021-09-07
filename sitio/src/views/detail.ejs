@@ -8,11 +8,11 @@
 
             <main class="detail">
                 <section>
-                    <h4>Dulce Deleite Choc, de almendra con nuez</h4>
+                    <h4><%= producto.nombre %></h4>
                     <div class="detalle">
 
                         <div>
-                            <img src="/images/productos/nuez.jpg" alt="">
+                            <img src="/images/productos/<%= producto.imagen %>" >
                         </div>
                         <div class="content">
                             <div class="redes">
@@ -23,7 +23,7 @@
                             </div>
 
                             <div class="precio">
-                                <span>$450</span> <del>$600</del>
+                                <span>$<%= producto.precio %></span>
                             </div>
 
                             <div class="button-cantidad">
@@ -37,15 +37,7 @@
                                 <button type="reset">AGREGAR<i class="fas fa-shopping-cart"></i></button>
                             </div>
                             <p class="description">
-                                ¡Nos moríamos de ganas de presentarte nuestro Dulce Deleite Choc!
-                                Dicen que un primer bocado delicioso comienza por la vista. Especial para tus desayunos
-                                o
-                                meriendas.
-                                ¿Qué estás esperando para probarlo?
-                                Con un chocolate amargo que protege tu memoria, reduce el colesterol y mejora la
-                                circulación.
-                                Derretido en un suave bizcochuelo de vainilla.
-                                Y aun asi ¿Te lo vas a perder?
+                                <%= producto.descripcion %> 
                             </p>
 
                         </div>
