@@ -4,6 +4,8 @@ const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','pr
 const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
 
 const capitalize = require('../utils/capitalize');
+const toThousand = require('../utils/toThousand')
+const precioFinal = require('../utils/precioFinal');
 
 module.exports = {
     detail : (req,res) => {
@@ -12,6 +14,8 @@ module.exports = {
                 productos,
                 producto,
                 capitalize,
+                precioFinal,
+                toThousand
             })
 
     },
