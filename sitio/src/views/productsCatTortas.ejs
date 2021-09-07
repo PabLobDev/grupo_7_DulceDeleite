@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+
+    <main class="main-products">
+      <section class="products-destac">
+        <h2>Tortas</h2>
+
+        <% productos.forEach(producto => { %>
+
+          <% if (producto.categoria === 'Tortas') { %>
+             
+            <article>
+              <% if(producto.celiacos === true){ %>
+                <img class="tacc" src="/images/sin-tacc.png">
+              <% } %> 
+                <div class="product-caja-img">
+                  <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
+                </div>
+                <div class="product-info">
+                  <h4><%= producto.nombre %></h4>
+                  <a href="/products/detail">Ver detalles</a>
+                  <span>$<%= producto.precio %> </span>
+                </div>
+              </article>
+           <% } %>
+         <% }) %>
+         
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
