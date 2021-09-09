@@ -1,95 +1,153 @@
-.register main{
-    width: 350px;
-    margin: 0 auto;
-    padding-top: 150px;
+.box-form1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: sienna;
+    font-family: var(--font-secundaria);
+    background: var(--color-amarillo);
+    border: 2px solid sienna;
+    width: 70%;
+    height: 800px;
+    gap: 5px;
+    margin: 20px auto;
+    margin-top: 10px;
 }
-
-
 
 .register h1{
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
     text-align: center;
-    font-family: var(--font-titulos);
-    margin: 2px;
+    padding: 15px 100px;
+    margin-top: 135px;
+    color: sienna; 
 }
 
-.register{ 
-    background-color: var(--color-rosa-claro);
-}
-
-.register .box-form1{
+.input-box-form1 {
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    width: 70%;
+    height: 70px;
+    text-align: center;
+    background: #F6EBCD;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.register h4{
-    font-family: var(--font-secundaria);
-    margin: 10px 0;
-}
-
-.register .box-form1 input, select{
-    margin: 5px 0;
-    height: 25px;
-}
-
-.register .box-form1 small{
-    color:red;
-    margin: 5px 0;
-    display: inline-block;
-}
-
-.register .options {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.register .options label{
+.input-box-form1 label {
+    padding-bottom: 5px;
     font-size: 14px;
 }
 
-.register .box-form1 textarea{
-    resize: none;
-}
-
-.register .terminos{
-    text-align: center;
-    flex-direction: row;
-}
-
-.register .box-button{
-    display: flex;
-    justify-content: space-around;
-    margin: 10px 0; 
-}
-.register .box-button button{
-    padding: 8px 0;
-    color: black;
-    background-color: #ffda9e;
+.input-box-form1 input {
     border: none;
     border-radius: 5px;
+    height: 25px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+
+.box-form1 .checkbox {
+    margin: 0 auto;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-form1 .checkbox input {
+    width: 13px;
+    height: 13px; 
+}
+
+.box-form1 .checkbox label {
+    padding-left: 2px;
+    font-size: 12px;
+}
+
+.guardar {
+    margin: 0 auto; 
+}
+
+.box-form1 button{
     width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: wheat;
+    margin: 0 auto;
+    color: sienna;
+    font-size: 1rem;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
 }
 
-.register .box-button button:hover{
-    background-color: azure;
-    border-radius: 3px;
+.box-form1 button:hover {
+    background-color: sienna;
+    color:wheat;
+    transition: all .5s;
 }
 
-/*tablet*/
-@media (min-width : 768px) {
-    .register main{
-        width: 400px;
-        margin: 0 auto;
-        padding-top: 25px;
+.box-form1 .input-box-form1 .errors {
+    font-family: var(--font-secundaria);
+    font-size: 10px;
+    color: red;  
+}
+
+.checkbox .errors{
+    font-family: var(--font-secundaria);
+    font-size: 10px;
+    padding-left: 10px;
+    color: red;
+}
+
+@media (min-width: 768px) {
+    .box-form1{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        width: 70%;
     }
-}
 
-
-@media (min-width:1024px){ 
-    .register main{
-        width: 400px;
+    .register h1{
         margin: 0 auto;
-        padding-top: 20px;
+        text-align: center;
+    }
+
+    .input-box-form1 {
+        margin: 0 auto;
+        height: 75px;
+        width: 70%;
+    }
+
+    .input-box-form1 label {
+       
+        font-size: 16px;
+    }
+
+    .box-form1 button{
+        margin: 10px 60px ;
+    }
+
+    .checkbox {
+        margin: 0 auto;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .box-form1 .checkbox label {
+        padding-left: 5px;
+        font-size: 14px;
+    }
+
+    .box-form1 .input-box-form1 .errors, .checkbox .errors{
+        font-size: 14px;
     }
 }
