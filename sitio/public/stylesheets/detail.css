@@ -6,14 +6,14 @@
 
 .detail h2{ 
     font-family: var(--font-titulos);
-    margin: 0px auto  ;
+    margin: 10px auto  ;
     width: 200px ;
     text-align: center;
+    font-weight: bold;
 }
 
 .detail img{
-    width: 300px;
-    height: 200px;
+    width: 80%;
     border: 5px;
     
 }
@@ -22,34 +22,21 @@
     font-family: var(--font-secundaria);
     margin: 20px 0;
     text-align: center;
-    
-}
-
-.detail img{
-    width: 200px;
-}
-
-.detail .button{ 
-    position: relative;
-    padding: 8px 0;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    width: auto;
-    display: inline-block;
-    text-align: justify;
+    font-size: 20px;
 }
 
 .detail .box-button button{
-    padding: 8px 0;
+    padding: 10px;
     color: black;
     background-color: #ffda9e;
     border: none;
     border-radius: 5px;
-    width: auto;
+    width: 70%;
     display: inline-block;
     text-align: justify;
     margin: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .detail .box-button button:hover{
@@ -60,26 +47,6 @@
     margin: 10px 0;
     text-align: center;
     font-size: 35px !important;
-}
-
-.detail .menos, .detail .mas{
-    background-color: black;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 30%;
-    padding: 5px;
-    width: 20px;
-}
-.detail #cantidad{
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    font-size: 18px;
-    margin: 3px;
-}
-
-.detail .description{
-    text-align: center;
 }
 
 
@@ -115,9 +82,14 @@
         display: grid;
         align-items: center;
         margin-left: 50px;
-        height: 400px;
+        height: 300px;
     }
-
+    .detail .description{
+        font-size: 25px;
+    }
+    .detail .precio{
+        font-size: 18px;
+    }
 }
 
 

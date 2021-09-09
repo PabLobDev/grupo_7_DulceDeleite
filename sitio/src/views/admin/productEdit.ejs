@@ -8,44 +8,58 @@
 <%- include('./partials/header') %> 
 
 <main class="admin">
-    <h1>Edición de producto</h1>
-    <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST">
+    <h1>Editar Producto</h1>
+    <form action="/admin/update/<%= producto.id %>?_method=PUT" method="POST">
         <div class="box-form">
             <div class="input-box-form">
-                <label for="name" >Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Nombre del producto" value="<%= producto.nombre %>">
-                <span class="text-danger small"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>           
+                <label for="nombre" >Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<%= producto.nombre %>">
+                <span class="error"> <%= locals.errores && errores.nombre ? errores.nombre.msg : null %> </span>
             </div>
             <div class="input-box-form">
-                <label for="price" >Precio:</label>
-                <input type="number" name="precio" id="precio" value=<%= producto.precio %>>
-                <span class="text-danger small"><%= locals.errores && errores.precio ? errores.precio.msg : 
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" value= <%= producto.precio %> >
+                <span class="error"> <%= locals.errores && errores.precio ? errores.precio.msg : null %></span>
             </div>
             <div class="input-box-form">
-                <label for="category" >Categoría:</label>
-                <select name="category" id="category" >
+                <label for="descuento">Descuento:</label>
+                <input type="number" id="descuento" name="descuento" value=<%= producto.descuento %> >
+                <span class="error"><%= locals.errores && errores.descuento ? errores.descuento.msg : null %> </span>
+            </div>
+            <div class="input-box-form">
+                <label for="categoria" >Categoría:</label>
+                <select name="categoria" id="categoria" >
+                    <option value="" hidden selected>Elegí</option>
                     <% categorias.forEach(categoria => { %>
-                     <option value="<%= categoria %>" <%= producto.categoria.toLowerCase() === categoria.toLowerCase() ? 'selected' : null %> ><%= categoria %> </option>
+                        <option value="<%= categoria %>" ><%= producto.categoria %></option>
                     <% }) %>
+                    <span class="error"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %> </span>
                 </select>
-                <span class="text-danger small"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagen">
+                <input type="file" name="imagen" id="imagen" accept="image/*">
             </div>
             <div class="description-box">
-                <label for="description">Descripción:</label>
-                <textarea name="descripcion" id="" cols="30" rows="3"><%= producto.descripcion %></textarea>
-                <span class="text-danger small"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : null %></span>
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" id="descripcion"> <%= locals.old && old.descripcion ? old.descripcion : null %><%= producto.descripcion %>  </textarea>
+               <span class="error"> <%= locals.errores && errores.descripcion ? errores.descripcion.msg : null %> </span>
             </div>
-            
-            <div>
-                <button type="submit">Guardar</button>
+            <div class="checkbox">
+                <input type="checkbox" id="celiaquia" name="celiaquia">
+                <label for="celiaquia">Celiaquía</label>
+                <input type="checkbox" id="diabetes" name="diabetes">
+                <label for="diabetes">Diabetes</label>
+            </div>
+            <div class="guardar">
+                <button type="submit">Actualizar</button>
             </div>
         </div>
     </form>
 </main>
+    
+</body>
+</html>
     
 </body>
 </html>

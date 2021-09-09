@@ -5,7 +5,6 @@ const {detail,cart, categoryViewPos, categoryViewMuf, categoryViewTor, categoryV
 
 router.get('/cart',cart);
 router.get('/detail/:id',detail)
-
 router.get('/categoriesPos', categoryViewPos);
 router.get('/categoriesMuf', categoryViewMuf);
 router.get('/categoriesTor', categoryViewTor);

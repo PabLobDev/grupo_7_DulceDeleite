@@ -20,10 +20,11 @@
                             <p class="description">
                                 <%= producto.descripcion %>
                             </p>
+                            <div class="precio">
                                 <% if (producto.descuento> 0) { %>
                                     <p>
                                         <span>$<%= toThousand(producto.precio) %> </span>
-                                        /
+                                        
                                         <b>
                                             <%= producto.descuento %>% OFF
                                         </b>
@@ -36,14 +37,8 @@
                                             $<%= precioFinal(producto.precio,producto.descuento) %>
                                         </p>
                                         <% } %>
-                            
-                            <div class="button-cantidad">
-                                <button type="button" class="menos">-</button>
-                                <input type="number" name="cantidad" id="cantidad">
-                                <button type="button" class="mas">+</button>
-                            </div>
-
-                            <div class="box-button">
+                                    </div>
+                                 <div class="box-button">
                                 <button type="submit">COMPRAR AHORA</button>
                             </div>
                         </div>
