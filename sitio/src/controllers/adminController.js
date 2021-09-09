@@ -53,18 +53,30 @@ module.exports = {
         }
 
     },
-    edit : (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id)
-        return res.render('./admin/productEdit',{
+    edit: (req, res) => {
+		let producto = productos.find(producto => producto.id === +req.params.id);
+		return res.render('./admin/productEdit', {
+			producto,
             productos,
             categorias,
-            producto,
-        })
-    },
-    update: (req,res) => {
+            capitalize,
+		})
+	},
+	update: (req, res) => {
+		const {nombre, precio, descuento, descripcion, categoria} = req.body;
 
-    },
-
+		productos.map(producto => {
+			if(producto.id === +req.params.id){
+				producto.nombre = nombre;
+				producto.precio = +precio;
+				producto.descuento = +descuento;
+				producto.categoria = categoria;
+				producto.descripcion = descripcion;		
+			}
+		})
+        fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
+        return res.redirect('/admin/productsList')
+	},
     destroy: (req,res) => {
            let productosModificados = productos.filter(producto => producto.id !== +req.params.id)
            fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productosModificados,null,2),'utf-8');

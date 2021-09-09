@@ -10,8 +10,8 @@ router.post('/productCreate',upload.single('imagen'),productsCreateValidator, st
 
 router.get('/productsList', index);
 
-router.get('/productEdit', edit);
-router.put('/productEdit', update);
+router.get('/edit/:id', edit);
+router.put('/update/:id',upload.single('imagen'),productsCreateValidator, update);
 
 router.delete('/delete:id', destroy)
 
