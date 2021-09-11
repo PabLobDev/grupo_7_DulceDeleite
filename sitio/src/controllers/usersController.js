@@ -36,7 +36,7 @@ module.exports = {
                 avatar : user.avatar,
                 rol : user.rol
             }
-            return res.redirect('/')
+            return res.redirect('/users/login')
         }else{
             return res.render('users/register',{
                 old : req.body,
