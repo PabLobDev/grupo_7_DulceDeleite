@@ -16,6 +16,16 @@
     "password": "cQflRqnRJ2Z",
     "category": "user",
     "image": "user_2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "pablo",
+    "last_name": "Lobai",
+    "age": 38,
+    "city": "lanus",
+    "email": "pablolobai@gmail.com",
+    "pass": "$2a$10$K7ZOt3qCGjOPpRx7Pi2h/.mVF511rowHUsMu4jPvQ5po2FJ9DsTSi",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
-  
 ]
