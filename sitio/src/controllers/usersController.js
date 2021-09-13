@@ -47,5 +47,10 @@ module.exports = {
 
     login: (req, res) => {
         return res.render('users/login')
+    },
+    profile : (req,res) => res.render('profile'),
+    logout : (req,res) => {
+        req.session.destroy()
     }
+    
 }
