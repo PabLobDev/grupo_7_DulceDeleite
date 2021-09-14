@@ -1,5 +1,10 @@
 <header>
-    <div class="logo"><a href="/"><img src="/images/logodd.jpg"></a></div>
+    <div class="logo"> 
+        <% if (locals.userLogin) { %>
+        <img src="/images/users/<%= userLogin.avatar %>" alt="">
+    <% }else{ %>
+        <a href="/"><img src="/images/logodd.jpg"></a>
+    <% } %> </div>
     <section class="header-container">
         <div class="menu-hamburguesa">
             <input type="checkbox" id="menu">
