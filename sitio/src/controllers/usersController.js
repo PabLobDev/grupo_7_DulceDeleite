@@ -61,12 +61,12 @@ module.exports = {
             }
 
             if(req.body.recordar){
-                res.cookie(ddLogin, req.session.userLogin, {maxAge : 200 * 60 })
+                res.cookie('ddLogin', req.session.userLogin, {maxAge : 200 * 60 })
             }
-            res.redirect('/')
+            res.redirect('/users/profile')
         }else{
-            return res.render('login',{
-            errors : error .mapped()
+            return res.render('users/login',{
+            errors : errors.mapped()
         })}
     },
     profile : (req,res) => {
