@@ -46,7 +46,28 @@ module.exports = {
     },
 
     login: (req, res) => {
-        return res.render('users/login')
+            return res.render('users/login')},
+            processLogin : (req,res) => {
+                let errors = validationResult(req);
+        
+        if(errors.isEmpty()){
+            let user = users.find(user => user.email === req.body.email.trim())
+
+            req.session.userLogin = {
+                id : user.id,
+                name : user.name,
+                avatar : user.avatar,
+                rol : user.rol
+            }
+
+            if(req.body.recordar){
+                res.cookie(ddLogin, req.session.userLogin, {maxAge : 200 * 60 })
+            }
+            res.redirect('/')
+        }else{
+            return res.render('login',{
+            errors : error .mapped()
+        })}
     },
     profile : (req,res) => {
         res.render('profile',{
