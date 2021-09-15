@@ -38,5 +38,16 @@
     "pass": "$2a$10$drjfQnY9GLShwL24/gPT7eUMexgYGyQ7qW//EEJyz25lO1vSkg2FW",
     "rol": "admin",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 5,
+    "name": "Carlos",
+    "last_name": "Perez",
+    "age": 40,
+    "city": "Lanus",
+    "email": "carlosperez@gmail.com",
+    "pass": "$2a$10$sdMT23T3h9jcxGjm4p0FReQPNVSfbBs27p508bq0fCmZ4WpioCVQ2",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
 ]

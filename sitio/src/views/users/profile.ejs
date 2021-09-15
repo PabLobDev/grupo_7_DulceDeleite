@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <%- include('../partials/head') %> 
-<body>
-    <%- include('../partials/header') %> 
+<body class="register">
 
-    <main class="container">
-        <div class="row">
-            <div class="col-12 col-md-8 mx-auto">
-                <div class="card">
-                    <div class="card-header">Perfil de usuario</div>
-                    <div class="card-body">
-                        <form action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-                            <div class="mb-3">
-                                <label for="exampleInputName" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="exampleInputName" name="name" value="<%= user.name  %>">
-                                <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
-                              </div>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<%= user.email  %>" readonly>
-                              <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword0" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword0" name="passOld">
-                                <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %> </span>
-                              </div>
-                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Nueva contraseña</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
-                              <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %> </span>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword2" class="form-label">Confirmar contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword2" name="pass2">
-                                <span class="text-danger small"><%= locals.errors && errors.pass2 ? errors.pass2.msg : null %> </span>
-                            </div>
-                            <div class="mb-3">
-                                <label for="inputAvatar" class="btn btn-secondary">Subir imagen de perfil</label>
-                                <input type="file" class="form-control" id="inputAvatar" name="avatar" hidden>
-                                <span class="text-danger small"><%= locals.errors && errors.avatar ? errors.avatar.msg : null %> </span>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                          </form>
-                    </div>
-                </div>
+    <%- include('../partials/header') %>
+    
+    <main class="register">
+        <h1>Mi Perfil</h1>
+
+        <form action="/users/profile/<%= user.id %>?_method=PUT" method="POST">
+         <div class="box-form1">
+            <div class="input-box-form1">
+                <label>Nombres</label>
+                <input type="text" name="name" id="name" value="<%= user.name %>">
+                <span class="errors"> <%= locals.errors && errors.name ? errors.name.msg : null %></span>
+            </div>
+            <div class="input-box-form1">
+                <label>Apellidos</label>
+                <input type="text" name="last_name" id="last_name" value="<%= user.last_name  %>">
+                <span class="errors"> <%= locals.errors && errors.last_name ? errors.last_name.msg : null %></span>
+            </div>
+            <div class="input-box-form1">
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" value= <%= user.age%> >
+                <span class="errors"> <%= locals.errors && errors.age ? errors.age.msg : null %></span>
+            </div>
+            <div class="input-box-form1">
+                <label>Ciudad</label>
+                <input type="text" name="city" id="city" value="<%= user.city  %>">
+                <span class="errors"> <%= locals.errors && errors.city ? errors.city.msg : null %></span>
+            </div>
+            <div class="input-box-form1">
+                <label>Email</label>
+                <input type="email" name="email" id="email" value="<%= user.email %>">
+                <span class="errors"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            </div>
+            <div class="guardar">
+                <button type="submit">Editar Perfil</button>
             </div>
         </div>
+        </form>
     </main>
-    <%- include('../partials/footer') %> 
-    <%- include('../partials/scripts') %> 
-
+    <%- include('../partials/footer') %>   
 </body>
-
 </html>
