@@ -47,7 +47,8 @@ module.exports = {
 
     login: (req, res) => {
             return res.render('users/login')},
-            processLogin : (req,res) => {
+
+    processLogin : (req,res) => {
                 let errors = validationResult(req);
         
         if(errors.isEmpty()){
@@ -63,21 +64,20 @@ module.exports = {
             if(req.body.recordar){
                 res.cookie('ddLogin', req.session.userLogin, {maxAge : 2000 * 60 })
             }
-            res.redirect('/users/profile')
+            res.redirect('../')
         }else{
             return res.render('users/login',{
             errors : errors.mapped()
         })}
     },
+
     profile : (req,res) => {
-        res.render('profile',{
+        res.render('users/profile',{
             user : users.find(user => user.id === +req.session.userLogin.id)
         })
     },
-    update : (req,res) => {
-        let errors = validationResult(req)
-        return res.send(errors)
-    },
+   
+    
     logout : (req,res) => {
         req.session.destroy();
         return res.redirect('/')

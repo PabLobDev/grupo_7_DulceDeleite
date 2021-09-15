@@ -25,6 +25,28 @@
     "city": "lanus",
     "email": "pablolobai@gmail.com",
     "pass": "$2a$10$K7ZOt3qCGjOPpRx7Pi2h/.mVF511rowHUsMu4jPvQ5po2FJ9DsTSi",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 4,
+    "name": "Paulina",
+    "last_name": "Campos",
+    "age": 38,
+    "city": "Lanus",
+    "email": "paulina@gmail.com",
+    "pass": "$2a$10$drjfQnY9GLShwL24/gPT7eUMexgYGyQ7qW//EEJyz25lO1vSkg2FW",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 5,
+    "name": "Carlos",
+    "last_name": "Perez",
+    "age": 40,
+    "city": "Lanus",
+    "email": "carlosperez@gmail.com",
+    "pass": "$2a$10$sdMT23T3h9jcxGjm4p0FReQPNVSfbBs27p508bq0fCmZ4WpioCVQ2",
     "rol": "user",
     "avatar": "avatar_default.png"
   },

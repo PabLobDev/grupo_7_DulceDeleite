@@ -11,19 +11,22 @@
   <h1>Login</h1>
   <div class="user-pass">
     <i class="fas fa-user"></i>
-    <input type="text" placeholder="Email" name="email">
+    <input type="text" name="email" id="email" placeholder="Email">
   </div>
+  <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
 
   <div class="user-pass">
     <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Contraseña" name="pass">
+    <input type="password" name="pass" id="pass" placeholder="Contraseña">
   </div>
+  <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+
   <div class="mb-3 form-check">
    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordar">
    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
   </div>
-  <span class = "text-danger small"><span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span></span>
-  <input type="submit" class="btn" value="Inicia Sesión" name="botton">
+  
+  <input type="submit" class="btn">
 </div>
 </form>
 <%- include('../partials/footer') %> 
