@@ -27,5 +27,16 @@
     "pass": "$2a$10$K7ZOt3qCGjOPpRx7Pi2h/.mVF511rowHUsMu4jPvQ5po2FJ9DsTSi",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 4,
+    "name": "Joaquin",
+    "last_name": "Leguizamón",
+    "age": 18,
+    "city": "CABA",
+    "email": "joaquinleguizamon03@gmail.com",
+    "pass": "$2a$10$DGHnUGpjPXXhGjdrd6WrcOhydqouIi7K1gcSJDoskV.onQ4RHoC86",
+    "rol": "user",
+    "avatar": "avatar_default.png"
   }
 ]

@@ -61,7 +61,7 @@ module.exports = {
             }
 
             if(req.body.recordar){
-                res.cookie('ddLogin', req.session.userLogin, {maxAge : 200 * 60 })
+                res.cookie('ddLogin', req.session.userLogin, {maxAge : 2000 * 60 })
             }
             res.redirect('/users/profile')
         }else{
