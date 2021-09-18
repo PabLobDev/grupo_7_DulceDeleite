@@ -4,14 +4,26 @@
 <%- include('./partials/head') %> 
 
   <body>
-
-    <%- include('./partials/header') %> 
+    <%- include('./partials/header') %>
     
     <main class="main-products">
-      <div class="nav-head">
-        <div class="nav-head-img">
-          <img src="/images/productos/image-2.jpeg" class="back-img" alt="" />
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image:url('/images/banner/8-86625_cakes-hd.jpg')"></div>
+          <div class="carousel-item" style="background-image:url('/images/banner/Colorful-cream-cakes.jpg')"></div>
+          <div class="carousel-item" style="background-image:url('/images/banner/pastel-pastel-de-chocolate-papel-pintado-3554x1999_53.jpg')"></div>
         </div>
+  
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        <div class="nav-head">
         <nav>
           <ul>
             <li>
@@ -24,7 +36,7 @@
               <a href="/products/categoriesTor">Tortas</a>
             </li>
             <li>
-              <a href="/products/categoriesSal">Saludable </a>
+              <a href="/products/categoriesSal">Saludable</a>
             </li>
           </ul>
         </nav>
@@ -111,6 +123,7 @@
 
     <%- include('./partials/footer') %> 
     <%- include('./partials/scripts') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/javascripts/index.js"></script>
     <script src="/javascripts/index2.js"></script>
     
