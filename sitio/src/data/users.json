@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "first_name": "Juana",
+    "name": "Juana",
     "last_name": "Pascquale",
     "email": "juanapasq@gmail.com",
     "password": "wQqLEdYU",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "first_name": "Hernan",
+    "name": "Hernan",
     "last_name": "Rodrigo",
     "email": "Hernirodri@outlook.es",
     "password": "cQflRqnRJ2Z",

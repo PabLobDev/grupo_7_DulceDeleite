@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('./partials/head') %>
+  <%- include('../partials/head') %>
 
   <body>
-    <%- include('./partials/header') %>
-
-    <main class="main-products">
+    <%- include('../partials/header') %>
+    
+    <main class="main-products-views">
       <section class="products-destac">
-        <h2>Tortas</h2>
+        <h2>Postres</h2>
 
         <% productos.forEach(producto => { %>
 
-          <% if (producto.categoria === 'Tortas') { %>
+          <% if (producto.categoria === 'Postres') { %>
              
             <article>
               <% if(producto.celiacos === true){ %>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="product-info">
                   <h4><%= producto.nombre %></h4>
-                  <a href="/products/detail">Ver detalles</a>
+                  <a href="/products/detail/<%= producto.id %>">Ver detalles</a>
                   <span>$<%= producto.precio %> </span>
                 </div>
               </article>
@@ -31,6 +31,6 @@
          
       </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
   </body>
 </html>

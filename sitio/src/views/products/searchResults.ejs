@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('./partials/head') %>
+  
+<%- include('../partials/head') %> 
 
   <body>
-    <%- include('./partials/header') %>
 
-    <main class="main-products">
+    <%- include('../partials/header') %> 
+    
+    <main class="main-products-views">
+     
       <section class="products-destac">
-        <h2>Apto celíacos</h2>
+        <h2>Tu busqueda</h2>
         
         <% productos.forEach(producto => { %>
-
-          <% if (producto.celiacos === true || producto.diabeticos === true){ %>
-             
             <article>
-              <% if(producto.celiacos === true){ %>
-                <img class="tacc" src="/images/sin-tacc.png">
-              <% } %> 
                 <div class="product-caja-img">
                   <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
                 </div>
                 <div class="product-info">
                   <h4><%= producto.nombre %></h4>
-                  <a href="/products/detail">Ver detalles</a>
+                  <a href="/products/detail/<%= producto.id %>">Ver detalles</a>
                   <span>$<%= producto.precio %> </span>
                 </div>
               </article>
-           <% } %>
-         <% }) %>
+        <% }) %>
       
-         
+
       </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
   </body>
 </html>

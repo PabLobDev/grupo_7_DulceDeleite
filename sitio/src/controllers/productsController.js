@@ -10,7 +10,8 @@ const precioFinal = require('../utils/precioFinal');
 module.exports = {
     detail : (req,res) => {
         let producto = productos.find(producto => producto.id === +req.params.id)
-            return res.render('detail',{
+            return res.render('products/detail',{
+                title : "Detalle del producto",
                 productos,
                 producto,
                 capitalize,
@@ -20,12 +21,14 @@ module.exports = {
 
     },
     cart: (req, res) => {
-        return res.render('cart')
+        return res.render('products/cart',{
+            title:"Tu carrito"
+        })
     },
-
     categoryViewPos: (req,res) => {
 
-            return res.render('productsCatPostres', {
+            return res.render('products/productsCatPostres', {
+                 title : "Postres",
                  productos,
                  categorias
                  
@@ -35,7 +38,8 @@ module.exports = {
 
     categoryViewMuf: (req,res) => {
 
-        return res.render('productsCatMuffins', {
+        return res.render('products/productsCatMuffins', {
+            title : "Muffins y Cupcakes",
             productos,
             categorias
             
@@ -45,7 +49,8 @@ module.exports = {
 
      categoryViewTor: (req,res) => {
 
-        return res.render('productsCatTortas', {
+        return res.render('products/productsCatTortas', {
+            title : "Tortas",
             productos,
             categorias
             
@@ -55,7 +60,8 @@ module.exports = {
 
     categoryViewSal: (req,res) => {
 
-        return res.render('productsCatSaludable', {
+        return res.render('products/productsCatSaludable', {
+            title : "Saludables",
             productos,
             categorias
             

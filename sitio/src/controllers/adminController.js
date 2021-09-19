@@ -9,6 +9,7 @@ const {validationResult} = require('express-validator');
 module.exports = {
     index : (req,res) => {
         return res.render('admin/productsList', {
+          title : "Administrador",
           productos,
           categorias
         })      
@@ -16,6 +17,7 @@ module.exports = {
 
     create : (req,res) => {
         return res.render('admin/productCreate', {
+            title : "Crear producto",
             categorias,
             capitalize
         })
@@ -56,6 +58,7 @@ module.exports = {
     edit: (req, res) => {
 		let producto = productos.find(producto => producto.id === +req.params.id);
 		return res.render('./admin/productEdit', {
+            title : "Editar producto",
 			producto,
             productos,
             categorias,
