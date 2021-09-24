@@ -41,6 +41,7 @@ module.exports = {
             return res.redirect('/users/login')
         }else{
             return res.render('users/register',{
+                title : "Intentalo de nuevo",
                 old : req.body,
                 errors : errors.mapped()
             })
@@ -71,6 +72,7 @@ module.exports = {
             res.redirect('../')
         }else{
             return res.render('users/login',{
+            title : "Intentalo de nuevo",
             errors : errors.mapped()
         })}
     },
