@@ -1,0 +1,38 @@
+.profile {
+    background-color: pink ;
+}
+.profile h1{
+    font-family: var(--font-titulos);
+    font-weight: bold;
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+.profile .datos-perfil{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 50px;
+}
+.profile .datos-perfil label{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+.profile .datos-perfil span{
+    font-size: 22px;
+}
+/*tablet*/
+@media (min-width:768px){
+    .profile h1 {
+        padding-top: 20px;
+    }
+    .profile .datos-perfil{
+        padding-left: 230px;
+    }
+}
+@media (min-width:1024px){
+    .profile .datos-perfil{
+        padding-left: 400px;
+    }
+}
