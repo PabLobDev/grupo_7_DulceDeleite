@@ -1,3 +1,4 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,6 +7,9 @@ var logger = require('morgan');
 var methodOverride = require("method-override");
 const session = require('express-session');
 const localsUser = require('./middlewares/localsUser');
+
+const dbConnectionTest = require('./utils/dbConnectionTest')
+dbConnectionTest();
 
 
 var indexRouter = require('./routes/index');
