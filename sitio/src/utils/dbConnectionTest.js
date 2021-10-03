@@ -2,9 +2,9 @@ const {sequelize} = require ('../database/models');
 const dbConnectionTest = async () => {
 try {
     await sequelize.authenticate();
-    console.log('Connection has been established successfully');
+    console.log('La conexión ha sido establecida exitosamente');
 } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('No se puede conectar con database:', error);
 }
 };
 module.exports=dbConnectionTest
