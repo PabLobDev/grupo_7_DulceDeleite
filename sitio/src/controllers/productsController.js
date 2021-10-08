@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productos.json'),'utf-8'));
 const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
-
+const db = require('../database/models');
 const capitalize = require('../utils/capitalize');
 const toThousand = require('../utils/toThousand')
 const precioFinal = require('../utils/precioFinal');
@@ -25,48 +25,96 @@ module.exports = {
             title:"Tu carrito"
         })
     },
-    categoryViewPos: (req,res) => {
-
-            return res.render('products/productsCatPostres', {
-                 title : "Postres",
-                 productos,
-                 categorias
-                 
-             })
-  
+    categoryViewPos:(req,res) => {
+        let postres = db.Category.findOne({
+            where : {
+                name : 'postres'
+            },
+            include : [
+                {
+                    association : 'products',
+                    include : [
+                        {association : 'category'}
+                        
+                    ]
+                }
+            ]
+        })
+        Promise.all([postres])
+    
+            .then(([postres]) => {
+                return res.render('products/productsCatPostres',{
+                    title : "postres",
+                    postres : postres.products,
+                    
+                })
+            })
+            .catch(error => console.log(error))
     },
 
     categoryViewMuf: (req,res) => {
-
-        return res.render('products/productsCatMuffins', {
-            title : "Muffins y Cupcakes",
-            productos,
-            categorias
-            
+        let muffins = db.Category.findOne({
+            where : {
+                name : 'muffins cupcakes'
+            },
+            include : [
+                {
+                    association : 'products',
+                    include : [
+                        {association : 'category'}
+                        
+                    ]
+                }
+            ]
         })
-
-     },
+        Promise.all([muffins])
+    
+            .then(([muffins]) => {
+                return res.render('products/productsCatMuffins',{
+                    title : "muffins cupcakes",
+                    muffins : muffins.products,
+                    
+                })
+            })
+            .catch(error => console.log(error))
+    },
 
      categoryViewTor: (req,res) => {
-
-        return res.render('products/productsCatTortas', {
-            title : "Tortas",
-            productos,
-            categorias
-            
+        let tortas = db.Category.findOne({
+            where : {
+                name : 'tortas'
+            },
+            include : [
+                {
+                    association : 'products',
+                    include : [
+                        {association : 'category'}
+                        
+                    ]
+                }
+            ]
         })
-
+        Promise.all([tortas])
+    
+            .then(([tortas]) => {
+                return res.render('products/productsCatTortas',{
+                    title : "tortas",
+                    tortas : tortas.products,
+                    
+                })
+            })
+            .catch(error => console.log(error))
     },
 
     categoryViewSal: (req,res) => {
-
-        return res.render('products/productsCatSaludable', {
-            title : "Saludables",
-            productos,
-            categorias
-            
-        })
-
+        db.Product.findAll()
+        .then(products => {
+                res.render("products/productsCatSaludable",{
+                    products,
+                    title: 'Saludables'
+                })
+            })
+            .catch(error => console.log(error))
     }
 
 }

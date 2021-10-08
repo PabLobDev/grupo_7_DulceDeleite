@@ -6,12 +6,12 @@ const upload = require('../middlewares/productImageStore');
 const productsCreateValidator = require('../validations/productsCreateValidator');
 
 router.get('/productCreate', create);
-router.post('/productCreate',upload.single('imagen'),productsCreateValidator, store);
+router.post('/productCreate',upload.single('image'),productsCreateValidator, store);
 
 router.get('/productsList', index);
 
 router.get('/edit/:id', edit);
-router.put('/update/:id',upload.single('imagen'),productsCreateValidator, update);
+router.put('/update/:id',upload.single('image'),productsCreateValidator, update);
 
 router.delete('/delete:id', destroy)
 

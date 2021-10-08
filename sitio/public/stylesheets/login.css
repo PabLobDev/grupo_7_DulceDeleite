@@ -3,7 +3,7 @@
 .caja-login{
   width: 280px;
   margin: 20px auto;
-  padding-top: 235px;
+  padding-top: 135px;
   color: black;
 }
 .caja-login h1{
@@ -57,4 +57,13 @@
 }
 .link:hover{
    color: cadetblue;
+}
+
+@media (min-width: 768px) {
+
+  .caja-login{
+    padding-top: 30px;
+    
+  }
+
 }

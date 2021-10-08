@@ -12,44 +12,44 @@
     <form action="" method="POST" enctype="multipart/form-data">
         <div class="box-form">
             <div class="input-box-form">
-                <label for="nombre" >Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
-                <span class="error"> <%= locals.errores && errores.nombre ? errores.nombre.msg : null %> </span>
+                <label for="name" >Nombre:</label>
+                <input type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                <span class="error"> <%= locals.errores && errores.name ? errores.name.msg : null %> </span>
             </div>
             <div class="input-box-form">
-                <label for="precio">Precio:</label>
-                <input type="number" id="precio" name="precio" value= <%= locals.old && old.precio ? old.precio : null%> >
-                <span class="error"> <%= locals.errores && errores.precio ? errores.precio.msg : null %></span>
+                <label for="price">Precio:</label>
+                <input type="number" id="price" name="price" value= <%= locals.old && old.price ? old.price : null%> >
+                <span class="error"> <%= locals.errores && errores.price ? errores.price.msg : null %></span>
             </div>
             <div class="input-box-form">
-                <label for="descuento">Descuento:</label>
-                <input type="number" id="descuento" name="descuento" value=<%= locals.old && old.descuento ? old.descuento : null %> >
-                <span class="error"><%= locals.errores && errores.descuento ? errores.descuento.msg : null %> </span>
+                <label for="discount">Descuento:</label>
+                <input type="number" id="discount" name="discount" value=<%= locals.old && old.discount ? old.discount : null %> >
+                <span class="error"><%= locals.errores && errores.discount ? errores.discount.msg : null %> </span>
             </div>
             <div class="input-box-form">
-                <label for="categoria" >Categoría:</label>
-                <select name="categoria" id="categoria" >
+                <label for="category" >Categoría:</label>
+                <select name="category" id="category" >
                     <option value="" hidden selected>Elegí</option>
-                    <% categorias.forEach(categoria => { %>
-                        <option value="<%= categoria %>" ><%= categoria %> </option>
-                    <% }) %>
-                    <span class="error"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %> </span>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>" <%= locals.old && old.category.name === category.name ? 'selected' : null %> ><%= category.name %> </option>
+                        <% }) %>
+                    <span class="error"><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
                 </select>
             </div>
             <div class="input-box-form">
-                <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagen" accept="image/*">
+                <label for="Image">Imagen</label>
+                <input type="file" name="image" id="image" accept="image/*">
             </div>
             <div class="description-box">
-                <label for="descripcion">Descripción:</label>
-                <textarea name="descripcion" id="descripcion"> <%= locals.old && old.descripcion ? old.descripcion : null %> </textarea>
-               <span class="error"> <%= locals.errores && errores.descripcion ? errores.descripcion.msg : null %> </span>
+                <label for="description">Descripción:</label>
+                <textarea name="description" id="description"> <%= locals.old && old.description ? old.description : null %> </textarea>
+               <span class="error"> <%= locals.errores && errores.description ? errores.description.msg : null %> </span>
             </div>
             <div class="checkbox">
-                <input type="checkbox" id="celiaquia" name="celiaquia">
-                <label for="celiaquia">Celiaquía</label>
-                <input type="checkbox" id="diabetes" name="diabetes">
-                <label for="diabetes">Diabetes</label>
+                <input type="checkbox" id="celiac" name="celiac">
+                <label for="celiac">Celiaquía</label>
+                <input type="checkbox" id="diabetic" name="diabetic">
+                <label for="diabetic">Diabetes</label>
             </div>
             <div class="guardar">
                 <button type="submit">Guardar</button>

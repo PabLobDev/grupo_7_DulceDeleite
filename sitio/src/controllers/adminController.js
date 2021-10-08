@@ -3,24 +3,32 @@ const path = require('path');
 const capitalize = require('../utils/capitalize');
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data','productos.json'),'utf-8'));
 const categorias = require('../data/categorias.json');
-
+const db = require('../database/models');
 const {validationResult} = require('express-validator');
 
 module.exports = {
-    index : (req,res) => {
-        return res.render('admin/productsList', {
-          title : "Administrador",
-          productos,
-          categorias
-        })      
+    index: (req,res) => {
+        db.Product.findAll()
+        .then(products => {
+                res.render("admin/productsList",{
+                    products,
+                    title: 'Todos los productos'
+                })
+            })
+            .catch(error => console.log(error))
     },
 
-    create : (req,res) => {
-        return res.render('admin/productCreate', {
-            title : "Crear producto",
-            categorias,
-            capitalize
+    create  : (req,res) => {
+        db.Category.findAll({
+            order : [
+                ['name','DESC']
+            ]
         })
+            .then(categories => res.render('admin/productCreate',{
+                categories,
+                title: 'Agregar producto'
+            }))
+            .catch(error => console.log(error))
     },
 
     store: (req,res) => {
@@ -28,33 +36,41 @@ module.exports = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            const {nombre,precio,descuento,descripcion,categoria,celiaquia,diabetes} = req.body;
-       
-            let producto = {
-                id: productos[productos.length - 1].id + 1,
-                nombre : nombre.trim(),
-                precio : +precio,
-                descuento : +descuento,
-                descripcion : descripcion.trim(),
-                categoria,
-                celiaquia : celiaquia ? true : false,
-                diabetes : diabetes ? true : false,
-                imagen : req.file ? req.file.filename : 'default-image.png'
-            }
-              
-            productos.push(producto)
-            fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
-            return res.redirect('/')
-        }else{
-            return res.render('admin/productCreate',{
-                categorias,
-                productos,
-                errores : errors.mapped(),
-                old : req.body
+            const {name,price,discount,description,category,celiac,diabetic} = req.body;
+            
+            db.Product.create({
+                
+                name : name.trim(),
+                price : +price,
+                discount : +discount,
+                description : description.trim(),
+                categoryId : category,
+                celiac : celiac ? true : false,
+                diabetic : diabetic ? true : false,
+                image:  req.file ? req.file.filename : 'default-image.png'
             })
-        }
+            .then(product => {  
+                console.log(product);
+             return res.redirect('/admin/productsList')
+             })
+            .catch(error => console.log(error))
+
+        }else{
+            db.Category.findAll({
+                order : [
+                    ['name','DESC']
+                ]
+            })
+                .then(categories => res.render('admin/productCreate',{
+                categories,
+                errores : errors.mapped(),
+                old : req.body,
+                
+            })
+                )}
 
     },
+    
     edit: (req, res) => {
 		let producto = productos.find(producto => producto.id === +req.params.id);
 		return res.render('./admin/productEdit', {

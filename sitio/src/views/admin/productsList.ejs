@@ -12,20 +12,26 @@
       <section class="products-destac">
         <h2>Administración</h2>
         
-        <% productos.forEach(producto => { %>
-            <article>
-                <div class="product-caja-img">
-                  <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
-                </div>
-                <div class="product-info">
-                  <h4><%= producto.nombre %></h4>
-                  <form action="/admin/delete<%= producto.id %>?_method=DELETE" method="POST">
-                    <button type='submit'>Eliminar</button>
-                    </form>
-                  <a  href="/admin/edit/<%= producto.id %>">Editar</a>
-                </div>
-              </article>
-        <% }) %>
+        <% products.forEach(product => { %>
+          <article>
+            <% if(product.celiac === 1){ %>
+                  <img class="tacc" src="/images/sin-tacc.png">
+                <% } %>
+                <% if(product.diabetic === 1){ %>
+                  <img class="lapdi" src="/images/lapdi.png">
+                <% } %>
+              <div class="product-caja-img">
+                <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
+              </div>
+              <div class="product-info">
+                <h4><%= product.name %></h4>
+                <form action="/admin/delete<%= product.id %>?_method=DELETE" method="POST">
+                  <button type='submit'>Eliminar</button>
+                  </form>
+                <a  href="/admin/edit/<%= product.id %>">Editar</a>
+              </div>
+            </article>
+      <% }) %>
       
 
       </section>

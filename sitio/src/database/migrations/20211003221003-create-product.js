@@ -22,28 +22,33 @@ module.exports = {
       },
       discount: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue : 0
       },
       categoryId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
-            tableName : 'Categories',
+            tableName : 'Categories'
           },
           key : 'id'
         }
       },
       image: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
+        defaultValue : 'default-image.png'
       },
       diabetic: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue : 0
       },
       celiac: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue : 0
       },
       createdAt: {
         allowNull: false,

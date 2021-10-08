@@ -9,21 +9,24 @@
       <section class="products-destac">
         <h2>Saludables</h2>
         
-        <% productos.forEach(producto => { %>
+        <% products.forEach(product => { %>
 
-          <% if (producto.celiacos === true || producto.diabeticos === true){ %>
+          <% if (product.celiac === 1 || product.diabetic === 1){ %>
              
             <article>
-              <% if(producto.celiacos === true){ %>
+              <% if(product.celiac === 1){ %>
                 <img class="tacc" src="/images/sin-tacc.png">
               <% } %> 
+              <% if(product.diabetic === 1){ %>
+                <img class="lapdi" src="/images/lapdi.png">
+              <% } %>
                 <div class="product-caja-img">
-                  <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
+                  <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
                 </div>
                 <div class="product-info">
-                  <h4><%= producto.nombre %></h4>
-                  <a href="/products/detail/<%= producto.id %>">Ver detalles</a>
-                  <span>$<%= producto.precio %> </span>
+                  <h4><%= product.name %></h4>
+                  <a href="/products/detail/<%= product.id %>">Ver detalles</a>
+                  <span>$<%= product.price %></span>
                 </div>
               </article>
            <% } %>

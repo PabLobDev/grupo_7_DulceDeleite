@@ -3,15 +3,23 @@ const path = require('path');
 const categorias = require('../data/categorias.json')
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data','productos.json'),'utf-8'));
 
+const db = require('../database/models');
+
 module.exports = {
     home : (req,res) => {
-        return res.render('index',{
-            title : "Dulce Deleite",
-           productos,
-           categorias
+        db.Product.findAll({
+            order : [ 'name'],
+            limit : 15
         })
+        .then(products => {
+                res.render("index",{
+                    products,
+                    title: 'Dulce Deleite'
+                })
+            })
+            .catch(error => console.log(error))
     },
-
+    
     search : (req,res) => {
         if(req.query.busqueda){
             let resultado = productos.filter(producto => producto.nombre.toLowerCase().includes(req.query.busqueda.toLowerCase()))
