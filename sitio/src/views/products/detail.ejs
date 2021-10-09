@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head') %>
+    <%- include('../partials/head',{title : product.name}) %>
 
     <body>
         <%- include('../partials/header') %>
@@ -9,32 +9,32 @@
             <main class="detail">
                 <section>
                     <h2>
-                        <%= producto.nombre %>
+                        <%= product.name %>
                     </h2>
                     <div class="detalle">
 
                         <div>
-                            <img src="/images/productos/<%= producto.imagen %>">
+                            <img src="/images/productos/<%= product.image %>">
                         </div>
                         <div class="detalle-contenido">
                             <p class="description">
-                                <%= producto.descripcion %>
+                                <%= product.description %>
                             </p>
                             <div class="precio">
-                                <% if (producto.descuento> 0) { %>
+                                <% if (product.discount> 0) { %>
                                     <p>
-                                        <span>$<%= toThousand(producto.precio) %> </span>
+                                        <span>$<%= toThousand(product.price) %> </span>
                                         
                                         <b>
-                                            <%= producto.descuento %>% OFF
+                                            <%= product.discount %>% OFF
                                         </b>
                                     </p>
                                     <p>
-                                        $<%= precioFinal(producto.precio,producto.descuento) %>
+                                        $<%= precioFinal(product.price,product.discount) %>
                                     </p>
                                     <% }else{ %>
                                         <p>
-                                            $<%= precioFinal(producto.precio,producto.descuento) %>
+                                            $<%= precioFinal(product.price,product.discount) %>
                                         </p>
                                         <% } %>
                                     </div>

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productos.json'),'utf-8'));
-const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
+//*const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','productos.json'),'utf-8'));
+//*const categorias = require('../data/categorias.json');
 const db = require('../database/models');
 const capitalize = require('../utils/capitalize');
 const toThousand = require('../utils/toThousand')
@@ -9,16 +9,19 @@ const precioFinal = require('../utils/precioFinal');
 
 module.exports = {
     detail : (req,res) => {
-        let producto = productos.find(producto => producto.id === +req.params.id)
-            return res.render('products/detail',{
-                title : "Detalle del producto",
-                productos,
-                producto,
-                capitalize,
-                precioFinal,
-                toThousand
-            })
+        db.Product.findByPk(req.params.id, {
+            include : ['category']
+        })
+            .then(product => {
+                return res.render('products/detail',{
+                    product,
+                    capitalize,
+                    toThousand ,
+                    precioFinal 
 
+                })
+            })
+            .catch(error => console.log(error))
     },
     cart: (req, res) => {
         return res.render('products/cart',{
