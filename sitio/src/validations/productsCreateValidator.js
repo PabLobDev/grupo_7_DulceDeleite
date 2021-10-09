@@ -1,22 +1,22 @@
 const {body} = require('express-validator');
 
 module.exports = [
-    body('nombre')
+    body('name')
     .notEmpty().withMessage('El nombre es obligatorio'),
 
-    body('precio')
+    body('price')
     .notEmpty().withMessage('El precio es obigatorio'),
     
-    body('descripcion')
+    body('description')
     .isLength({
         min : 10
     }).withMessage('La descripción debe tener como mínimo 10 caracteres'),
 
-    body('categoria')
+    body('category')
     .notEmpty()
     .withMessage('Indica la categoría'),
 
-    body('descuento')
+    body('discount')
     .notEmpty().withMessage('Debe poner un número')
     
 ]
