@@ -13,7 +13,9 @@ router.get('/productsList', index);
 router.get('/edit/:id', edit);
 router.put('/update/:id',upload.single('image'),productsCreateValidator, update);
 
-router.delete('/delete:id', destroy)
+router.delete('/products/:id', destroy)
+
+
 
 
 

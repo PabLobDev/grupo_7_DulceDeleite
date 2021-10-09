@@ -96,10 +96,18 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
         return res.redirect('/admin/productsList')
 	},
-    destroy: (req,res) => {
-           let productosModificados = productos.filter(producto => producto.id !== +req.params.id)
-           fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productosModificados,null,2),'utf-8');
-            return res.redirect('/')
+    destroy: (req, res) => {
+
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(result => {
+                return res.redirect("/admin/productsList")
+            })
+            .catch((error) => {
+                res.send(error)
+            })
     }
-    
 }
