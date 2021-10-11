@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {index, create, store, edit, update, remove, destroy} = require('../controllers/adminController');
+const {index, create, store, edit, update, remove, destroy, admin} = require('../controllers/adminController');
 
 const upload = require('../middlewares/productImageStore');
 const productsCreateValidator = require('../validations/productsCreateValidator');
@@ -10,6 +10,7 @@ router
       .post('/productCreate',upload.single('image'),productsCreateValidator, store)
 
       .get('/productsList', index)
+      .get('/productsTable', admin)
 
       .get('/edit/:id', edit)
       .put('/update/:id',upload.single('image'),productsCreateValidator, update)

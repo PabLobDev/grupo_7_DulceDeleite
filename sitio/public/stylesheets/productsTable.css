@@ -1,0 +1,25 @@
+.container-fluid {
+    background: #F6EBCD;
+    max-width: 100%;
+	margin: 0 auto;
+    padding: 0; 
+    text-align: center;
+     
+}
+
+.container-fluid .btn{
+    border: sienna 2px solid;
+}
+
+.container-fluid img{
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.container-fluid .form-check-input{
+margin: 0 auto;
+}
+
+
+
+

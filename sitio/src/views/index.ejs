@@ -52,7 +52,7 @@
         <div class="glider-contain">
           <div class="glider">
             <% products.forEach(product => { %>
-              
+               <% if (product.price >= 900) { %>
                 <article>
                   <% if(product.celiac === 1){ %>
                     <img class="tacc" src="/images/sin-tacc.png">
@@ -69,8 +69,8 @@
                       <span>$<%= product.price %> </span>
                     </div>
                   </article>
-              
-             <% }) %>
+                <% } %>   
+            <% }) %>
           </div>
         
           <button aria-label="Previous" class="glider-prev"><i class="fas fa-chevron-circle-left"></i></button>
@@ -94,28 +94,28 @@
         <div class="glider-contain2">
           <div class="glider2">
             
-            <% products.forEach(product => { %>
-             <% if (product.price <= 1200) { %>
-                <article>
-                 <% if(product.celiac === 1){ %>
-                   <img class="tacc" src="/images/sin-tacc.png">
-                 <% } %> 
-                 <% if(product.diabetic === 1){ %>
-                   <img class="lapdi" src="/images/lapdi.png">
-                 <% } %> 
-                   <div class="product-caja-img">
-                     <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
-                   </div>
-                   <div class="product-info">
-                     <h4><%= product.name %></h4>
-                     <a href="/products/detail/<%= product.id %>">Ver detalles</a>
-                     <span>$<%= product.price %> </span>
-                   </div>
-                 </article>
-             <% } %>
-           <% }) %>
-
-          </div>  
+             <% products.forEach(product => { %>
+              <% if (product.price <= 1200) { %>
+                 <article>
+                  <% if(product.celiac === 1){ %>
+                    <img class="tacc" src="/images/sin-tacc.png">
+                  <% } %> 
+                  <% if(product.diabetic === 1){ %>
+                    <img class="lapdi" src="/images/lapdi.png">
+                  <% } %> 
+                    <div class="product-caja-img">
+                      <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
+                    </div>
+                    <div class="product-info">
+                      <h4><%= product.name %></h4>
+                      <a href="/products/detail/<%= product.id %>">Ver detalles</a>
+                      <span>$<%= product.price %> </span>
+                    </div>
+                  </article>
+              <% } %>
+            <% }) %>
+            
+          </div>
         
           <button aria-label="Previous" class="glider-prev2"><i class="fas fa-chevron-circle-left"></i></button>
           <button aria-label="Next" class="glider-next2"><i class="fas fa-chevron-circle-right"></i></button>

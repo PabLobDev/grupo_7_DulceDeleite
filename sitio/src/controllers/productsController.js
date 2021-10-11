@@ -47,7 +47,7 @@ module.exports = {
     
             .then(([postres]) => {
                 return res.render('products/productsCatPostres',{
-                    title : "postres",
+                    title : "Postres",
                     postres : postres.products,
                     
                 })
@@ -74,7 +74,7 @@ module.exports = {
     
             .then(([muffins]) => {
                 return res.render('products/productsCatMuffins',{
-                    title : "muffins cupcakes",
+                    title : "Muffins Cupcakes",
                     muffins : muffins.products,
                     
                 })
@@ -101,7 +101,7 @@ module.exports = {
     
             .then(([tortas]) => {
                 return res.render('products/productsCatTortas',{
-                    title : "tortas",
+                    title : "Tortas",
                     tortas : tortas.products,
                     
                 })

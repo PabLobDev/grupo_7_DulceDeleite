@@ -9,7 +9,7 @@
     background: var(--color-amarillo);
     border: 2px solid sienna;
     width: 70%;
-    height: 90vh;
+    height: 100vh;
     gap: 5px;
     margin: 20px auto;
     margin-top: 10px;
@@ -20,7 +20,6 @@
     font-size: 1.5rem;
     text-align: center;
     padding: 15px 100px;
-    margin-top: 135px;
     color: sienna; 
 }
 
@@ -44,6 +43,23 @@
     border: none;
     border-radius: 5px;
     height: 30px;
+}
+
+.img-edit{
+    display: flex;
+    width: 70%;
+    height: 110px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #F6EBCD;
+    object-fit: cover;
+}
+
+.img-edit img{
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .description-box {
@@ -123,7 +139,8 @@
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 20% 20% 20% 20% 20%;
-        width: 75%;
+        width: 90%;
+        height: 90vh;
     }
 
     .admin h1{
@@ -154,6 +171,8 @@
         height: 40px;
         font-size: 1.2rem;
     }
+
+    
 
     .box-form .input-box-form .error, .description-box .error {
         font-size: 14px;

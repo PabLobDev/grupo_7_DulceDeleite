@@ -7,6 +7,7 @@ const db = require('../database/models');
 const {validationResult} = require('express-validator');
 
 module.exports = {
+    
     index: (req,res) => {
         db.Product.findAll()
         .then(products => {
@@ -71,16 +72,26 @@ module.exports = {
 
     },
     
-    edit: (req, res) => {
-		let producto = productos.find(producto => producto.id === +req.params.id);
-		return res.render('./admin/productEdit', {
-            title : "Editar producto",
-			producto,
-            productos,
-            categorias,
-            capitalize,
-		})
+    edit : (req,res) => {
+        let categories = db.Category.findAll({
+            order : [
+                ['name']
+            ]
+        })
+        let product = db.Product.findByPk(req.params.id, {
+            include : ['category']
+        })
+        Promise.all(([categories, product]))
+            .then(([categories, product]) => {
+                return res.render('admin/productEdit',{
+                    categories,
+                    product,
+                    capitalize
+                })
+            })
+            .catch(error => console.log(error))
 	},
+
 	update: (req, res) => {
 		const {nombre, precio, descuento, descripcion, categoria} = req.body;
 
@@ -96,6 +107,7 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
         return res.redirect('/admin/productsList')
 	},
+
     remove: (req, res) => {
         db.Product.findByPk(req.params.id)
         .then(Product => res.render('./admin/productDelete',{
@@ -104,6 +116,7 @@ module.exports = {
         
         .catch(error => console.log(error))
     },
+
     destroy: (req, res) => {
         db.Product.destroy(
             {
@@ -118,5 +131,22 @@ module.exports = {
          })
 
         .catch(error => console.log(error))
+    },
+
+    admin: (req, res) => {
+        db.Product.findAll({
+            order : [
+                ['name']
+            ],
+            include : ['category']
+            
+        })
+        .then(products=> {
+                res.render("admin/productsTable",{
+                    products,
+                    title: 'Tabla de productos'
+                })
+            })
+            .catch(error => console.log(error))
     }
 }
