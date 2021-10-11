@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('./partials/head') %> 
+
+    <body>
+    
+    <%- include('./partials/header') %> 
+<main>  
+    <br>
+    <h1>Estas seguro que queres borrar este producto: <%= Product.name %>???</h1>
+    <br>
+        <form action="/admin/delete/<%= Product.id %>?_method=DELETE" method="POST">
+
+            <button class="botonBorrar" type="submit">Borrar el producto</button>
+        
+            <a  class="botonVolver" href="/admin/productsList">Listado de Productos</a></p>
+
+        </form>
+    
+</main>  
+</body>
+
+</html>

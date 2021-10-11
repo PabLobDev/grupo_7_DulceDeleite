@@ -25,9 +25,7 @@
               </div>
               <div class="product-info">
                 <h4><%= product.name %></h4>
-                <form action="/admin/products/<%= product.id %>?_method=DELETE" method="POST">
-                  <button class="btn btn-sm btn-danger" type="submit">Eliminar</a></button>
-              </form>
+                <a href="/admin/remove/<%= product.id %> ">Eliminar</a>
                 <a  href="/admin/edit/<%= product.id %>">Editar</a>
               </div>
             </article>

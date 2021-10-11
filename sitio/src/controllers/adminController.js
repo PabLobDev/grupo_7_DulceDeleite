@@ -96,18 +96,27 @@ module.exports = {
         fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
         return res.redirect('/admin/productsList')
 	},
+    remove: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then(Product => res.render('./admin/productDelete',{
+            Product
+        }))
+        
+        .catch(error => console.log(error))
+    },
     destroy: (req, res) => {
-
-        db.Product.destroy({
-            where: {
-                id: req.params.id
+        db.Product.destroy(
+            {
+                where : {
+                    id : req.params.id
+                }
             }
-        })
-            .then(result => {
-                return res.redirect("/admin/productsList")
-            })
-            .catch((error) => {
-                res.send(error)
-            })
+        )
+        .then(product => {  
+            console.log(product);
+         return res.redirect('/admin/productsList')
+         })
+
+        .catch(error => console.log(error))
     }
 }
