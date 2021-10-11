@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-<%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
-  <body>
+    <body>
+        <%- include('../partials/header') %>
+         <main>
 
-    <%- include('../partials/header') %> 
-    
-    <main class="main-products-views">
-     
-      <section class="products-destac">
-        <h2>Tu busqueda</h2>
-        
-        <% productos.forEach(producto => { %>
-            <article>
-                <div class="product-caja-img">
-                  <img src="/images/productos/<%=producto.imagen%>" height="349px" alt="" />
-                </div>
-                <div class="product-info">
-                  <h4><%= producto.nombre %></h4>
-                  <a href="/products/detail/<%= producto.id %>">Ver detalles</a>
-                  <span>$<%= producto.precio %> </span>
-                </div>
-              </article>
-        <% }) %>
-      
+                <section >
+                  <br>
+                    <h3 class="w-100"><%= title %> : <%= busqueda %>  </h3>
 
-      </section>
-    </main>
-    <%- include('../partials/footer') %>
-  </body>
+                    <% if (products.length > 0) { %>
+
+                    <% products.forEach(product=> { %>
+                        <article>
+                            <h4>
+                                <%= product.name %>
+                            </h4>
+                            <p>
+                                <%= product.description %>
+                            </p>
+                            <div class="d-flex justify-content-around flex-wrap">
+                                <a class="btn btn-sm btn-primary" href="/products/detail/<%= product.id %>">ver
+                                    más</a>
+                                
+                            </div>
+
+                        </article>
+
+                        <% }) %>
+
+                        <% }else{ %>
+                            <p>No hay resultados para tu búsqueda </p>
+                        <% } %>
+
+                 </section>
+            </main>
+            <%- include('../partials/footer') %>
+          
+            
+
+    </body>
+
 </html>
