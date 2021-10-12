@@ -51,13 +51,35 @@
     "avatar": "avatar_default.png"
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "Joaquin",
     "last_name": "Leguizamón",
     "age": 18,
     "city": "CABA",
     "email": "joaquinleguizamon03@gmail.com",
     "pass": "$2a$10$DGHnUGpjPXXhGjdrd6WrcOhydqouIi7K1gcSJDoskV.onQ4RHoC86",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 7,
+    "name": "mateo",
+    "last_name": "mercado",
+    "age": 8,
+    "city": "lanus",
+    "email": "mateom@gmail.com",
+    "pass": "$2a$10$hOnxiKlaB0.9RZlK24WiKOBRq40PlxvmYP.KiTdrUcMChyecTrlPK",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  },
+  {
+    "id": 8,
+    "name": "mateo",
+    "last_name": "mercado",
+    "age": 8,
+    "city": "Lomas De Zamora",
+    "email": "mateo@gmail.com",
+    "pass": "$2a$10$Y.GMDXLD18vEWY5.FYEfDeHzBBpoY5aGeKovXeWOt92qPzkdXQvoy",
     "rol": "user",
     "avatar": "avatar_default.png"
   }
