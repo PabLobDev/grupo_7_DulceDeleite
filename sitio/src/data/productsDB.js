@@ -258,5 +258,70 @@ module.exports = [
       "image": "nuez.jpg",
       "createdAt" : new Date,
       "updatedAt" : new Date
+    },
+    {
+      
+      "name": "Chocotorta",
+      "price": 980,
+      "description": "Está hecha con 3 ingredientes argentinos: galletitas de chocolate(chocolinas), dulce de leche y queso crema.",
+      "categoryId": 1,
+      "discount": 0,
+      "diabetic": false,
+      "celiac": false,
+      "image": "chocotorta.jpg",
+      "createdAt" : new Date,
+      "updatedAt" : new Date
+    },
+    {
+      
+      "name": "Muffins navideños",
+      "price": 1350,
+      "description": "Crema helada con almendras partidas y crocante de almendras.",
+      "categoryId": 3,
+      "discount": 25,
+      "diabetic": false,
+      "celiac": true,
+      "image": "muffins-arbolito.jpg",
+      "createdAt" : new Date,
+      "updatedAt" : new Date
+    },
+    {
+      
+      "name": "Arcoiris",
+      "price": 1645,
+      "description": "Torta elaborada con bizcochuelo de colores y cobertira de queso crema.",
+      "categoryId": 2,
+      "discount": 15,
+      "diabetic": true,
+      "celiac": false,
+      "image": "arcoiris.png",
+      "createdAt" : new Date,
+      "updatedAt" : new Date
+    },
+    {
+      
+      "name": "Moka",
+      "price": 2170,
+      "description": "Es una torta formada por varias capas de bizcochuelo embebidas con jaraba al café y sparadas por capas de crema o chocolate",
+      "categoryId": 2,
+      "discount": 5,
+      "diabetic": false,
+      "celiac": false,
+      "image": "moka.jpg",
+      "createdAt" : new Date,
+      "updatedAt" : new Date
+    },
+    {
+      
+      "name": "Chocofiesta",
+      "price": 940,
+      "description": "Especial para los amantes del chocolate, un bizcuchuelo de chocolate, relleno con una capa y envuelto con mouse de cacao, bañado en chocolate rayado.",
+      "categoryId": 2,
+      "discount": 0,
+      "diabetic": false,
+      "celiac": false,
+      "image": "chocolatera.jpg",
+      "createdAt" : new Date,
+      "updatedAt" : new Date
     }
   ]

@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const capitalize = require('../utils/capitalize');
-const productos = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data','productos.json'),'utf-8'));
-const categorias = require('../data/categorias.json');
 const db = require('../database/models');
 const {validationResult} = require('express-validator');
 
@@ -92,21 +90,58 @@ module.exports = {
             .catch(error => console.log(error))
 	},
 
-	update: (req, res) => {
-		const {nombre, precio, descuento, descripcion, categoria} = req.body;
+	update : (req,res) => {
+        let errors = validationResult(req);
 
-		productos.map(producto => {
-			if(producto.id === +req.params.id){
-				producto.nombre = nombre;
-				producto.precio = +precio;
-				producto.descuento = +descuento;
-				producto.categoria = categoria;
-				producto.descripcion = descripcion;		
-			}
-		})
-        fs.writeFileSync(path.join(__dirname,'..','data','productos.json'),JSON.stringify(productos,null,2),'utf-8');
-        return res.redirect('/admin/productsList')
-	},
+        if(errors.isEmpty()){
+            
+            const {name,price,discount,description,category,celiac,diabetic} = req.body;
+             
+            db.Product.update(
+                {
+                name : name.trim(),
+                price : +price,
+                discount : +discount,
+                description : description.trim(),
+                categoryId : category,
+                celiac : celiac ? true : false,
+                diabetic : diabetic ? true : false,
+                image: req.file ? req.file.filename : req.body.image
+                },
+                {
+                    where : {
+                        id : req.params.id
+                    }
+                }
+               )
+                .then(response => {
+                    console.log(response)
+                    return res.redirect('/admin/productsTable')
+                })
+                .catch(error => console.log(error))
+
+           
+        }else{
+            let categories = db.Category.findAll({
+                order : [
+                    ['name']
+                ]
+            })
+            let product = db.Product.findByPk(req.params.id, {
+                include : ['category']
+            })
+            Promise.all(([categories, product]))
+                .then(([categories, product]) => {
+                    return res.render('admin/productEdit',{
+                        categories,
+                        product,
+                        errores : errors.mapped()
+                    })
+                })
+                .catch(error => console.log(error))
+        }
+      
+    },
 
     remove: (req, res) => {
         db.Product.findByPk(req.params.id)
@@ -118,6 +153,13 @@ module.exports = {
     },
 
     destroy: (req, res) => {
+
+        db.Product.findByPk(req.params.id)
+        .then(product => {
+                if(fs.existsSync(path.join(__dirname,'../../public/images/productos',product.image))){
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/productos',product.image))   
+            }});
+
         db.Product.destroy(
             {
                 where : {
