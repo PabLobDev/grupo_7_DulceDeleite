@@ -2,12 +2,12 @@
 
 const rols = [
   {
-    name : 'admin',
+    name : 'user',
     createdAt : new Date,
     updatedAt : new Date
   },
   {
-    name : 'user',
+    name : 'admin',
     createdAt : new Date,
     updatedAt : new Date
   },

@@ -1,102 +1,55 @@
-module.exports[{
-    "id": 1,
-    "name": "Juana",
-    "last_name": "Pascquale",
-    "email": "juanapasq@gmail.com",
-    "password": "wQqLEdYU",
-    "category": "user",
-    "image": "user_1.jpg",
-    "createdAt" : new Date,
-      "updatedAt" : new Date
-  },
+module.exports = [ 
+
   {
-    "id": 2,
-    "name": "Hernan",
-    "last_name": "Rodrigo",
-    "email": "Hernirodri@outlook.es",
-    "password": "cQflRqnRJ2Z",
-    "category": "user",
-    "image": "user_2.jpg",
-    "createdAt" : new Date,
-      "updatedAt" : new Date
-  },
-  {
-    "id": 3,
+    
     "name": "pablo",
-    "last_name": "Lobai",
+    "surname": "Lobai",
     "age": 38,
     "city": "lanus",
     "email": "pablolobai@gmail.com",
     "pass": "$2a$10$K7ZOt3qCGjOPpRx7Pi2h/.mVF511rowHUsMu4jPvQ5po2FJ9DsTSi",
-    "rol": "admin",
-    "avatar": "avatar_default.png",
-    "createdAt" : new Date,
-      "updatedAt" : new Date
-  },
-  {
-    "id": 4,
-    "name": "Paulina",
-    "last_name": "Campos",
-    "age": 38,
-    "city": "Lanus",
-    "email": "paulina@gmail.com",
-    "pass": "$2a$10$drjfQnY9GLShwL24/gPT7eUMexgYGyQ7qW//EEJyz25lO1vSkg2FW",
-    "rol": "admin",
-    "avatar": "avatar_default.png",
-    "createdAt" : new Date,
-      "updatedAt" : new Date
-  },
-  {
-    "id": 5,
-    "name": "Carlos",
-    "last_name": "Perez",
-    "age": 40,
-    "city": "Lanus",
-    "email": "carlosperez@gmail.com",
-    "pass": "$2a$10$sdMT23T3h9jcxGjm4p0FReQPNVSfbBs27p508bq0fCmZ4WpioCVQ2",
-    "rol": "user",
-    "avatar": "avatar_default.png",
-    "createdAt" : new Date,
-      "updatedAt" : new Date
-  },
-  {
-    "id": 6,
-    "name": "Joaquin",
-    "last_name": "Leguizamón",
-    "age": 18,
-    "city": "CABA",
-    "email": "joaquinleguizamon03@gmail.com",
-    "pass": "$2a$10$DGHnUGpjPXXhGjdrd6WrcOhydqouIi7K1gcSJDoskV.onQ4RHoC86",
-    "rol": "admin",
+    "rolId": 2,
     "avatar": "avatar_default.png",
     "createdAt" : new Date,
     "updatedAt" : new Date
   },
   {
-    "id": 7,
-    "name": "mateo",
-    "last_name": "mercado",
-    "age": 8,
-    "city": "lanus",
-    "email": "mateom@gmail.com",
-    "pass": "$2a$10$hOnxiKlaB0.9RZlK24WiKOBRq40PlxvmYP.KiTdrUcMChyecTrlPK",
-    "rol": "user",
+    
+    "name": "Paulina",
+    "surname": "Campos",
+    "age": 38,
+    "city": "Lanus",
+    "email": "paulina@gmail.com",
+    "pass": "$2a$10$drjfQnY9GLShwL24/gPT7eUMexgYGyQ7qW//EEJyz25lO1vSkg2FW",
+    "rolId": 2,
     "avatar": "avatar_default.png",
     "createdAt" : new Date,
-      "updatedAt" : new Date
+    "updatedAt" : new Date
   },
   {
-    "id": 8,
-    "name": "mateo",
-    "last_name": "mercado",
-    "age": 8,
-    "city": "Lomas De Zamora",
-    "email": "mateo@gmail.com",
-    "pass": "$2a$10$Y.GMDXLD18vEWY5.FYEfDeHzBBpoY5aGeKovXeWOt92qPzkdXQvoy",
-    "rol": "user",
+    
+    "name": "Carlos",
+    "surname": "Perez",
+    "age": 40,
+    "city": "Lanus",
+    "email": "carlosperez@gmail.com",
+    "pass": "$2a$10$sdMT23T3h9jcxGjm4p0FReQPNVSfbBs27p508bq0fCmZ4WpioCVQ2",
+    "rolId": 1,
     "avatar": "avatar_default.png",
     "createdAt" : new Date,
-      "updatedAt" : new Date
-
-}
+    "updatedAt" : new Date
+  },
+  {
+    
+    "name": "Joaquin",
+    "surname": "Leguizamón",
+    "age": 18,
+    "city": "CABA",
+    "email": "joaquinleguizamon03@gmail.com",
+    "pass": "$2a$10$DGHnUGpjPXXhGjdrd6WrcOhydqouIi7K1gcSJDoskV.onQ4RHoC86",
+    "rolId": 2,
+    "avatar": "avatar_default.png",
+    "createdAt" : new Date,
+    "updatedAt" : new Date
+  }
 ]
