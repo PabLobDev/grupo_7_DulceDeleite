@@ -61,31 +61,39 @@ module.exports = {
                      email
                  }
              })
-             .then(user => {
 
+             .then(user => {
             req.session.userLogin = {
                 id : user.id,
                 name : user.name,
                 avatar : user.avatar,
                 rolId : user.rolId
             }
-             if(req.body.recordar){
-                res.cookie('ddLogin', req.session.userLogin, {maxAge : 2000 * 60 })
+             if(recordar){
+                res.cookie('ddLogin', req.session.userLogin, {maxAge : 20000 * 100 })
             }
             res.redirect('../')
         })
         }else{
             return res.render('users/login',{
-            title : "Intentalo de nuevo",
+            title : 'Algo falló',
             errors : errors.mapped()
         })}
     },
 
     profile : (req,res) => {
-        res.render('users/profile',{
-            user : users.find(user => user.id === +req.session.userLogin.id)
-        })
-    },
+ 
+        db.User.findByPk(req.params.id)
+            
+           .then((user) => {
+              
+               return res.render('users/profile',{
+                   user
+               })
+           })
+           .catch(error => console.log(error))
+ 
+   },
    
     
     logout : (req,res) => {

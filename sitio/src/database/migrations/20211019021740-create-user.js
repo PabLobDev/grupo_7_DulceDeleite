@@ -36,7 +36,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      rolID: {
+      rolId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references : {

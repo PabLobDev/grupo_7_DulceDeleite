@@ -12,11 +12,11 @@
             <nav class="menu-desplegable">
                 <ul>
                     <% if (locals.userLogin) { %>
-                        <% if (userLogin.rol === 2) { %>
+                        <% if (userLogin.rolId === 2) { %>
                             <li><a href="/">Inicio</a></li>
                             <li><a href="/admin/productsTable">Administración</a></li>
                             <li><a href="/users/logout">Cerrar sesión</a></li>
-                        <% }else if(userLogin.rol === 1) { %>
+                        <% }else if(userLogin.rolId === 1) { %>
                             <li><a href="/">Inicio</a></li>
                             <li><a href="/users/profile">Mi perfil</a></li>
                             <li><a href="/users/logout">Cerrar sesión</a></li>
@@ -46,11 +46,11 @@
                     
                     
                 <% if (locals.userLogin) { %>
-                    <% if (userLogin.rol === 2) { %>
+                    <% if (userLogin.rolId === 2) { %>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/admin/productsTable">Administrar</a></li>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
-                    <% }else if(userLogin.rol === 1) { %>
+                    <% }else if(userLogin.rolId === 1) { %>
                         <li><a href="/">Inicio</a></li>
                         <li><a href="/users/profile">Mi perfil</a></li>
                         <li><a href="/users/logout">Cerrar sesión</a></li>
