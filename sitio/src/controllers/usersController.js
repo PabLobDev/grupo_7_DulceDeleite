@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const {validationResult} = require('express-validator');
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
@@ -164,5 +166,23 @@ updateProfile : (req,res) => {
 logout : (req,res) => {
         req.session.destroy();
         return res.redirect('/')
+    },
+destroy: (req,res) => {
+
+    db.User.findByPk(req.session.userLogin.id)
+    .then(user => {
+            if(fs.existsSync(path.join(__dirname,'../../public/images/users',userLogin.avatar))){
+                fs.unlinkSync(path.join(__dirname,'../../public/images/users',userLogin.avatar))   
+        }});
+        db.User.destroy({
+            where : {
+                id : req.session.userLogin.id
+            }
+        }).then( user => {
+            
+            req.session.destroy()
+        res.clearCookie("remenber")
+        return res.redirect('/')
+        }).catch(error => console.log(error))
     }
 }
