@@ -66,6 +66,10 @@ module.exports = {
             req.session.userLogin = {
                 id : user.id,
                 name : user.name,
+                surname : user.surname,
+                age : user.age,
+                city : user.city,
+                email : user.email,
                 avatar : user.avatar,
                 rolId : user.rolId
             }
@@ -94,9 +98,70 @@ module.exports = {
            .catch(error => console.log(error))
  
    },
+
+   editProfile : (req,res) => {
+     
+    db.User.findByPk(req.session.userLogin.id)
    
-    
-    logout : (req,res) => {
+    .then((user) => {
+          
+       return res.render('users/editProfile',{
+           user,
+           title :'Editar perfil'
+       })
+   })
+   .catch(error => console.log(error))
+
+},
+
+updateProfile : (req,res) => {
+   let errors = validationResult(req);
+  
+   if(errors.isEmpty()){
+       
+       const {name,surname,age,city,email,pass} = req.body;
+        
+       db.User.update(
+           {
+           name : name.trim(),
+           surname : surname.trim(),
+           age : +age,
+           city : city.trim(),
+           email : email.trim(),
+           pass : req.body.pass ? bcrypt.hashSync(pass.trim(),10) : req.session.userLogin.pass,
+           avatar: req.file ? req.file.filename : req.body.avatar
+           },
+           {
+               where : {
+                   id : req.session.userLogin.id
+               }
+           }
+          )
+           .then(() => {
+               req.session.destroy();
+               return res.redirect('/')
+           })
+           .catch(error => console.log(error))
+
+      
+   }else{
+      
+       db.User.findByPk(req.session.userLogin.id)
+   
+    .then((user) => {
+          
+       return res.render('users/editProfile',{
+           user,
+           title :'Editar perfil',
+           errores : errors.mapped()
+       })
+   })
+   .catch(error => console.log(error))
+   }
+ 
+},
+     
+logout : (req,res) => {
         req.session.destroy();
         return res.redirect('/')
     }

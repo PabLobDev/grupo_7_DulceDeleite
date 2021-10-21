@@ -13,33 +13,36 @@
                     <div>
                     <label>Nombre:</label>
                     <span>
-                        <%= user.name %>
+                        <%= userLogin.name %>
                     </span>
                 </div>
                 <div>
-                    <label>Apellidos:</label>
+                    <label>Apellido:</label>
                     <span>
-                        <%= user.last_name %>
+                        <%= userLogin.surname%>
                     </span>
                 </div>
                 <div>
                     <label>Edad:</label>
                     <span>
-                        <%= user.age %>
+                        <%= userLogin.age %>
                     </span>
                 </div>
                 <div>
                     <label>Ciudad:</label>
                     <span>
-                        <%= user.city %>
+                        <%= userLogin.city %>
                     </span>
                 </div>
                 <div>
                     <label>Email</label>
                     <span>
-                        <%= user.email %>">
+                        <%= userLogin.email %>">
                     </span>
                 </div>
+
+                <a  href="/users/edit">Editar mi perfil</a>
+                
                 </section>
             </main>
             <%- include('../partials/footer') %>

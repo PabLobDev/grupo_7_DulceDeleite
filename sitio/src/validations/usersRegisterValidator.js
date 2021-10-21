@@ -1,10 +1,11 @@
 const {check, body} = require('express-validator');
+const db = require('../database/models');
 
 module.exports = [
     body('name')
     .notEmpty().withMessage('El nombre es obligatorio'),
 
-    body('last_name')
+    body('surname')
     .notEmpty().withMessage('El apellido es obligatorio'),
 
     body('age')
@@ -14,7 +15,19 @@ module.exports = [
     .notEmpty().withMessage('Debe indicar la ciudad'),
 
     body('email')
-    .isEmail().withMessage('Ingrese un email válido'),
+    .isEmail().withMessage('Ingrese un email válido')
+    .custom(value => {
+        return db.User.findOne({
+            where: {
+                email: value
+            }
+        })
+            .then(user => {
+                if (user) {
+                    return Promise.reject('El email ya se encuentra registrado')
+                }
+            })
+    }),
 
     body('pass')
     .isLength({
