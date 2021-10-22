@@ -1,12 +1,12 @@
 .profile {
-    background-color: pink ;
+    background-color: pink;
 }
 .profile h1{
     font-family: var(--font-titulos);
     font-weight: bold;
     padding-top: 150px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-size: 30px;
 }
 .profile .datos-perfil{
@@ -17,10 +17,37 @@
 .profile .datos-perfil label{
     font-size: 20px;
     font-weight: bold;
-    padding: 15px;
+    padding: 15px 0 ;
+    color: sienna;
 }
 .profile .datos-perfil span{
     font-size: 22px;
+}
+
+.profile .edit-btn{
+    margin: 20px 0;
+}
+
+.profile .edit-btn a{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: wheat;
+    margin: 0 auto;
+    color: sienna;
+    font-size: 1.1rem;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    padding: 8px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.profile .edit-btn a:hover{
+    background-color: sienna;
+    color:wheat;
+    transition: all .5s;
 }
 /*tablet*/
 @media (min-width:768px){

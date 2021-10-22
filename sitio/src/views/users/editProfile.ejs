@@ -31,22 +31,22 @@
                 <input type="text" id="city" name="city" value="<%= user.city %>" >
                 <span class="error"> <%= locals.errores && errores.City ? errores.City.msg : null %> </span>
             </div>
-            <div class="input-box-form1">
+            <div class="input-box-form">
                 <label>Email</label>
                 <input type="email" name="email" id="email" value="<%= user.email %>" readonly>
                 <span class="error"> <%= locals.errores && errores.email ? errores.email.msg : null %></span>
             </div>
-            <div class="input-box-form1">
+            <div class="input-box-form">
                 <label>Contraseña</label>
                 <input type="password" name="passOld" id="passOld">
                 <span class="error"> <%= locals.errores && errores.passOld ? errores.passOld.msg : null %></span>
             </div>
-            <div class="input-box-form1">
+            <div class="input-box-form">
                 <label>Nueva contraseña</label>
                 <input type="password" name="pass" id="pass">
                 <span class="error"> <%= locals.errores && errores.pass ? errores.pass.msg : null %></span>
             </div>
-            <div class="input-box-form1">
+            <div class="input-box-form">
                 <label>Confirma contraseña</label>
                 <input type="password" name="pass2" id="pass2">
                 <span class="error"> <%= locals.errores && errores.pass2 ? errores.pass2.msg : null %></span>
@@ -58,12 +58,17 @@
                 <label for="inputAvatar">Cambiar avatar</label>
                 <input type="file" id="inputAvatar" name="avatar" accept="image/*">
             </div>
-           
-            <div class="guardar">
+            <div class="edit-guardar">
                 <button type="submit">Actualizar</button>
             </div>
+        </form>
+            <div class="edit-guardar">
+                <form action="/users/delete?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar cuenta</button>
+                </form>
+            </div>
         </div>
-    </form>
+    
 </main>
     
 </body>

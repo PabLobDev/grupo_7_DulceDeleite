@@ -4,7 +4,9 @@
     <header class="admin-header">
         <div class="logo">
             <% if (locals.userLogin) { %>
+            <p class="welcome"><%= userLogin.name%></p>
             <img src="/images/users/<%= userLogin.avatar %>" alt="">
+            <p class="welcome"><%= userLogin.surname %></p>
         <% }else{ %>
             <a href="/"><img src="/images/logodd.jpg"></a>
         <% } %> </div>

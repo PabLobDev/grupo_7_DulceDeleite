@@ -9,7 +9,7 @@
     background: var(--color-amarillo);
     border: 2px solid sienna;
     width: 70%;
-    height: 100vh;
+    height: 1100px;
     gap: 5px;
     margin: 20px auto;
     margin-top: 10px;
@@ -64,11 +64,12 @@
 }
 
 .description-box {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 120px;
 }
 
 .description-box label {
@@ -76,8 +77,9 @@
 }
 
 .description-box textarea {
+    
     width: 80%;
-    height: 70%;
+    height: 100%;
     margin: 0 auto;
     border: none;
     border-radius: 5px;
@@ -103,13 +105,19 @@
     padding-left: 2px;
 }
 
-.guardar {
-    margin: 0 auto; 
+.edit-guardar {
+    margin: 0 auto;
+    
 }
 
-.box-form button{
-    width: 120px;
-    height: 30px;
+.edit-guardar form button {
+    width: 140px;
+    height: 40px;
+}
+
+.box-form button {
+    width: 140px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     background-color: wheat;
@@ -139,7 +147,7 @@
     .box-form{
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 15% 15% 15% 15% 20% 20%;
+        grid-template-rows: 15% 15% 15% 17% 20% 18%;
         width: 90%;
         height: 90vh;
     }

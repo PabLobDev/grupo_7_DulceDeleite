@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('../partials/head', {title: "Perfil" }) %>
+<%- include('../partials/head', {title: "Mi perfil" }) %>
 
     <body>
 
         <%- include('../partials/header') %>
-
-            <main class="profile">
+        
+         <main class="profile">
                 <h1>Mi Perfil</h1>
-
-                <section class="datos-perfil">
+               
+              <section class="datos-perfil">
+                
                     <div>
                     <label>Nombre:</label>
                     <span>
-                        <%= userLogin.name %>
+                    <%= userLogin.name %>
                     </span>
+                    
                 </div>
                 <div>
                     <label>Apellido:</label>
                     <span>
-                        <%= userLogin.surname%>
+                        <%= userLogin.surname %>
                     </span>
                 </div>
                 <div>
@@ -35,22 +37,19 @@
                     </span>
                 </div>
                 <div>
-                    <label>Email</label>
+                    <label>Email:</label>
                     <span>
-                        <%= userLogin.email %>">
+                        <%= userLogin.email %>
                     </span>
                 </div>
-
-                <a  href="/users/edit">Editar mi perfil</a>
-                <div>
-                    <form action="/users/delete/<%= userLogin.id %>?_method=DELETE" method="POST">
-        
-                        <button type="submit">Eliminar Usuario</button>
-            
-                    </form>
+                <div class="edit-btn">
+                <a  href="/users/edit">Editar perfil</a>
                 </div>
+                
                 </section>
+             
             </main>
+        
             <%- include('../partials/footer') %>
     </body>
 

@@ -11,10 +11,25 @@ header{
 header .logo {
     text-align: center;
     padding-top: 7px;
+    display: flex;
+    justify-content: center;
 }
 header .logo img{
     width: 80px;
     height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+header .logo .welcome{
+    font-family: var(--font-titulos);
+    font-size: 22px;
+    font-weight: bold;
+    height: 40px;
+    color: sienna;
+    margin: 0;
+    align-self: center;
 }
 /*contenedor*/
 header .header-container{
@@ -180,7 +195,7 @@ header .menu-derecho nav ul li a{
     font-family: var(--font-titulos);
     font-weight: bold;
     color: sienna;
-    padding-right: 5px;
+    padding-right: 4px;
 }
 header .carrito-desktop i{
     color:sienna;
