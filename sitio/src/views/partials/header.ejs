@@ -1,11 +1,19 @@
 <header>
     <div class="logo">
-        <% if (locals.userLogin) { %>
-            <img width="150" height="100" src="/images/users/<%= userLogin.avatar %>" alt="">
-            <p class="welcome">Hola <%= userLogin.name %>!!</p>
-    <% }else{ %>
-        <a href="/"><img src="/images/logodd.jpg"></a>
-    <% } %> </div>
+         <% if (locals.userLogin) { %>
+            <% if (userLogin.rolId === 2) { %>
+                <img width="150" height="100" src="/images/users/admin.jpg" alt="">
+                <p class="welcome">Hola <%= userLogin.name %>!!</p>
+            <% }else if(userLogin.rolId === 1) { %>
+                <img width="150" height="100" src="/images/users/<%= userLogin.avatar %>" alt="">
+                <p class="welcome">Hola <%= userLogin.name %>!!</p>
+             <% }%>
+          <% } %>
+    
+          <% if (!locals.userLogin) { %>
+            <a href="/"><img src="/images/logodd.jpg"></a>
+          <% } %> 
+    </div>
     <section class="header-container">
         <div class="menu-hamburguesa">
             <input type="checkbox" id="menu">
