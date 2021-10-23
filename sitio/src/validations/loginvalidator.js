@@ -13,7 +13,7 @@ module.exports = [
         })
             .then(user => {
                 if(!user || !bcryptjs.compareSync(req.body.pass, user.pass)){
-                    return Promise.reject('Email o contraseña incorrectas')
+                    return Promise.reject()
                 }
             }).catch( () => Promise.reject('Credenciales inválidas'))
     })

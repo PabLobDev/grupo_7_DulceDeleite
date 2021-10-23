@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  
     <%- include('../partials/head') %> 
-  <body>
-    
+<body class="login">
+
     <%- include('../partials/header') %>
-    <form method="POST">
-<div class="caja-login">
-  <h1>Login</h1>
-  <div class="user-pass">
-    <i class="fas fa-user"></i>
-    <input type="text" name="email" id="email" placeholder="Email">
-  </div>
-  <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+    
+    <main class="login">
+        <h1>Ingresa</h1>
 
-  <div class="user-pass">
-    <i class="fas fa-lock"></i>
-    <input type="password" name="pass" id="pass" placeholder="Contraseña">
-  </div>
-  <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
-
-  <div class="mb-3 form-check">
-   <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordar">
-   <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-  </div>
-  
-  <input type="submit" class="btn">
-</div>
-</form>
-<%- include('../partials/footer') %> 
-  </body>
+      <form action="" method="POST">
+         <div class="box-form-login">
+            
+            <div class="input-box-form-login">
+                <i class="fas fa-user"></i>
+                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null  %>">
+                <span class="errors"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
+            </div>
+            <div class="input-box-form-login">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                <span class="errors"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+            </div>
+            
+                <div class="checkbox">
+                     <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recordarme</label>
+                </div>              
+            <div class="send">
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>   
+</body>
 </html>

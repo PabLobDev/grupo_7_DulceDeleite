@@ -46,7 +46,7 @@ module.exports = {
         }else{
             return res.render('users/register',{
                 title : "Algo falló",
-                errores : errors.mapped()
+                errors : errors.mapped()
             })
         }
     },
@@ -89,7 +89,7 @@ module.exports = {
                 }else{
                     return res.render('users/login',{
                         title : 'Algo falló',
-                        errores : errors.mapped()
+                        errors : errors.mapped()
                     })
                 }
     },
@@ -162,7 +162,7 @@ module.exports = {
             return res.render('users/editProfile',{
                 user,
                 title :'Editar perfil',
-                errores : errors.mapped()
+                errors : errors.mapped()
             })
         })
         .catch(error => console.log(error))

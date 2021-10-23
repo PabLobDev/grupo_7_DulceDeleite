@@ -1,41 +1,106 @@
-@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-
-.caja-login{
-  width: 280px;
-  margin: 20px auto;
-  padding-top: 135px;
-  color: black;
-}
-.caja-login h1{
-  float: left;
-  font-size: 40px;
-  border-bottom: 6px solid #ff776e;
-  margin-bottom: 50px;
-  padding: 13px 0;
-}
-.user-pass{
-  width: 100%;
-  overflow: hidden;
-  font-size: 20px;
-  padding: 8px 0;
-  margin: 8px 0;
-  border-bottom: 1px solid #ff776e;
-}
-.user-pass i{
-  width: 26px;
-  float: left;
-  text-align: center;
-}
-.user-pass input{
-  border: none;
-  outline: none;
-  background: none;
-  color: black;
-  font-size: 18px;
+.box-form-login{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: sienna;
+  font-family: var(--font-secundaria);
+  background: var(--color-amarillo);
+  border: 2px solid sienna;
   width: 80%;
-  float: left;
-  margin: 0 10px;
+  height: 55vh;
+  gap: 5px;
+  margin: 70px auto;
+  margin-top: 30px;
 }
+
+.login h1{
+  font-family: var(--font-secundaria);
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 15px 100px;
+  margin-top: 135px;
+  color: sienna; 
+}
+
+div.input-box-form-login {
+  width: 80%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #F6EBCD;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.input-box-form-login input {
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 60%;
+  margin-left: 10px;
+}
+
+
+.box-form-login .checkbox {
+  margin: 0 auto;
+  height: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-form-login .checkbox input {
+  width: 16px;
+  height: 16px; 
+}
+
+.box-form-login .checkbox label {
+  padding-left: 2px;
+  font-size: 16px;
+}
+
+.send {
+  margin: 0 auto; 
+}
+
+.box-form-login button{
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: wheat;
+  margin: 0 auto;
+  color: sienna;
+  font-size: 1rem;
+  font-family: var(--font-secundaria);
+  font-weight: bold;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.box-form-login button:hover {
+  background-color: sienna;
+  color:wheat;
+  transition: all .5s;
+}
+
+.box-form-login .input-box-form-login .errors {
+  font-family: var(--font-secundaria);
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  bottom: 0;
+}
+
 .btn{
   width: 100%;
   background: none;
@@ -47,23 +112,53 @@
   margin: 20px 0;
   margin-bottom: 30%;
 }
-.p{
-  text-align: center;
-}
-.link{
-  text-decoration: none;
-    color: #1a2537;
-  font-weight: 600;
-}
-.link:hover{
-   color: cadetblue;
-}
+
 
 @media (min-width: 768px) {
 
-  .caja-login{
-    padding-top: 30px;
-    
+  .box-form-login{
+    width: 70%;
   }
 
+  .login h1{
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  div.input-box-form-login {
+      margin: 0 auto;
+      height: 80px;
+      width: 70%;
+  }
+
+  .input-box-form-login label {
+
+      font-size: 18px;
+  }
+
+  .box-form-login button{
+      margin: 10px 60px ;
+  }
+
+  .checkbox {
+      margin: 0 auto;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+
+  .box-form-login .checkbox label {
+      padding-left: 5px;
+      font-size: 18px;
+  }
+
+  .box-form-login .input-box-form-login .errors{
+      font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .box-form-login{
+    width: 60%;
+  }
 }

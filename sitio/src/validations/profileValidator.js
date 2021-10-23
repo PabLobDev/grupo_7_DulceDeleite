@@ -1,7 +1,7 @@
 const {check, body} = require('express-validator');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs'); 
-const { TooManyRequests } = require('http-errors');
+
 
 module.exports = [
     check('name')

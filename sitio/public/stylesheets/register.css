@@ -58,11 +58,12 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 
 .box-form1 .checkbox input {
-    width: 13px;
-    height: 13px; 
+    width: 15px;
+    height: 15px; 
 }
 
 .box-form1 .checkbox label {
@@ -149,5 +150,17 @@
 
     .box-form1 .input-box-form1 .errors, .checkbox .errors{
         font-size: 14px;
+    }
+
+    .checkbox .errors{
+        padding: 0; 
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .checkbox .errors{
+        padding: 0 80px; 
     }
 }

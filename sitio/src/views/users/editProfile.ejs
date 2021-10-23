@@ -14,42 +14,42 @@
             <div class="input-box-form">
                 <label for="nombre" >Nombre:</label>
                 <input type="text" id="name" name="name" value="<%= user.name %>">
-                <span class="error"> <%= locals.errores && errores.name ? errores.name.msg : null %> </span>
+                <span class="error"> <%= locals.errors && errors.name ? errors.name.msg : null %> </span>
             </div>
             <div class="input-box-form">
                 <label for="surname" >Apellido:</label>
                 <input type="text" id="surname" name="surname" value="<%= user.surname %>">
-                <span class="error"> <%= locals.errores && errores.surname ? errores.surname.msg : null %> </span>
+                <span class="error"> <%= locals.errors && errors.surname ? errors.surname.msg : null %> </span>
             </div>
             <div class="input-box-form">
                 <label for="age">Edad:</label>
                 <input type="number" id="age" name="age" value= <%= user.age %> >
-                <span class="error"> <%= locals.errores && errores.age ? errores.age.msg : null %></span>
+                <span class="error"> <%= locals.errors && errors.age ? errors.age.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label for="city" >Ciudad:</label>
                 <input type="text" id="city" name="city" value="<%= user.city %>" >
-                <span class="error"> <%= locals.errores && errores.City ? errores.City.msg : null %> </span>
+                <span class="error"> <%= locals.errors && errors.city ? errors.city.msg : null %> </span>
             </div>
             <div class="input-box-form">
                 <label>Email</label>
                 <input type="email" name="email" id="email" value="<%= user.email %>" readonly>
-                <span class="error"> <%= locals.errores && errores.email ? errores.email.msg : null %></span>
+                <span class="error"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label>Contraseña</label>
                 <input type="password" name="passOld" id="passOld">
-                <span class="error"> <%= locals.errores && errores.passOld ? errores.passOld.msg : null %></span>
+                <span class="error"> <%= locals.errors && errors.passOld ? errors.passOld.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label>Nueva contraseña</label>
                 <input type="password" name="pass" id="pass">
-                <span class="error"> <%= locals.errores && errores.pass ? errores.pass.msg : null %></span>
+                <span class="error"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label>Confirma contraseña</label>
                 <input type="password" name="pass2" id="pass2">
-                <span class="error"> <%= locals.errores && errores.pass2 ? errores.pass2.msg : null %></span>
+                <span class="error"> <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
             </div>
             <div class="img-edit">
                 <img width="150" height="100" src="/images/users/<%= user.avatar %>" alt="">
