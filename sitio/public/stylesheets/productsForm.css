@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 60px;
+    height: 90px;
     text-align: center;
     background: #F6EBCD;
     border-radius: 5px;
@@ -48,14 +48,16 @@
 
 .img-edit{
     display: flex;
+    flex-direction: column;
     width: 70%;
-    height: 110px;
+    height: 120px;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     background-color: #F6EBCD;
     object-fit: cover;
+    margin-top: 20px;
 }
 
 .img-edit img{
@@ -64,7 +66,7 @@
 }
 
 .description-box {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -143,6 +145,28 @@
     padding-top: 12px;
 }
 
+input.is-valid {
+    border: ridge 3px rgb(29, 255, 29);
+    border-radius: 5px; 
+}
+
+input.is-invalid {
+    border: ridge 3px rgb(241, 21, 21);
+    border-radius: 5px; 
+}
+
+textarea.is-valid {
+    border: ridge 3px rgb(29, 255, 29);
+    border-radius: 5px; 
+}
+
+textarea.is-invalid {
+    border: ridge 3px rgb(241, 21, 21);
+    border-radius: 5px; 
+}
+
+
+
 @media (min-width: 768px) {
     .box-form{
         display: grid;
@@ -150,6 +174,7 @@
         grid-template-rows: 15% 15% 15% 17% 20% 18%;
         width: 90%;
         height: 90vh;
+        padding-top: 10px;
     }
 
     .admin h1{
@@ -159,15 +184,17 @@
 
     .input-box-form {
         margin: 0 auto;
-        height: 75px;
+        height: 90px;
     }
 
     .description-box {
         grid-column: 1 / 3;
+        margin-top: 100px;
     }
 
     .box-form button{
         margin: 10px 60px ;
+        margin-top: 120px;
     }
 
     .description-box textarea {
@@ -179,6 +206,7 @@
         margin: 0 auto;
         height: 40px;
         font-size: 1.2rem;
+        margin-top: 100px;
     }
 
     

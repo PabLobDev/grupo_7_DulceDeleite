@@ -9,43 +9,47 @@
 
 <main class="admin">
     <h1>Editar Producto</h1>
-    <form action="/admin/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form action="/admin/update/<%= product.id %>?_method=PUT" method="POST" id='form-product' enctype="multipart/form-data">
+        <span class="text-danger text-center" id='error-empty'></span>
         <div class="box-form">
             <div class="input-box-form">
-                <label for="nombre" >Nombre:</label>
-                <input type="text" id="name" name="name" value="<%= product.name %>">
-                <span class="error"> <%= locals.errores && errores.name ? errores.name.msg : null %> </span>
+                <label for="name" >Nombre:</label>
+      
+                <input class="form-control" type="text" id="name" name="name" value="<%= product.name %>">
+                <span class="error" id='name-error'> <%= locals.errores && errores.name ? errores.name.msg : null %> </span>
             </div>
             <div class="input-box-form">
                 <label for="price">Precio:</label>
-                <input type="number" id="price" name="price" value= <%= product.price %> >
-                <span class="error"> <%= locals.errores && errores.price ? errores.price.msg : null %></span>
+                <input class="form-control" type="number" id="price" name="price" value= <%= product.price %> >
+                <span class="error" id='price-error'> <%= locals.errores && errores.price ? errores.price.msg : null %></span>
             </div>
             <div class="input-box-form">
                 <label for="discount">Descuento:</label>
-                <input type="number" id="discount" name="discount" value=<%= product.discount %> >
-                <span class="error"><%= locals.errores && errores.discount ? errores.discount.msg : null %> </span>
+                <input class="form-control" type="number" id="discount" name="discount" value=<%= product.discount %> >
+                <span class="error" id='discount-error'><%= locals.errores && errores.discount ? errores.discount.msg : null %> </span>
             </div>
             <div class="input-box-form">
                 <label for="category" >Categoría:</label>
-                <select name="category" id="category" >
+                <select class="form-select" name="category" id="category" >
                     <% categories.forEach(category => { %>
                         <option value="<%= category.id %>" <%= product.categoryId === category.id ? 'selected' : null %>><%= category.name %> </option>
                     <% }) %>
-                    <span class="error"><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
+                    <span class="error" id='category-error'><%= locals.errores && errores.category ? errores.category.msg : null %> </span>
                 </select>
             </div>
             <div class="img-edit">
-                <img width="150" height="100" src="/images/productos/<%= product.image %>" alt="">
+                <label for="image">Imágen actual</label>
+                <img width="150" height="85" src="/images/productos/<%= product.image %>" alt="">
             </div>
             <div class="input-box-form">
-                <label for="image">Imagen nueva</label>
-                <input type="file" name="image" id="image" accept="image/*">
+                <label for="image">Imágen nueva</label>
+                <input class="form-control" type="file" name="image" id="image" accept="image/*">
+                <span class="error" id='image-error'><%= locals.errores && errores.images ? errores.images.msg : null %> </span>
             </div>
             <div class="description-box">
                 <label for="description">Descripción:</label>
-                <textarea name="description" id="description"> <%= locals.old && old.description ? old.description : null %><%= product.description %>  </textarea>
-               <span class="error"> <%= locals.errores && errores.description ? errores.description.msg : null %> </span>
+                <textarea class="form-control" name="description" id="description"> <%= locals.old && old.description ? old.description : null %><%= product.description %>  </textarea>
+               <span class="error" id='description-error'> <%= locals.errores && errores.description ? errores.description.msg : null %> </span>
             </div>
             <div class="checkbox">
                 <input type="checkbox" id="celiac" name="celiac" value="<%= product.celiac %>"<%= product.celiac === 1 ? 'checked' : null %> >
@@ -59,9 +63,7 @@
         </div>
     </form>
 </main>
-    
+<%- include('./partials/scripts') %>
 </body>
 </html>
     
-</body>
-</html>

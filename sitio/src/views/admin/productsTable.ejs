@@ -51,7 +51,7 @@
                              <a class="btn btn-sm btn-success" href="/admin/edit/<%= product.id %> " style="width: 35px;"><i class="fas fa-edit"></i></a>
                          </div>
                          <div>
-                             <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                             <form action="/admin/remove/<%= product.id %>?_method=DELETE" method="POST">
                                  <button class="btn btn-sm btn-danger" style="width: 35px;" type="submit"><i class="fas fa-trash-alt"></i></button>
                              </form>
                          </div>

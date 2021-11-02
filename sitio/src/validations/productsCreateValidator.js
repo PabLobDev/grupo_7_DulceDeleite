@@ -17,6 +17,17 @@ module.exports = [
     .withMessage('Indica la categoría'),
 
     body('discount')
-    .notEmpty().withMessage('Debe poner un número')
+    .notEmpty().withMessage('Debe poner un número'),
+
+    body('images')
+    .custom((value,{req}) => {
+      
+        if(req.file){
+            return true
+        }else{
+            return false
+        }
+    })
+    .withMessage('No ha subido una imágen')
     
 ]
