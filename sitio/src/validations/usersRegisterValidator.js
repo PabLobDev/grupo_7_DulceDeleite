@@ -1,48 +1,64 @@
-const {check, body} = require('express-validator');
+const { check, body } = require('express-validator');
 const db = require('../database/models');
 
 module.exports = [
-    body('name')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    check('name')
+        .notEmpty().withMessage('El nombre es obligatorio').bail()
+        .isLength({
+            min: 2,
+            max: 50
+        }).withMessage('Como mínimo 2  y máximo 50 caracteres').bail()
+        .isAlpha().withMessage('El nombre solo debe contener letras'),
 
-    body('surname')
-    .notEmpty().withMessage('El apellido es obligatorio'),
+    check('surname')
+        .notEmpty().withMessage('El apellido es obligatorio').bail()
+        .isLength({
+            min: 2,
+            max: 50
+        }).withMessage('Como mínimo 2  y máximo 50 caracteres').bail()
+        .isAlpha().withMessage('El nombre solo debe contener letras'),
 
-    body('age')
-    .notEmpty().withMessage('La edad es obigatoria'),
+    check('age')
+        .notEmpty().withMessage('La edad es obigatoria').bail(),
 
-    body('city')
-    .notEmpty().withMessage('Debe indicar la ciudad'),
+    check('city')
+        .notEmpty().withMessage('Debe indicar la Ciudad').bail()
+        .isLength({
+            min: 2,
+            max: 50
+        }).withMessage('Como mínimo 2  y máximo 50 caracteres').bail(),
 
+
+    check('email')
+        .isEmail().withMessage('Debe ingresar un email válido'),
     body('email')
-    .isEmail().withMessage('Ingrese un email válido')
-    .custom(value => {
-        return db.User.findOne({
-            where: {
-                email: value
-            }
-        })
-            .then(user => {
-                if (user) {
-                    return Promise.reject('El email ya se encuentra registrado')
+        .custom(value => {
+            return db.User.findOne({
+                where: {
+                    email: value
                 }
             })
-    }),
+                .then(user => {
+                    if (user) {
+                        return Promise.reject('El email ya se encuentra registrado')
+                    }
+                })
+        }),
 
-    body('pass')
-    .isLength({
-        max : 8,
-        min : 8
-    }).withMessage('Debe tener 8 caracteres'),
+    check('pass')
+        .isLength({
+            min: 8,
+            max: 8
+        }).withMessage('Debe tener 8 caracteres'),
 
     body('pass2')
-    .custom((value,{req}) => {
-        if(value !== req.body.pass){
-            return false
-        }
-        return true
-    }).withMessage('La verificación de la contraseña no coincide'),
+        .custom((value, { req }) => {
+            if (value !== req.body.pass) {
+                return false
+            }
+            return true
+        }).withMessage('La verificación de la contraseña no coincide'),
 
     check('terms')
-    .isString('on').withMessage('Debe aceptar los términos y condiciones')
+        .isString('on').withMessage('Debe aceptar los términos y condiciones')
 ]

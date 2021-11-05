@@ -8,47 +8,48 @@
     <main class="register">
         <h1>Registrate con tus datos</h1>
 
-      <form action="" method="POST">
+      <form action="" method="POST"  id="form-users">
+          <span class="text-danger text-center" id='error-empty'></span>
          <div class="box-form1">
             <div class="input-box-form1">
                 <label>Nombres</label>
-                <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null  %>">
-                <span class="errors"> <%= locals.errors && errors.name ? errors.name.msg : null %></span>
+                <input  class="form-control" type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null  %>">
+                <span class="errors" id="name-error"> <%= locals.errors && errors.name ? errors.name.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label>Apellidos</label>
-                <input type="text" name="surname" id="surname" value="<%= locals.old && old.surname ? old.surname : null  %>">
-                <span class="errors"> <%= locals.errors && errors.surname ? errors.surname.msg : null %></span>
+                <input  class="form-control" type="text" name="surname" id="surname" value="<%= locals.old && old.surname ? old.surname : null  %>">
+                <span class="errors" id="surname-error"> <%= locals.errors && errors.surname ? errors.surname.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label for="age">Edad</label>
-                <input type="number" id="age" name="age" value= <%= locals.old && old.age ? old.age : null%> >
-                <span class="errors"> <%= locals.errors && errors.age ? errors.age.msg : null %></span>
+                <input  class="form-control" type="number" id="age" name="age" value= <%= locals.old && old.age ? old.age : null%> >
+                <span class="errors" id="age-error"> <%= locals.errors && errors.age ? errors.age.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label>Ciudad</label>
-                <input type="text" name="city" id="city" value="<%= locals.old && old.city ? old.city : null  %>">
-                <span class="errors"> <%= locals.errors && errors.city ? errors.city.msg : null %></span>
+                <input  class="form-control" type="text" name="city" id="city" value="<%= locals.old && old.city ? old.city : null  %>">
+                <span class="errors" id="city-error"> <%= locals.errors && errors.city ? errors.city.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label>Email</label>
-                <input type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null  %>">
-                <span class="errors"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                <input  class="form-control" type="email" name="email" id="email" value="<%= locals.old && old.email ? old.email : null  %>">
+                <span class="errors" id="email-error"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label>Contraseña</label>
-                <input type="password" name="pass" id="pass">
-                <span class="errors"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+                <input  class="form-control" type="password" name="pass" id="pass">
+                <span class="errors" id="pass-error"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
             </div>
             <div class="input-box-form1">
                 <label>Confirma contraseña</label>
-                <input type="password" name="pass2" id="pass2">
-                <span class="errors"> <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
+                <input  class="form-control" type="password" name="pass2" id="pass2">
+                <span class="errors" id="pass2-error"> <%= locals.errors && errors.pass2 ? errors.pass2.msg : null %></span>
             </div>
                 <div class="checkbox">
                      <input type="checkbox" id="terms" name="terms">
-                    <label for="terminos">Acepto los términos y condiciones</label>
-                    <span class="errors"><%= locals.errors && errors.terms ? errors.terms.msg : null %> </span>
+                    <label>Acepto los términos y condiciones</label>
+                    <span class="errors" id="terms-error"><%= locals.errors && errors.terms ? errors.terms.msg : null %> </span>
                 </div>              
             <div class="guardar">
                 <button type="submit">Registrarme</button>
@@ -56,6 +57,7 @@
         </div>
         </form>
     </main>
-    <%- include('../partials/footer') %>   
+    <%- include('../partials/footer') %>  
+    <script src="/javascripts/users.js"></script> 
 </body>
 </html>

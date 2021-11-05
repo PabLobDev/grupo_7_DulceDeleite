@@ -8,22 +8,22 @@
     <main class="login">
         <h1>Ingresa</h1>
 
-      <form action="" method="POST">
+      <form action="" method="POST" id="form-users">
+        <span class="text-danger text-center" id='error-empty'></span>
          <div class="box-form-login">
-            
             <div class="input-box-form-login">
                 <i class="fas fa-user"></i>
-                <input type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null  %>">
-                <span class="errors"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                <input class="form-control" type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null  %>">
+                <span class="errors" id="email-error"> <%= locals.errors && errors.email ? errors.email.msg : null %></span>
             </div>
             <div class="input-box-form-login">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="pass" id="pass" placeholder="Contraseña">
-                <span class="errors"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
+                <input class="form-control" type="password" name="pass" id="pass" placeholder="Contraseña">
+                <span class="errors" id="pass-error"> <%= locals.errors && errors.pass ? errors.pass.msg : null %></span>
             </div>
             
                 <div class="checkbox">
-                     <input type="checkbox" id="recordar" name="recordar">
+                     <input class="form-control" type="checkbox" id="recordar" name="recordar">
                     <label for="recordar">Recordarme</label>
                 </div>              
             <div class="send">
@@ -33,5 +33,6 @@
         </form>
     </main>
     <%- include('../partials/footer') %>   
+    <script src="/javascripts/users.js"></script> 
 </body>
 </html>

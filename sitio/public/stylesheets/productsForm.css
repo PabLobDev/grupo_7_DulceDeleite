@@ -173,8 +173,9 @@ textarea.is-invalid {
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 15% 15% 17% 20% 18%;
         width: 90%;
-        height: 90vh;
+        height: 105vh;
         padding-top: 10px;
+    
     }
 
     .admin h1{
