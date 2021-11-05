@@ -8,16 +8,16 @@
     <main class="register">
         <h1>Registrate con tus datos</h1>
 
-      <form action="" method="POST"  id="form-users">
+      <form action="" method="POST"  id='form-userRegister'>
           <span class="text-danger text-center" id='error-empty'></span>
          <div class="box-form1">
             <div class="input-box-form1">
-                <label>Nombres</label>
+                <label>Nombre(s)</label>
                 <input  class="form-control" type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : null  %>">
                 <span class="errors" id="name-error"> <%= locals.errors && errors.name ? errors.name.msg : null %></span>
             </div>
             <div class="input-box-form1">
-                <label>Apellidos</label>
+                <label>Apellido(s)</label>
                 <input  class="form-control" type="text" name="surname" id="surname" value="<%= locals.old && old.surname ? old.surname : null  %>">
                 <span class="errors" id="surname-error"> <%= locals.errors && errors.surname ? errors.surname.msg : null %></span>
             </div>
@@ -58,6 +58,6 @@
         </form>
     </main>
     <%- include('../partials/footer') %>  
-    <script src="/javascripts/users.js"></script> 
+    <%- include('../partials/scripts') %>   
 </body>
 </html>

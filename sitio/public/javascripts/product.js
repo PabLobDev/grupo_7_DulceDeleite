@@ -50,6 +50,7 @@ window.addEventListener('load', () => {
         
         $('name').addEventListener('focus',()=> {
             $('name').classList.remove('is-invalid')
+            $('name').classList.remove('is-valid')
             $('name-error').innerHTML = null
         })
 
@@ -58,6 +59,7 @@ window.addEventListener('load', () => {
 
          $('price').addEventListener('focus',()=> {
             $('price').classList.remove('is-invalid')
+            $('price').classList.remove('is-valid')
             $('price-error').innerHTML = null
         })   
 
@@ -99,6 +101,7 @@ window.addEventListener('load', () => {
 
           $('discount').addEventListener('focus',()=> {
             $('discount').classList.remove('is-invalid')
+            $('discount').classList.remove('is-valid')
             $('discount-error').innerHTML = null
         })   
 
@@ -152,6 +155,12 @@ window.addEventListener('load', () => {
                     break;
                 }
             })
+            $('category').addEventListener('focus',()=> {
+                $('category').classList.remove('is-invalid')
+                $('category').classList.remove('is-valid')
+                $('category-error').innerHTML = null
+            })
+
 
 
              //Validación de la imágen del producto
@@ -228,6 +237,7 @@ window.addEventListener('load', () => {
 
             $('description').addEventListener('focus',()=> {
             $('description').classList.remove('is-invalid')
+            $('description').classList.remove('is-valid')
             $('description-error').innerHTML = null
         })
 

@@ -173,7 +173,7 @@ textarea.is-invalid {
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 15% 15% 17% 20% 18%;
         width: 90%;
-        height: 105vh;
+        height: 800px;
         padding-top: 10px;
     
     }
@@ -195,7 +195,7 @@ textarea.is-invalid {
 
     .box-form button{
         margin: 10px 60px ;
-        margin-top: 120px;
+        margin-top: 40px;
     }
 
     .description-box textarea {
@@ -207,7 +207,7 @@ textarea.is-invalid {
         margin: 0 auto;
         height: 40px;
         font-size: 1.2rem;
-        margin-top: 100px;
+        margin-top: 40px;
     }
 
     

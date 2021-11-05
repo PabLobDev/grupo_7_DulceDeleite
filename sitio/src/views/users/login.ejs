@@ -8,9 +8,10 @@
     <main class="login">
         <h1>Ingresa</h1>
 
-      <form action="" method="POST" id="form-users">
+      <form action="" method="POST" id='form-userLogin'>
         <span class="text-danger text-center" id='error-empty'></span>
          <div class="box-form-login">
+             
             <div class="input-box-form-login">
                 <i class="fas fa-user"></i>
                 <input class="form-control" type="email" name="email" id="email" placeholder="Email" value="<%= locals.old && old.email ? old.email : null  %>">
@@ -23,7 +24,7 @@
             </div>
             
                 <div class="checkbox">
-                     <input class="form-control" type="checkbox" id="recordar" name="recordar">
+                     <input type="checkbox" id="recordar" name="recordar">
                     <label for="recordar">Recordarme</label>
                 </div>              
             <div class="send">
@@ -32,7 +33,8 @@
         </div>
         </form>
     </main>
-    <%- include('../partials/footer') %>   
-    <script src="/javascripts/users.js"></script> 
+    <%- include('../partials/footer') %> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>  
+    <script src="/javascripts/userLogin.js"></script> 
 </body>
 </html>
