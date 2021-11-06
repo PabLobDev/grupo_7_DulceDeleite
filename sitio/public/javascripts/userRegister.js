@@ -111,8 +111,8 @@ window.addEventListener('load', () => {
                     $('age').classList.add('is-invalid')
     
                     break;
-                case $('age').value.length > 2 :
-                    $('age-error').innerText = "Debe tener menos de 3 cifras"
+                case $('age').value.trim() < 18 :
+                    $('age-error').innerText = "Debe ser mayor de 18 años"
                     $('age').classList.add('is-invalid')
                        
                     break;    
@@ -138,12 +138,6 @@ window.addEventListener('load', () => {
 
           //validación de la ciudad del usuario
 
-          $('city').addEventListener('focus', () => {
-            if($('city').value.trim() === ""){
-                $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
-            }
-    
-        })
         $('city').addEventListener('blur', () => {
     
             switch (true) {
@@ -157,11 +151,6 @@ window.addEventListener('load', () => {
                     $('city').classList.add('is-invalid')
     
                     break;
-                case !regExLetter.test($('city').value.trim()):
-                    $('city-error').innerText = "Sólo caracteres alfabéticos"
-                    $('city').classList.add('is-invalid')
-    
-                    break;
                 default:
                     $('city').classList.remove('is-invalid')
                     $('city').classList.add('is-valid')
@@ -172,13 +161,7 @@ window.addEventListener('load', () => {
         $('city').addEventListener('keydown', () => {
             $('city').classList.remove('is-invalid')
             $('city-error').innerText = null
-            })
-    
-            $('city').addEventListener('keypress', () => {
-                if(!regExLetter.test($('city').value.trim())){
-                    $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
-                    $('city').classList.add('is-invalid')
-                }
+            
             })
 
            //Validación del email del usuario
