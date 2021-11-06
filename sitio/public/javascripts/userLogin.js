@@ -7,8 +7,9 @@ window.addEventListener('load', () => {
     
     //Validación del email del usuario
 
-    $('email').addEventListener('focus',()=> {
+    $('email').addEventListener('focus', () => {
         $('email').classList.remove('is-invalid')
+        $('email').classList.remove('is-valid')
         $('email-error').innerHTML = null
     })
 $('email').addEventListener('blur', () => {
@@ -32,10 +33,10 @@ $('email').addEventListener('blur', () => {
 
      //Validación del password del usuario
 
-     $('pass').addEventListener('focus',()=> {
+     $('pass').addEventListener('focus', () => {
         $('pass').classList.remove('is-invalid')
+        $('pass').classList.remove('is-valid')
         $('pass-error').innerHTML = null
-
     })
 
      $('pass').addEventListener('blur', () => {

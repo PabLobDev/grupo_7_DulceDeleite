@@ -8,8 +8,14 @@ let regExFile = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//Acepta sólo las extensiones 
 window.addEventListener('load', () => {
     console.log('profileUpdate.js success');//Confirma la conexión con el archivo JS
 
-    
+
     //validación del nombre del usuario
+
+    $('name').addEventListener('focus', () => {
+        $('name').classList.remove('is-invalid')
+        $('name').classList.remove('is-valid')
+        $('name-error').innerHTML = null
+    })
 
     $('name').addEventListener('blur', () => {
 
@@ -36,10 +42,6 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-    $('name').addEventListener('keydown', () => {
-        $('name').classList.remove('is-invalid')
-        $('name-error').innerHTML = null
-    })
 
     $('name').addEventListener('keypress', () => {
         if (!regExLetter.test($('name').value.trim())) {
@@ -48,14 +50,14 @@ window.addEventListener('load', () => {
         }
     })
 
-    $('name').addEventListener('focus', () => {
-        $('name').classList.remove('is-invalid')
-        $('name').classList.remove('is-valid')
-        $('name-error').innerHTML = null
-    })
-
 
     //validación del apellido del usuario
+
+    $('surname').addEventListener('focus', () => {
+        $('surname').classList.remove('is-invalid')
+        $('surname').classList.remove('is-valid')
+        $('surname-error').innerHTML = null
+    })
 
     $('surname').addEventListener('blur', () => {
 
@@ -82,10 +84,6 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-    $('surname').addEventListener('keydown', () => {
-        $('surname').classList.remove('is-invalid')
-        $('surname-error').innerText = null
-    })
 
     $('surname').addEventListener('keypress', () => {
         if (!regExLetter.test($('surname').value.trim())) {
@@ -94,14 +92,14 @@ window.addEventListener('load', () => {
         }
     })
 
-    $('surname').addEventListener('focus', () => {
-        $('surname').classList.remove('is-invalid')
-        $('surname').classList.remove('is-valid')
-        $('surname-error').innerHTML = null
-    })
-
 
     //Validación de la edad del usuario
+
+    $('age').addEventListener('focus', () => {
+        $('age').classList.remove('is-invalid')
+        $('age').classList.remove('is-valid')
+        $('age-error').innerHTML = null
+    })
 
     $('age').addEventListener('blur', () => {
 
@@ -109,12 +107,14 @@ window.addEventListener('load', () => {
             case !$('age').value:
                 $('age-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Debe colocar su edad</span>"
                 $('age').classList.add('is-invalid')
-
+                break;
+            case $('age').value.trim() < 18:
+                $('age-error').innerText = "Debe ser mayor de 18 años"
+                $('age').classList.add('is-invalid')
                 break;
             case $('age').value.length > 2:
                 $('age-error').innerText = "Debe tener menos de 3 cifras"
                 $('age').classList.add('is-invalid')
-
                 break;
             default:
                 $('age').classList.remove('is-invalid')
@@ -122,10 +122,6 @@ window.addEventListener('load', () => {
                 $('age-error').innerText = null
                 break;
         }
-    })
-    $('age').addEventListener('keydown', () => {
-        $('age').classList.remove('is-invalid')
-        $('age-error').innerText = null
     })
 
     $('age').addEventListener('keypress', () => {
@@ -135,14 +131,14 @@ window.addEventListener('load', () => {
         }
     })
 
-    $('age').addEventListener('focus', () => {
-        $('age').classList.remove('is-invalid')
-        $('age').classList.remove('is-valid')
-        $('age-error').innerHTML = null
-    })
-
 
     //validación de la ciudad del usuario
+
+    $('city').addEventListener('focus', () => {
+        $('city').classList.remove('is-invalid')
+        $('city').classList.remove('is-valid')
+        $('city-error').innerHTML = null
+    })
 
     $('city').addEventListener('blur', () => {
 
@@ -150,17 +146,10 @@ window.addEventListener('load', () => {
             case !$('city').value.trim():
                 $('city-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La ciudad es obligatoria</span>"
                 $('city').classList.add('is-invalid')
-
                 break;
             case $('city').value.trim().length < 2 || $('city').value.trim().length > 100:
                 $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 100 caracteres</span>"
                 $('city').classList.add('is-invalid')
-
-                break;
-            case !regExLetter.test($('city').value.trim()):
-                $('city-error').innerText = "Sólo caracteres alfabéticos"
-                $('city').classList.add('is-invalid')
-
                 break;
             default:
                 $('city').classList.remove('is-invalid')
@@ -168,23 +157,6 @@ window.addEventListener('load', () => {
                 $('city-error').innerText = null
                 break;
         }
-    })
-    $('city').addEventListener('keydown', () => {
-        $('city').classList.remove('is-invalid')
-        $('city-error').innerText = null
-    })
-
-    $('city').addEventListener('keypress', () => {
-        if (!regExLetter.test($('city').value.trim())) {
-            $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
-            $('city').classList.add('is-invalid')
-        }
-    })
-
-    $('city').addEventListener('focus', () => {
-        $('city').classList.remove('is-invalid')
-        $('city').classList.remove('is-valid')
-        $('city-error').innerHTML = null
     })
 
 
