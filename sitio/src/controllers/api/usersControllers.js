@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../../database/models');
 const { Op } = require('sequelize');
 
+const bcryptjs = require('bcryptjs');
 const { AsyncResource } = require('async_hooks');
 
 const throwError = (res, error) => {
@@ -68,6 +69,25 @@ detailUsers: async (req, res) => {
             error: error.errors
         }
         return res.status(res.status || 500).json(response)
+    }
+},
+getMails: async (req, res) => {
+    try {
+        let result = await db.User.findAll({
+            attributes: ['email']
+        })
+        let emails = result.map(user => user.email)
+        return res.status(200).json({
+            meta: {
+                link: getUrl(req),
+                total: emails.length
+            },
+            data: emails
+        })
+    } catch (error) {
+        console.log(error)
+        throwError(res, error)
+
     }
 },
 }
