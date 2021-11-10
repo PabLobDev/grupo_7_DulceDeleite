@@ -6,6 +6,19 @@ let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\�
 let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}$/; //solicita que la contraseña sea mayúscula, número y 8 caracteres
 
 
+const emailVerify = async (email) => {
+    try {
+        let response = await fetch(window.origin + '/api/emails');
+        let result = await response.json()
+
+        return result.data.includes(email)
+               
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 window.addEventListener('load', () => {
     console.log('userRegister.js success');//Confirma la conexión con el archivo JS
 
@@ -53,10 +66,12 @@ window.addEventListener('load', () => {
 
     //validación del apellido del usuario
 
-    $('surname').addEventListener('focus', () => {
+   $('surname').addEventListener('focus', () => {
         $('surname').classList.remove('is-invalid')
         $('surname').classList.remove('is-valid')
         $('surname-error').innerHTML = null
+    })
+
     })
     $('surname').addEventListener('blur', () => {
 
@@ -84,6 +99,7 @@ window.addEventListener('load', () => {
         }
     })
 
+
     $('surname').addEventListener('keypress', () => {
         if (!regExLetter.test($('surname').value.trim())) {
             $('surname-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
@@ -106,14 +122,12 @@ window.addEventListener('load', () => {
             case !$('age').value:
                 $('age-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Debe colocar su edad</span>"
                 $('age').classList.add('is-invalid')
+
                 break;
             case $('age').value.trim() < 18:
                 $('age-error').innerText = "Debe ser mayor de 18 años"
                 $('age').classList.add('is-invalid')
-                break;
-            case $('age').value.length > 2:
-                $('age-error').innerText = "Debe tener menos de 3 cifras"
-                $('age').classList.add('is-invalid')
+
                 break;
             default:
                 $('age').classList.remove('is-invalid')
@@ -145,10 +159,12 @@ window.addEventListener('load', () => {
             case !$('city').value.trim():
                 $('city-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La ciudad es obligatoria</span>"
                 $('city').classList.add('is-invalid')
+
                 break;
             case $('city').value.trim().length < 2 || $('city').value.trim().length > 100:
                 $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 100 caracteres</span>"
                 $('city').classList.add('is-invalid')
+
                 break;
             default:
                 $('city').classList.remove('is-invalid')
@@ -157,7 +173,7 @@ window.addEventListener('load', () => {
                 break;
         }
     })
-
+    
 
     //Validación del email del usuario
 
@@ -167,25 +183,24 @@ window.addEventListener('load', () => {
         $('email-error').innerHTML = null
     })
 
-    $('email').addEventListener('blur', () => {
+    $('email').addEventListener('blur', async () => {
 
         switch (true) {
-            case !$('email').value:
-                $('email-error').innerHTML = "<span><i class='fas fa-info-circle'></i> El email es obligatorio</span>"
-                $('email').classList.add('is-invalid');
-                break;
             case !regExEmail.test($('email').value):
-                $('email-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Tiene que ser un email válido</span>"
+                $('email-error').innerText = "Tiene que ser un email válido"
+                $('email').classList.add('is-invalid')
+                break;
+            case await emailVerify($('email').value) :
+                $('email-error').innerText = "El email está registrado"
                 $('email').classList.add('is-invalid')
                 break;
             default:
-                $('email-error').innerHTML = null
+                $('email-error').innerText = null
                 $('email').classList.remove('is-invalid')
                 $('email').classList.add('is-valid')
                 break;
         }
     })
-
 
     //Validación del password del usuario
 
@@ -280,6 +295,5 @@ window.addEventListener('load', () => {
             $('form-userRegister').submit()
         }
     })
+    
 
-
-})
