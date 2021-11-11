@@ -45,11 +45,11 @@ module.exports = [
                 })
         }),
 
-    check('pass')
+    check('password')
         .isLength({
-            min: 8,
-            max: 8
-        }).withMessage('Debe tener 8 caracteres'),
+            min : 6,
+            max : 12
+        }).withMessage('La contraseña debe tener 6 y 12 caracteres, al menos una mayuscula, una minuscula y un numero'),
 
     body('pass2')
         .custom((value, { req }) => {

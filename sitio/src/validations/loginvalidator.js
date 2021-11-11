@@ -21,8 +21,8 @@ module.exports = [
     }),
     check('pass')
     .isLength({
-        min: 8,
-        max: 8
-    }).withMessage('Debe tener 8 caracteres'),
+        min: 6,
+        max: 12
+    }).withMessage('Debe tener entre 6 y 12 caracteres'),
 
 ]

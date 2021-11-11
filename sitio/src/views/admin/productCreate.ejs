@@ -10,7 +10,7 @@
 <main class="admin">
     <h1>Agregar producto</h1>
     <form action="" method="POST" id='form-product' enctype="multipart/form-data">
-        <span class="text-danger text-center" id='error-empty'></span>
+        <p class="text-danger text-center small" id='error-empty'></p>
         <div class="box-form">
             <div class="input-box-form">
                 <label for="name" >Nombre:</label>
@@ -57,7 +57,9 @@
             <div class="guardar">
                 <button type="submit">Guardar</button>
             </div>
+           
         </div>
+      
     </form>
 </main>
 <%- include('./partials/scripts') %> 

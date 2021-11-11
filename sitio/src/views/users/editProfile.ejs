@@ -10,7 +10,7 @@
 <main class="admin">
     <h1>Editar Perfil</h1>
     <form action="/users/update?_method=PUT" method="POST" id='form-profileUpdate' enctype="multipart/form-data">
-        <span class="text-danger text-center" id='error-empty'></span>
+        <p class="text-danger text-center small" id='error-empty'></p>
         <div class="box-form">
             <div class="input-box-form">
                 <label for="name" >Nombre:</label>
@@ -63,14 +63,15 @@
             <div class="edit-guardar">
                 <button type="submit">Actualizar</button>
             </div>
-        </form>
+        
             <div class="edit-guardar">
                 <form action="/users/delete?_method=DELETE" method="POST">
                     <button type="submit">Eliminar cuenta</button>
                 </form>
             </div>
         </div>
-    
+      
+    </form>
 </main>
 <%- include('./partials/scripts') %>  
 </body>

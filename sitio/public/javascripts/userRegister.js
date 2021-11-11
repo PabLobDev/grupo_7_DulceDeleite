@@ -3,8 +3,7 @@ const $ = id => document.getElementById(id);//Captura el elemento por ID
 let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/;//Solicita que sólo sean letras
 let onlyNumbers = /^([0-9])*$/;//Solicita que sólo sean números
 let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;//Que sea tipo email
-let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}$/; //solicita que la contraseña sea mayúscula, número y 8 caracteres
-
+let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/; //mayuscula, numero y 6 a 12 caracteres
 
 const emailVerify = async (email) => {
     try {
@@ -217,7 +216,7 @@ window.addEventListener('load', () => {
                 $('pass').classList.add('is-invalid');
                 break;
             case !regExPass.test($('pass').value):
-                $('pass-error').innerText = "Debe contener 8 caracteres, al menos una mayúscula, minúscula y número"
+                $('pass-error').innerText = "Debe contener entre 6 y 12 caracteres, al menos una mayúscula, minúscula y número"
                 $('pass').classList.add('is-invalid');
                 break
             default:

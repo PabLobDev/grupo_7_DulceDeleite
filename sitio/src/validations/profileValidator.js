@@ -37,21 +37,6 @@ module.exports = [
             })
              
     }),
-    
-    body('pass')
-    .custom((value,{req}) => {
-        if(value != ""){
-            
-            if(value.length === 8 ){
-                return true
-            }else{
-                return false
-            }
-        }
-        return true
-    }).withMessage('La contraseña debe tener 8 caracteres'),
-    
-
     body('pass2')
     .custom((value,{req}) => {
         if(value !== req.body.pass && value.length != 0){

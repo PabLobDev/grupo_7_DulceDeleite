@@ -2,7 +2,7 @@
 let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/;//Solicita que sólo sean letras
 let onlyNumbers = /^([0-9])*$/;//Solicita que sólo sean números
 let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;//Que sea tipo email
-let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}$/; //solicita que la contraseña sea mayúscula, número y 8 caracteres
+let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/; //mayuscula, numero y 6 a 12 caracteres
 let regExFile = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//Acepta sólo las extensiones de imágenes detalladas
 
 window.addEventListener('load', () => {
@@ -201,7 +201,7 @@ window.addEventListener('load', () => {
                 $('pass-error').innerHTML = null
                 break;
             case !regExPass.test($('pass').value):
-                $('pass-error').innerText = "Debe contener 8 caracteres, al menos una mayúscula, minúscula y número"
+                $('pass-error').innerText = "Debe contener entre 6 y 12 caracteres, al menos una mayúscula, minúscula y número"
                 $('pass').classList.add('is-invalid');
                 break
             default:
@@ -214,7 +214,7 @@ window.addEventListener('load', () => {
     })
 
 
-    //Validación de confirmación de la contraseña del ususario
+    //Validación de confirmación de la contraseña del usuario
 
     $('pass2').addEventListener('focus', () => {
         $('pass2').classList.remove('is-invalid')
