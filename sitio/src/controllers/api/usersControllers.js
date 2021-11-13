@@ -1,12 +1,10 @@
 const { validationResult } = require('express-validator');
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcryptjs');
 const db = require('../../database/models');
 const { Op } = require('sequelize');
 
 const bcryptjs = require('bcryptjs');
-const { AsyncResource } = require('async_hooks');
+
 
 const throwError = (res, error) => {
     return res.status(error.status || 500).json({
@@ -32,7 +30,7 @@ listUsers:
             status: 200,
             meta: {
                 total: users.length,
-                url: '/api/users'
+                url: getUrl(req)
             },
             data: users
         }
@@ -41,7 +39,7 @@ listUsers:
         let response = {
             status: error.status || 500,
             meta: {
-                url: "/api/users"
+                url: getUrl(req)
             },
             error: error.errors
         }
@@ -90,4 +88,27 @@ getMails: async (req, res) => {
 
     }
 },
+
+verifyPassword: async (req, res) => {
+
+    try {
+        let user = await db.User.findOne({
+            where: { email: req.body.email }
+        })
+
+        if (bcryptjs.compareSync(req.body.password, user.password)) {
+            return res.status(200).json({ response: true })
+        } else {
+            return res.status(200).json({ response: false })
+        }
+        
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ response: error })
+
+    }
+
+}
+
+
 }

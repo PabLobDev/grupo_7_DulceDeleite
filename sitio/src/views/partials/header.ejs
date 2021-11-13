@@ -17,7 +17,7 @@
     <section class="header-container">
         <div class="menu-hamburguesa">
             <input type="checkbox" id="menu">
-            <label for="menu"><i class="fas fa-bars"></i></label>
+            <label class="hint--top" aria-label="Menú" for="menu"><i class="fas fa-bars"></i></label>
             <nav class="menu-desplegable">
                 <ul>
                     <% if (locals.userLogin) { %>
@@ -53,33 +53,76 @@
                     <button type="submit"><i class="fas fa-search"></i></button></i></a>
             </form>
         </div>
-       
-        <div class="menu-derecho">
-            <nav>
-                <ul>
-                                   
-                <% if (locals.userLogin) { %>
-                    <% if (userLogin.rolId === 2) { %>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/admin/productsTable">Administrar</a></li>
-                        <li><a href="/users/logout">Cerrar sesión</a></li>
-                    <% }else if(userLogin.rolId === 1) { %>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/users/profile/<%= userLogin.id %>">Mi perfil</a></li>
-                        <li><a href="/users/logout">Cerrar sesión</a></li>
-                        <a href="/products/cart" class="carrito-desktop"><i class="far fa-shopping-cart"></i></a>
-                    <% } %>
-                 <% } %>
-
-                 <% if (!locals.userLogin) { %>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/users/login">Mi Cuenta</a></li>
-                    <li><a href="/users/register">Registrarme</a></li>
-                 <% } %>                     
-                
-                </ul>
-            </nav>
-        </div>
+        
+        <% if (locals.userLogin) { %>
+         <% if (userLogin.rolId === 1) { %>
+          <div class="menu-derecho-cart">
+            <button type="button" class="nav-link btn-cart left-20 hint--top" aria-label="Mis compras" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="span-cantidad" class="badge rounded-pill"></span>
+            </button>
+            <a href="/users/profile/<%= userLogin.id %>" class="hint--top" aria-label="Mi perfil"><i class="fas fa-user-edit"></i></a>
+            <a href="/users/logout" class="hint--top" aria-label="Cierra cesión"><i class="fas fa-user-lock"></i></a>
+            </div>
+           <% }else if(userLogin.rolId === 2) { %>
+            <div class="menu-derecho-cart">
+              <a href="/admin/productsTable" class="hint--top" aria-label="Administrar"><i class="fas fa-edit"></i></a>
+              <a href="/users/logout" class="hint--top" aria-label="Cierra cesión"><i class="fas fa-user-lock"></i></a>
+              </div>
+          <% } %> 
+        <% } %> 
+          
+        <% if (!locals.userLogin) { %>
+         <div class="menu-derecho-cart">
+          <a href="/users/register" class="hint--top" aria-label="Registrate"><i class="far fa-address-card"></i></a>
+          <a href="/users/login" class="hint--top" aria-label="Ingresa"><i class="fas fa-sign-in-alt"></i></a>
+          <a href="/" class="hint--top" aria-label="Inicio"><i class="fas fa-home"></i></a>
+          
+         </div>
+        <% } %> 
     </section>
    
 </header>
+
+<aside>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" id="miCarrito">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Mis compras</h5>
+          </div>
+          <div class="modal-body" id="list-cart" >
+            <div class="table-responsive">
+              <table class="table">
+                <thead id="cart-head">
+                  <tr>
+                    <th colspan="3">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">SubTotal</th>
+                  </tr>
+                </thead>
+                <tfoot id="cart-footer">
+                  <tr>
+                    <th colspan="4"  class="text-end" id="totaltitle">TOTAL:</th>
+                    <th >
+                      <h5 id="total"></h5>
+                    </th>
+                  </tr>
+                </tfoot>
+                  <tbody id="cart-shop">
+                    <span id="cart-empty" class="text-danger">El carrito no tiene productos agregados</span>
+                  </tbody>
+                 
+                </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" id="btn-cart-empty">Vaciar carrito</button>
+            <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
+            <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy">Finalizar compra</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>

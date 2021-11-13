@@ -1,5 +1,3 @@
-const $ = id => document.getElementById(id);//Captura el elemento por ID
-
 let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/;//Solicita que sólo sean letras
 let onlyNumbers = /^([0-9])*$/;//Solicita que sólo sean números
 let regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;//Que sea tipo email

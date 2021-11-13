@@ -56,12 +56,13 @@
                                         <% } %>
                                     </div>
                                  <div class="box-button">
-                                <button type="submit">COMPRAR AHORA</button>
+                                    <a href="#" id="btn-detail-add" onclick="addItem(event,'<%=product.id%>')">Agregar al carrito</a>
                             </div>
                         </div>
                 </section>
             </main>
             <%- include('../partials/footer') %>
+            <%- include('../partials/scripts') %>
     </body>
 
 </html>

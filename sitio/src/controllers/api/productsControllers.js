@@ -32,7 +32,7 @@ module.exports = {
                 status: 200,
                 meta: {
                     total: categorias.length,
-                    link: `${req.protocol}://${req.get('host')}${req.originalUrl}`
+                    link: getUrl(req)
                 },
                 data: categorias
             }
@@ -51,7 +51,7 @@ module.exports = {
                 status: 200,
                 meta: {
                     total: products.length,
-                    link: `${req.protocol}://${req.get('host')}${req.originalUrl}`
+                    link: getUrl(req)
                 },
                 data: products
             }
@@ -77,7 +77,7 @@ module.exports = {
                 let response = {
                     status: 200,
                     meta: {
-                        link: `${req.protocol}://${req.get('host')}${req.originalUrl}`
+                        link: getUrl(req)
                     },
                     data: product
                 }
