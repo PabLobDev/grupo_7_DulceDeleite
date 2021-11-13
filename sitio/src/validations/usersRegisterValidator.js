@@ -45,7 +45,7 @@ module.exports = [
                 })
         }),
 
-    check('password')
+    check('pass')
         .isLength({
             min : 6,
             max : 12

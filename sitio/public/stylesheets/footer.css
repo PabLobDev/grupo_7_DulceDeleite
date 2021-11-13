@@ -27,6 +27,7 @@ ul{
 .footer-col{
    width: 33%;
    padding: 0 15px;
+   text-align: center;
 }
 .footer-col h4{
 	font-size: 18px;
@@ -39,7 +40,6 @@ ul{
 .footer-col h4::before{
 	content: '';
 	position: absolute;
-	left:0;
 	bottom: -10px;
 	background-color: black;
 	height: 2px;

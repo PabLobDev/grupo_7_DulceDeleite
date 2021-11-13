@@ -12,10 +12,27 @@
                         <%= product.name %>
                     </h2>
                     <div class="detalle">
-
                         <div>
-                            <img src="/images/productos/<%= product.image %>">
+                            <img src="/images/productos/<%= product.image %>" width="60%">
                         </div>
+                        <% if(product.celiac === 1){ %>
+                            <img class="tacc" src="/images/sin-tacc.png" width="10%">
+                          <% } %> 
+                          <% if(product.diabetic === 1){ %>
+                            <img class="lapdi" src="/images/lapdi.png" width="10%">
+                          <% } %>
+                          
+                          
+                          <% if (product.categoryId == 1) {  %>
+                            <p>CATEGORIA : POSTRES</p>
+                          <% } %>
+                          <% if (product.categoryId == 2) {  %>
+                            <p>CATEGORIA : TORTAS</p>
+                            <% } %>
+                            <% if (product.categoryId == 3) {  %>
+                                <p>CATEGORIA : MUFFINS CUPCAKES</p>
+                          <% } %>
+                        
                         <div class="detalle-contenido">
                             <p class="description">
                                 <%= product.description %>

@@ -1,16 +1,17 @@
-.recetas{
-    background-color: var(--color-rosa);
-    width: auto;
-}
+
 .recetas main{
     text-align: center;
     padding-top: 130px;
-    width: fit-content;
+    width: 100vw;
     background-image: url(../images/nosotros/fondo2.jpg);
 }
 .recetas .ingredientes{
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 100vw;
+}
+.recetas span{
+    width: 100vw;
 }
 .recetas h1{
     font-family: var(--font-titulos);
@@ -32,7 +33,7 @@
         padding-left: 0;
     }
     .recetas{
-        width: fit-content;
+        width: 100vw;
     }
     .recetas .foto-ingredientes{
         display: flex;

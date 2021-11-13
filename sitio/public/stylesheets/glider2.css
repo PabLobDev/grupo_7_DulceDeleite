@@ -1,5 +1,5 @@
 .glider-contain2 {
-  width: 290px;
+  width: 260px;
   margin: 0 auto;
   position: relative;
 }
@@ -134,9 +134,7 @@
 
 @media (min-width: 600px) {
 
-  .glider-contain2 {
-    width: 580px;
-  }
+
 
   .glider-track2 {
     gap: 5px;
