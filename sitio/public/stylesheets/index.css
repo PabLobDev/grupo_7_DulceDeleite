@@ -1,7 +1,7 @@
 .carousel-item{
    margin-top: 130px;
    height: 350px;
-   width: 100vw; 
+   width: 100%; 
    background-size: cover;
    background-repeat: no-repeat;
 }
@@ -9,7 +9,7 @@
 .main-products-views {
     top: 130px;
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100%;
     text-align: center;
     margin-bottom: 130px;   
@@ -17,7 +17,7 @@
 
 .main-products {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100%;
     text-align: center;
     display: grid;
@@ -29,11 +29,11 @@
 }
 
 .main-products h2, .main-products-views h2{
-    width: 100vw;
+    width: 100%;
     height: 90px;
     background-color: #e69fa4;
     font-family: var(--font-titulos);
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding-top: 10px;
     color: #fff; 
 }
@@ -41,7 +41,7 @@
 .nav-head{
     grid-area: nav-head;
     margin-top: 330px;
-    width: 100vw;
+    width: 100%;
     height: 150px;
     display: flex;
     flex-wrap: wrap;
@@ -59,7 +59,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 130px;
     margin: 0 auto;
     justify-content: center;
@@ -69,8 +69,9 @@
 .nav-head nav ul{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 100vw;
+    width: 80%;
     height: 130px;
+    gap: 5px;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
@@ -84,6 +85,7 @@
     flex-wrap: wrap;
     border-radius: 50%;
     height: 70%;
+    width: 100%;
     align-items: center;
     margin-left: 5px;
     transition: all 1s;
@@ -105,7 +107,7 @@
 /* banner */
 .banner{
     grid-area: banner;
-    width: 100vw;
+    width: 100%;
     height: 220px;
     margin: 5px auto;
 }
@@ -113,7 +115,7 @@
 .banner .banner-img{
     display: block;
     object-fit: cover;
-    width: 100vw;
+    width: 100%;
     height: 220px;
 }
 
@@ -124,7 +126,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     gap: 8px;
     align-items: center;
 } 
@@ -142,7 +144,7 @@
 
 /* imágen de producto */
 .products-destac .product-caja-img, .news .product-caja-img {
-    width: 100vw;
+    width: 100%;
     border-bottom: 3px solid #000;
     margin: 0;
     padding: 0; 
@@ -166,7 +168,7 @@
     gap: 10px;
     padding: 5px;
     position: relative;
-    width: 100vw;
+    width: 100%;
 }
 
 .products-destac .product-info h4, .news .product-info h4{
@@ -263,21 +265,21 @@
    opacity: .8;
 }
 
-/* sección últimas novedades */
+/* sección ofertas */
 .news{
     grid-area: novedades;
     background-color: var(--color-rosa-claro);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     gap: 20px;
     align-items: center;
 }
 
-/* lista de novedades */
+/* lista de oferta */
 .news .news-list ul{ 
-   width: 100vw;
+    min-width: 500px;
     height: 50px;
     margin: 10px auto 2px ;
     display: grid;
@@ -288,7 +290,7 @@
 
 .news .news-list ul li {
     display: grid;
-    width: 120px;
+    width: 130px;
     gap: 10px;
     background-color: wheat;
     height: 40px;
@@ -309,6 +311,19 @@
     color: sienna;
 }
 
+.card-cart{
+    position: absolute;
+    bottom: 120px;
+    left: 15px;
+}
+
+.card-cart i {
+    color: wheat;
+    font-size: 30px;
+    position: absolute;
+    z-index: 20;
+}
+
 /* fin del home */
 
 .admin-header {
@@ -325,7 +340,7 @@
     font-size: 30px;
     padding:0px;
     position: absolute;
-    bottom: 40px;
+    bottom: 5px;
 }
 
 .admin-header .admin-menu-derecho {
@@ -374,7 +389,7 @@
     }
 
     .banner{
-        width: 100vw;
+        width: 100%;
         height: 220px;
         margin: 5px auto;
     }
@@ -382,7 +397,7 @@
     .banner .banner-img{
         display: block;
         object-fit: cover;
-        width: 100vw;
+        width: 100%;
         height: 220px;
     }
 
@@ -391,7 +406,7 @@
     }
     
     .admin-header div label{
-        bottom: 20px;
+        bottom: 5px;
         width: 50px;
         height: 50px;
         font-size: 40px;

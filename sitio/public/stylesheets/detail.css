@@ -26,23 +26,26 @@
     font-size: 20px;
 }
 
-.detail .box-button button{
-    padding: 10px;
-    color: black;
-    background-color: #ffda9e;
+.detail .box-button a{
+    color: sienna;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    background: wheat;
+    height: 40px;
+    margin: 0 auto;
     border: none;
     border-radius: 5px;
-    width: 70%;
+    width: 60%;
     display: inline-block;
-    text-align: justify;
     margin: 10px;
     font-weight: bold;
-    text-align: center;
+    transition: all .5s;
 }
 
-.detail .box-button button:hover{
-    background-color:coral;
-    border-radius: 3px;
+.detail .box-button a:hover{
+    background-color: sienna;
+    color: wheat;
+    transition: all .5s;
 }
 .detail .precio{
     margin: 10px 0;

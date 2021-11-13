@@ -1,13 +1,8 @@
-const { validationResult } = require('express-validator');
-const capitalize = require('../../utils/capitalize');
-const toThousand = require('../../utils/toThousand')
-const precioFinal = require('../../utils/precioFinal');
 const fs = require('fs');
 const path = require('path');
 const db = require('../../database/models');
 const { Op } = require('sequelize');
 
-const { AsyncResource } = require('async_hooks');
 
 const throwError = (res, error) => {
     return res.status(error.status || 500).json({
