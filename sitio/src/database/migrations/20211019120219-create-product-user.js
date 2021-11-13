@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references : {
           model : {
@@ -26,11 +27,18 @@ module.exports = {
           key : 'id'
         }
       },
+      orderId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Orders',
+          },
+          key : 'id'
+        },
+        onDelete : 'cascade'
+      },
       quantity: {
         type: Sequelize.INTEGER
-      },
-      total: {
-        type: Sequelize.DECIMAL(8,2)
       },
       createdAt: {
         allowNull: false,
