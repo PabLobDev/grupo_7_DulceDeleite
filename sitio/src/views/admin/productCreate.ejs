@@ -43,6 +43,9 @@
                 <input class="form-control" type="file" name="image" id="image" accept="image/*">
                 <span class="error" id='image-error'><%= locals.errores && errores.images ? errores.images.msg : null %> </span>
             </div>
+            <div class="input-box-form-img" id="preview">
+                <label for="image" >Vista previa</label>
+            </div>
             <div class="description-box">
                 <label for="description">Descripción:</label>
                 <textarea class="form-control" name="description" id="description"> <%= locals.old && old.description ? old.description : null %> </textarea>

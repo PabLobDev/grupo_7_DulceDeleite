@@ -254,9 +254,5 @@ header button {
     cursor: pointer;
   }
 
-  header .cake-icons{
-    display: flex;
-    justify-content: space-evenly;
-  }
   }
 }

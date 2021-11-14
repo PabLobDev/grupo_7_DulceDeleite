@@ -161,6 +161,25 @@ window.addEventListener('load', () => {
                 $('category-error').innerHTML = null
             })
 
+             // Vista previa de la imágen del producto
+             
+             document.getElementById('image').onchange = function (e){
+                let reader = new FileReader();
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onload = function (){
+                    let preview = document.getElementById('preview');
+                    image = document.createElement('img');
+                    image.src = reader.result;
+                    image.width = 150
+                    image.height = 110
+                    image.style.objectFit = "cover"
+                    image.style.borderRadius="5px"
+                    preview.innerHTML = null;
+                    preview.append(image);
+                }
+            }
+
+
 
 
              //Validación de la imágen del producto
@@ -175,15 +194,7 @@ window.addEventListener('load', () => {
                     $('image').classList.remove('is-invalid');
                     $('image').classList.add('is-valid');
                     $('image-error').innerText = null;
-                    
-                     //Intento de vista previa, no funciona
-                    let reader = new FileReader();
-                        reader.readAsDataURL(e.target.file)
-        
-                        reader.onload = () => {
-                            preView.src = reader.result
-                        }
-                        break;
+                    break;
                 }
             })
               
@@ -200,15 +211,8 @@ window.addEventListener('load', () => {
                         $('image').classList.remove('is-invalid');
                         $('image').classList.add('is-valid');
                         $('image-error').innerHTML = null;
-
-                        //Intento de vista previa, no funciona
-                        let reader = new FileReader();
-                        reader.readAsDataURL(e.target.file)
-        
-                        reader.onload = () => {
-                            preView.src = reader.result
-                        }
-                        break;
+                        break;    
+                        
                 }
             })
 

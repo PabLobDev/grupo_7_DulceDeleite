@@ -17,7 +17,14 @@
             <% } %>
             <% if(product.diabetic === 1){ %>
               <img class="lapdi" src="/images/lapdi.png">
-            <% } %> 
+            <% } %>
+            <% if (locals.userLogin) { %>
+              <% if (userLogin.rolId === 1) { %>
+                <div class="card-cart hint--right" aria-label="Agregar al carrito">
+               <a href="#" onclick="addItem(event,'<%=product.id%>')"><img src="https://img.icons8.com/fluency/48/000000/shopping-cart.png"/></a> 
+              </div>   
+                <% } %> 
+              <% } %> 
               <div class="product-caja-img">
                 <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
               </div>
