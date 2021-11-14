@@ -21,7 +21,8 @@
     text-align: center;
     padding: 15px 100px;
     margin-top: 135px;
-    color: sienna; 
+    color: sienna;
+     
 }
 
 .input-box-form1 {
@@ -47,8 +48,6 @@
     width: 75%;
     margin: 0 auto;
 }
-
-
 
 .box-form1 .checkbox {
     margin: 0 auto;

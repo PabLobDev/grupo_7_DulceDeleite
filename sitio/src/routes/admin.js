@@ -4,18 +4,19 @@ const {index, create, store, edit, update, remove, destroy, admin} = require('..
 
 const upload = require('../middlewares/productImageStore');
 const productsCreateValidator = require('../validations/productsCreateValidator');
+const adminUserCheck = require('../middlewares/adminUserCheck');
 
 router
-      .get('/productCreate', create)
+      .get('/productCreate',adminUserCheck, create)
       .post('/productCreate',upload.single('image'),productsCreateValidator, store)
 
-      .get('/productsList', index)
-      .get('/productsTable', admin)
+      .get('/productsList',adminUserCheck, index)
+      .get('/productsTable',adminUserCheck, admin)
 
-      .get('/edit/:id', edit)
+      .get('/edit/:id',adminUserCheck, edit)
       .put('/update/:id',upload.single('image'),productsCreateValidator, update)
 
-      .get('/remove/:id',remove)
-      .delete('/delete/:id',destroy)
+      .get('/remove/:id',adminUserCheck, remove)
+      .delete('/delete/:id',adminUserCheck, destroy)
 
 module.exports = router;
