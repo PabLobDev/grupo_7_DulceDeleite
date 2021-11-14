@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('../partials/head',{title : product.name}) %>
+<%- include('../partials/head',{title : product.name}) %>
 
     <body>
         <%- include('../partials/header') %>
@@ -12,57 +12,69 @@
                         <%= product.name %>
                     </h2>
                     <div class="detalle">
-                        <div>
-                            <img src="/images/productos/<%= product.image %>" width="60%">
-                        </div>
-                        <% if(product.celiac === 1){ %>
-                            <img class="tacc" src="/images/sin-tacc.png" width="10%">
-                          <% } %> 
-                          <% if(product.diabetic === 1){ %>
-                            <img class="lapdi" src="/images/lapdi.png" width="10%">
-                          <% } %>
-                          
-                          
-                          <% if (product.categoryId == 1) {  %>
-                            <p>CATEGORIA : POSTRES</p>
-                          <% } %>
-                          <% if (product.categoryId == 2) {  %>
-                            <p>CATEGORIA : TORTAS</p>
-                            <% } %>
-                            <% if (product.categoryId == 3) {  %>
-                                <p>CATEGORIA : MUFFINS CUPCAKES</p>
-                          <% } %>
-                        
-                        <div class="detalle-contenido">
-                            <p class="description">
-                                <%= product.description %>
-                            </p>
-                            <div class="precio">
-                                <% if (product.discount> 0) { %>
-                                    <p>
-                                        <span>$<%= toThousand(product.price) %> </span>
-                                        
-                                        <b>
-                                            <%= product.discount %>% OFF
-                                        </b>
+                        <div class="imagencategoria">
+                            <div>
+                                <img src="/images/productos/<%= product.image %>" height="200px">
+                            </div>
+                            <div>
+                                <% if(product.celiac===1){ %>
+                                    <img class="tacc" src="/images/sin-tacc.png" width="10%">
+                                    <% } %>
+                                        <% if(product.diabetic===1){ %>
+                                            <img class="lapdi" src="/images/lapdi.png" width="10%">
+                                            <% } %>
+                            </div>
+                            <div>
+
+                                <% if (product.categoryId==1) { %>
+                                    <p>CATEGORIA : POSTRES</p>
+                                    <% } %>
+                                        <% if (product.categoryId==2) { %>
+                                            <p>CATEGORIA : TORTAS</p>
+                                            <% } %>
+                                                <% if (product.categoryId==3) { %>
+                                                    <p>CATEGORIA : MUFFINS CUPCAKES</p>
+                                                    <% } %>
+                            </div>
+                            </div>
+                            <div class="detalle-contenido">
+                                <div>
+                                    <p class="description">
+                                        <%= product.description %>
                                     </p>
-                                    <p>
-                                        $<%= precioFinal(product.price,product.discount) %>
-                                    </p>
-                                    <% }else{ %>
+                                </div>
+                                <div class="precio">
+                                    <% if (product.discount> 0) { %>
+                                        <p>
+                                            <span>$<%= toThousand(product.price) %> </span>
+
+                                            <b>
+                                                <%= product.discount %>% OFF
+                                            </b>
+                                        </p>
                                         <p>
                                             $<%= precioFinal(product.price,product.discount) %>
                                         </p>
-                                        <% } %>
-                                    </div>
-                                 <div class="box-button">
-                                    <a href="#" id="btn-detail-add" onclick="addItem(event,'<%=product.id%>')">Agregar al carrito</a>
+                                        <% }else{ %>
+                                            <p>
+                                                $<%= precioFinal(product.price,product.discount) %>
+                                            </p>
+                                            <% } %>
+
+                                </div>
+
+                            
+                            <div class="box-button">
+                                <a href="#" id="btn-detail-add" onclick="addItem(event,'<%=product.id%>')">Agregar
+                                    al carrito</a>
                             </div>
                         </div>
+
+                    </div>
                 </section>
             </main>
             <%- include('../partials/footer') %>
-            <%- include('../partials/scripts') %>
+                <%- include('../partials/scripts') %>
     </body>
 
 </html>

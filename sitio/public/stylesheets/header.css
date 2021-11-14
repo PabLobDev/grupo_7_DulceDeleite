@@ -1,6 +1,6 @@
 header {
   background-color: #f6ebcd;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   height: 130px;
   left: 0;
@@ -34,7 +34,7 @@ header .logo .welcome {
 /*contenedor*/
 header .header-container {
   display: grid;
-  grid-template-columns: 15% 60% 25%;
+  grid-template-columns: 10% 55% 35%;
   margin-top: 3px;
   padding-bottom: 5px;
   position: relative;
@@ -98,7 +98,7 @@ header .menu-desplegable li a {
 /*carrito*/
 
 .modal{
-  min-width: 550px;
+  min-width: 320px;
 }
 
 
@@ -135,7 +135,7 @@ header .menu-derecho-cart a i{
 
 #miCarrito {
   background-color: #f6ebcd;
-  min-width: 400px;
+
 }
 
 .modal-body{
@@ -170,7 +170,7 @@ header .menu-derecho-cart a i{
 
 /*barra de busqueda*/
 header .barra-busqueda input {
-  width: 100%;
+  width: 90%;
   height: 35px;
   border-radius: 5px;
   border: 1px solid beige;
@@ -178,11 +178,12 @@ header .barra-busqueda input {
   position: relative;
 }
 header .barra-busqueda {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
+  padding-left: 30px;
 }
 header button {
   position: absolute;
