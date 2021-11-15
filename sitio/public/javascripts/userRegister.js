@@ -9,7 +9,7 @@ const emailVerify = async (email) => {
         let result = await response.json()
 
         return result.data.includes(email)
-               
+
 
     } catch (error) {
         console.log(error)
@@ -63,234 +63,234 @@ window.addEventListener('load', () => {
 
     //validación del apellido del usuario
 
-   $('surname').addEventListener('focus', () => {
+    $('surname').addEventListener('focus', () => {
         $('surname').classList.remove('is-invalid')
         $('surname').classList.remove('is-valid')
         $('surname-error').innerHTML = null
     })
 
-    })
-    $('surname').addEventListener('blur', () => {
+})
+$('surname').addEventListener('blur', () => {
 
-        switch (true) {
-            case !$('surname').value.trim():
-                $('surname-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> El apellido es obligatorio</span>"
-                $('surname').classList.add('is-invalid')
-
-                break;
-            case $('surname').value.trim().length < 2 || $('surname').value.trim().length > 50:
-                $('surname-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 50 caracteres</span>"
-                $('surname').classList.add('is-invalid')
-
-                break;
-            case !regExLetter.test($('surname').value.trim()):
-                $('surname-error').innerText = "Sólo caracteres alfabéticos"
-                $('surname').classList.add('is-invalid')
-
-                break;
-            default:
-                $('surname').classList.remove('is-invalid')
-                $('surname').classList.add('is-valid')
-                $('surname-error').innerText = null
-                break;
-        }
-    })
-
-
-    $('surname').addEventListener('keypress', () => {
-        if (!regExLetter.test($('surname').value.trim())) {
-            $('surname-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
+    switch (true) {
+        case !$('surname').value.trim():
+            $('surname-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> El apellido es obligatorio</span>"
             $('surname').classList.add('is-invalid')
-        }
-    })
+
+            break;
+        case $('surname').value.trim().length < 2 || $('surname').value.trim().length > 50:
+            $('surname-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 50 caracteres</span>"
+            $('surname').classList.add('is-invalid')
+
+            break;
+        case !regExLetter.test($('surname').value.trim()):
+            $('surname-error').innerText = "Sólo caracteres alfabéticos"
+            $('surname').classList.add('is-invalid')
+
+            break;
+        default:
+            $('surname').classList.remove('is-invalid')
+            $('surname').classList.add('is-valid')
+            $('surname-error').innerText = null
+            break;
+    }
+})
 
 
-    //Validación de la edad del usuario
+$('surname').addEventListener('keypress', () => {
+    if (!regExLetter.test($('surname').value.trim())) {
+        $('surname-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Sólo caracteres alfabéticos</span>"
+        $('surname').classList.add('is-invalid')
+    }
+})
 
-    $('age').addEventListener('focus', () => {
-        $('age').classList.remove('is-invalid')
-        $('age').classList.remove('is-valid')
-        $('age-error').innerHTML = null
-    })
 
-    $('age').addEventListener('blur', () => {
+//Validación de la edad del usuario
 
-        switch (true) {
-            case !$('age').value:
-                $('age-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Debe colocar su edad</span>"
-                $('age').classList.add('is-invalid')
+$('age').addEventListener('focus', () => {
+    $('age').classList.remove('is-invalid')
+    $('age').classList.remove('is-valid')
+    $('age-error').innerHTML = null
+})
 
-                break;
-            case $('age').value.trim() < 18:
-                $('age-error').innerText = "Debe ser mayor de 18 años"
-                $('age').classList.add('is-invalid')
+$('age').addEventListener('blur', () => {
 
-                break;
-            default:
-                $('age').classList.remove('is-invalid')
-                $('age').classList.add('is-valid')
-                $('age-error').innerText = null
-                break;
-        }
-    })
-
-    $('age').addEventListener('keypress', () => {
-        if (!onlyNumbers.test($('age').value)) {
-            $('age-error').innerHTML = "<span><i class='fas fa-info-circle'></i>Sólo números</span>"
+    switch (true) {
+        case !$('age').value:
+            $('age-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Debe colocar su edad</span>"
             $('age').classList.add('is-invalid')
-        }
-    })
+
+            break;
+        case $('age').value.trim() < 18:
+            $('age-error').innerText = "Debe ser mayor de 18 años"
+            $('age').classList.add('is-invalid')
+
+            break;
+        default:
+            $('age').classList.remove('is-invalid')
+            $('age').classList.add('is-valid')
+            $('age-error').innerText = null
+            break;
+    }
+})
+
+$('age').addEventListener('keypress', () => {
+    if (!onlyNumbers.test($('age').value)) {
+        $('age-error').innerHTML = "<span><i class='fas fa-info-circle'></i>Sólo números</span>"
+        $('age').classList.add('is-invalid')
+    }
+})
 
 
-    //validación de la ciudad del usuario
+//validación de la ciudad del usuario
 
-    $('city').addEventListener('focus', () => {
-        $('city').classList.remove('is-invalid')
-        $('city').classList.remove('is-valid')
-        $('city-error').innerHTML = null
-    })
+$('city').addEventListener('focus', () => {
+    $('city').classList.remove('is-invalid')
+    $('city').classList.remove('is-valid')
+    $('city-error').innerHTML = null
+})
 
-    $('city').addEventListener('blur', () => {
+$('city').addEventListener('blur', () => {
 
-        switch (true) {
-            case !$('city').value.trim():
-                $('city-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La ciudad es obligatoria</span>"
-                $('city').classList.add('is-invalid')
+    switch (true) {
+        case !$('city').value.trim():
+            $('city-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La ciudad es obligatoria</span>"
+            $('city').classList.add('is-invalid')
 
-                break;
-            case $('city').value.trim().length < 2 || $('city').value.trim().length > 100:
-                $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 100 caracteres</span>"
-                $('city').classList.add('is-invalid')
+            break;
+        case $('city').value.trim().length < 2 || $('city').value.trim().length > 100:
+            $('city-error').innerHTML = "<span><i class='fas fa-info-circle'></i> Entre 2 y 100 caracteres</span>"
+            $('city').classList.add('is-invalid')
 
-                break;
-            default:
-                $('city').classList.remove('is-invalid')
-                $('city').classList.add('is-valid')
-                $('city-error').innerText = null
-                break;
-        }
-    })
-    
-
-    //Validación del email del usuario
-
-    $('email').addEventListener('focus', () => {
-        $('email').classList.remove('is-invalid')
-        $('email').classList.remove('is-valid')
-        $('email-error').innerHTML = null
-    })
-
-    $('email').addEventListener('blur', async () => {
-
-        switch (true) {
-            case !regExEmail.test($('email').value):
-                $('email-error').innerText = "Tiene que ser un email válido"
-                $('email').classList.add('is-invalid')
-                break;
-            case await emailVerify($('email').value) :
-                $('email-error').innerText = "El email está registrado"
-                $('email').classList.add('is-invalid')
-                break;
-            default:
-                $('email-error').innerText = null
-                $('email').classList.remove('is-invalid')
-                $('email').classList.add('is-valid')
-                break;
-        }
-    })
-
-    //Validación del password del usuario
-
-    $('pass').addEventListener('focus', () => {
-        $('pass').classList.remove('is-invalid')
-        $('pass').classList.remove('is-valid')
-        $('pass-error').innerHTML = null
-    })
-
-    $('pass').addEventListener('blur', () => {
-        switch (true) {
-            case !$('pass').value:
-                $('pass-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La contraseña es obligatoria</span>";
-                $('pass').classList.add('is-invalid');
-                break;
-            case !regExPass.test($('pass').value):
-                $('pass-error').innerText = "Debe contener entre 6 y 12 caracteres, al menos una mayúscula, minúscula y número"
-                $('pass').classList.add('is-invalid');
-                break
-            default:
-                $('pass-error').innerText = null;
-                $('pass').classList.remove('is-invalid');
-                $('pass').classList.add('is-valid');
-                break;
-        }
-
-    })
+            break;
+        default:
+            $('city').classList.remove('is-invalid')
+            $('city').classList.add('is-valid')
+            $('city-error').innerText = null
+            break;
+    }
+})
 
 
-    //Validación de confirmación de la contraseña del ususario
+//Validación del email del usuario
 
-    $('pass2').addEventListener('focus', () => {
-        $('pass2').classList.remove('is-invalid')
-        $('pass2').classList.remove('is-valid')
-        $('pass2-error').innerHTML = null
-    })
+$('email').addEventListener('focus', () => {
+    $('email').classList.remove('is-invalid')
+    $('email').classList.remove('is-valid')
+    $('email-error').innerHTML = null
+})
 
-    $('pass2').addEventListener('blur', () => {
-        switch (true) {
-            case !$('pass2').value:
-                $('pass2-error').innerHTML = "Debe repetir su contraseña";
-                $('pass2').classList.add('is-invalid');
-                break;
-            case $('pass2').value != $('pass').value:
-                $('pass2-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Las contraseñas no coinciden</span>"
-                $('pass2').classList.add('is-invalid');
-                break;
-            default:
-                $('pass2-error').innerHTML = null;
-                $('pass2').classList.remove('is-invalid');
-                $('pass2').classList.add('is-valid');
-                break;
-        }
+$('email').addEventListener('blur', async () => {
 
-    })
+    switch (true) {
+        case !regExEmail.test($('email').value):
+            $('email-error').innerText = "Tiene que ser un email válido"
+            $('email').classList.add('is-invalid')
+            break;
+        case await emailVerify($('email').value):
+            $('email-error').innerText = "El email está registrado"
+            $('email').classList.add('is-invalid')
+            break;
+        default:
+            $('email-error').innerText = null
+            $('email').classList.remove('is-invalid')
+            $('email').classList.add('is-valid')
+            break;
+    }
+})
+
+//Validación del password del usuario
+
+$('pass').addEventListener('focus', () => {
+    $('pass').classList.remove('is-invalid')
+    $('pass').classList.remove('is-valid')
+    $('pass-error').innerHTML = null
+})
+
+$('pass').addEventListener('blur', () => {
+    switch (true) {
+        case !$('pass').value:
+            $('pass-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> La contraseña es obligatoria</span>";
+            $('pass').classList.add('is-invalid');
+            break;
+        case !regExPass.test($('pass').value):
+            $('pass-error').innerText = "Debe contener entre 6 y 12 caracteres, al menos una mayúscula, minúscula y número"
+            $('pass').classList.add('is-invalid');
+            break
+        default:
+            $('pass-error').innerText = null;
+            $('pass').classList.remove('is-invalid');
+            $('pass').classList.add('is-valid');
+            break;
+    }
+
+})
 
 
-    //Validacón del formulario de creación(registro) del usuario
+//Validación de confirmación de la contraseña del ususario
 
-    $('form-userRegister').addEventListener('submit', event => {
-        event.preventDefault();
+$('pass2').addEventListener('focus', () => {
+    $('pass2').classList.remove('is-invalid')
+    $('pass2').classList.remove('is-valid')
+    $('pass2-error').innerHTML = null
+})
 
-        let elementsForm = $('form-userRegister').elements;
-        //console.log(elementsForm);
-        let error = false;
+$('pass2').addEventListener('blur', () => {
+    switch (true) {
+        case !$('pass2').value:
+            $('pass2-error').innerHTML = "Debe repetir su contraseña";
+            $('pass2').classList.add('is-invalid');
+            break;
+        case $('pass2').value != $('pass').value:
+            $('pass2-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Las contraseñas no coinciden</span>"
+            $('pass2').classList.add('is-invalid');
+            break;
+        default:
+            $('pass2-error').innerHTML = null;
+            $('pass2').classList.remove('is-invalid');
+            $('pass2').classList.add('is-valid');
+            break;
+    }
 
-        for (let i = 0; i < elementsForm.length - 2; i++) {
+})
 
-            if (!elementsForm[i].value) {
-                elementsForm[i].classList.add('is-invalid')
-                $('error-empty').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i>Los campos señalados son obligatorios</span>";
-                error = true
-            }
-        }
 
-        if (!$('terms').checked) {
+//Validacón del formulario de creación(registro) del usuario
 
-            $('terms').classList.add('is-invalid')
-            $('terms-error').innerText = "Debes aceptar los términos y condiciones";
+$('form-userRegister').addEventListener('submit', event => {
+    event.preventDefault();
+
+    let elementsForm = $('form-userRegister').elements;
+    //console.log(elementsForm);
+    let error = false;
+
+    for (let i = 0; i < elementsForm.length - 2; i++) {
+
+        if (!elementsForm[i].value) {
+            elementsForm[i].classList.add('is-invalid')
+            $('error-empty').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i>Los campos señalados son obligatorios</span>";
             error = true
         }
+    }
 
-        for (let i = 0; i < elementsForm.length - 2; i++) {
+    if (!$('terms').checked) {
 
-            if (elementsForm[i].classList.contains('is-invalid')) {
-                error = true
-                /* $('terms').classList.remove('is-valid') */
-            }
+        $('terms').classList.add('is-invalid')
+        $('terms-error').innerText = "Debes aceptar los términos y condiciones";
+        error = true
+    }
+
+    for (let i = 0; i < elementsForm.length - 2; i++) {
+
+        if (elementsForm[i].classList.contains('is-invalid')) {
+            error = true
+            /* $('terms').classList.remove('is-valid') */
         }
+    }
 
-        if (!error) {
-            $('form-userRegister').submit()
-        }
-    })
-    
+    if (!error) {
+        $('form-userRegister').submit()
+    }
+})
+
 
