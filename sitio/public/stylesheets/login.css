@@ -47,13 +47,20 @@ div.input-box-form-login {
   margin-left: 10px;
 }
 
+.input-box-form-login .fa-eye {
+  position: absolute;
+  right: 7%;
+  font-size: 18px;
+  cursor: pointer;
+}
+/*
 .login .watch{
   width: 38px;
   height: 35px;
   position: absolute;
   right: 0;
   background-color: wheat;
-}
+}*/
 
 .box-form-login .checkbox {
   margin: 0 auto;

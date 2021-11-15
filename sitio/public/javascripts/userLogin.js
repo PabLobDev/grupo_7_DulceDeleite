@@ -1,12 +1,34 @@
 const $ = id => document.getElementById(id);//Captura el elemento por ID
 
+//funcionamiento de la visualización de la contraseña(watch)
+let btnWatch = document.getElementById('watch');
+let inputPass = document.getElementById('pass');
+
+btnWatch.addEventListener('click', () => {
+    if (inputPass.getAttribute('type') == 'text') {
+        inputPass.setAttribute('type', 'password')
+    } else {
+        inputPass.setAttribute('type', 'text')
+    }
+})
+/*
+   Otra forma de visualizar la contraseña, va en el script del ejs
+   y se agreaga en el elemento el evento onclick="showPass()"
+
+ function showPass(){
+        let inputPass = document.getElementById("pass");
+        if(inputPass.type == "password"){
+            inputPass.type = "text";
+        }else{
+            inputPass.type = "password"
+        } 
+    }*/
+
 window.addEventListener('load', () => {
     console.log('userLogin.js success');
 
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;//Que sea tipo email
-    let btnWatch = document.getElementById('watch');
-    let inputPass = document.getElementById('pass');
-
+   
 
     //Validación del email del usuario
 
@@ -57,14 +79,7 @@ $('email').addEventListener('blur', () => {
         
 
     })
-    //funcionamiento watch
-    btnWatch.addEventListener('click', () => {
-        if (inputPass.getAttribute('type') == 'text') {
-            inputPass.setAttribute('type', 'password')
-        } else {
-            inputPass.setAttribute('type', 'text')
-        }
-    })
+    
 
               //Validacón del formulario de logueo(ingreso) del usuario
 
