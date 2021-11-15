@@ -48,7 +48,7 @@
             </nav>
         </div>
         <div class="barra-busqueda">
-            <form  action="/search"><input type="text" class="nav-search-input" 
+            <form id="form-search-header" action="/search"><input id="search-header" type="text" class="nav-search-input" 
                    name="busqueda" placeholder="Buscar productos">
                     <button type="submit"><i class="fas fa-search"></i></button></i></a>
             </form>
@@ -126,3 +126,9 @@
       </div>
     </div>
   </aside>
+  <script>
+    document.getElementById('form-search-header').addEventListener('submit', e => {
+      e.preventDefault()
+      document.getElementById('search-header').value !== '' && document.getElementById('form-search-header').submit()
+    })
+    </script>
