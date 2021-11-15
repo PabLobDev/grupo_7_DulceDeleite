@@ -6,7 +6,7 @@ let regExFile = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//Acepta sólo las extensiones 
 
 
 window.addEventListener('load', () => {
-    console.log('Products.js success');//Confirma la conexión con el archivo JS
+    console.log('ProductsCreate.js success');//Confirma la conexión con el archivo JS
 
      //validación del nombre del producto
 
