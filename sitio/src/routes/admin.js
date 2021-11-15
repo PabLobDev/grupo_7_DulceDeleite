@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {index, create, store, edit, update, remove, destroy, admin} = require('../controllers/adminController');
+const {index, create, store, edit, update, destroy, admin} = require('../controllers/adminController');
 
 const upload = require('../middlewares/productImageStore');
 const productsCreateValidator = require('../validations/productsCreateValidator');
@@ -16,7 +16,6 @@ router
       .get('/edit/:id',adminUserCheck, edit)
       .put('/update/:id',upload.single('image'),productsCreateValidator, update)
 
-      .get('/remove/:id',adminUserCheck, remove)
       .delete('/delete/:id',adminUserCheck, destroy)
 
 module.exports = router;

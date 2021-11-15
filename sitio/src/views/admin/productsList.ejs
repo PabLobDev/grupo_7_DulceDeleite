@@ -25,7 +25,11 @@
               </div>
               <div class="product-info">
                 <h4><%= product.name %></h4>
-                <a href="/admin/remove/<%= product.id %> ">Eliminar</a>
+                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                  <input type="hidden" name="_method" value="DELETE"> 
+                  <input type="hidden" name="_token" value="the_token">
+                  <button type="submit" class="btn btn-link" onclick="if (!confirm('¿Seguro quieres borrar este producto?')) { return false }">Eliminar</button>
+                  </form>
                 <a  href="/admin/edit/<%= product.id %>">Editar</a>
               </div>
             </article>

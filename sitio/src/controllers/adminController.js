@@ -143,15 +143,6 @@ module.exports = {
       
     },
 
-    remove: (req, res) => {
-        db.Product.findByPk(req.params.id)
-        .then(Product => res.render('./admin/productDelete',{
-            Product
-        }))
-        
-        .catch(error => console.log(error))
-    },
-
     destroy: (req, res) => {
 
         db.Product.findByPk(req.params.id)
