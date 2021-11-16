@@ -60,7 +60,7 @@ const tableLoad = cart => {
             </td>
            
             <td class="align-middle">
-            <span>$</span><span class="float-end">${product.price / 1}</span>
+            <span>$</span><span class="float-end">${product.price}</span>
             </td>
             <td class="align-middle">
             <span>$</span><span class="float-end">${product.subtotal}</span>
