@@ -119,13 +119,15 @@ $('age').addEventListener('blur', () => {
         case !$('age').value:
             $('age-error').innerHTML = "<span><i class='fas fa-exclamation-triangle'></i> Debe colocar su edad</span>"
             $('age').classList.add('is-invalid')
-
             break;
         case $('age').value.trim() < 18:
             $('age-error').innerText = "Debe ser mayor de 18 años"
             $('age').classList.add('is-invalid')
-
             break;
+        case $('age').value.length > 2:
+            $('age-error').innerText = "Debe tener menos de 3 cifras"
+            $('age').classList.add('is-invalid')
+        break;
         default:
             $('age').classList.remove('is-invalid')
             $('age').classList.add('is-valid')

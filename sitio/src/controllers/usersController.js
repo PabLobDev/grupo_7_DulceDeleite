@@ -41,6 +41,9 @@ module.exports = {
                         avatar: user.avatar,
                         rolId: user.rolId
                     }
+
+                    req.session.cart = [];
+
                     return res.redirect('/')
                 })
                 .catch(error => console.log(error))
@@ -137,7 +140,7 @@ module.exports = {
     //Perfil de usuario
     profile: (req, res) => {
 
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.session.userLogin.id)
 
             .then((user) => {
 
@@ -188,7 +191,7 @@ module.exports = {
                 }
             )
                 .then(() => {
-                    req.session.destroy();
+                    
                     return res.redirect('/')
                 })
                 .catch(error => console.log(error))
@@ -222,8 +225,9 @@ module.exports = {
 
         db.User.findByPk(req.session.userLogin.id)
             .then(userLogin => {
-                if (fs.existsSync(path.join(__dirname, '../../public/images/users', userLogin.avatar))) {
-                    fs.unlinkSync(path.join(__dirname, '../../public/images/users', userLogin.avatar))
+                if(userLogin.avatar != 'avatar_default.png'){
+                    fs.existsSync(path.join(__dirname,'../../public/images/users',userLogin.avatar)); 
+                    fs.unlinkSync(path.join(__dirname,'../../public/images/users',userLogin.avatar)); 
                 }
             });
         db.User.destroy({

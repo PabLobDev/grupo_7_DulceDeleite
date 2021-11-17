@@ -181,5 +181,49 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
+    },
+
+    //Admministración de usuarios
+
+    adminUsers: (req, res) => {
+        db.User.findAll({
+            order : [
+                ['name']
+            ],
+            include : ['rol']
+            
+        })
+        .then(users=> {
+                res.render("admin/usersTable",{
+                    users,
+                    title: 'Tabla de usuarios'
+                })
+            })
+            .catch(error => console.log(error))
+    },
+
+    userDestroy: (req, res) => {
+
+        db.User.findByPk(req.params.id)
+        .then(user => {
+            if(user.avatar != 'avatar_default.png'){
+                fs.existsSync(path.join(__dirname,'../../public/images/users',user.avatar)); 
+                fs.unlinkSync(path.join(__dirname,'../../public/images/users',user.avatar)); 
+            }
+            })
+
+        db.User.destroy(
+            {
+                where : {
+                    id : req.params.id
+                }
+            }
+        )
+        .then(user => {  
+            console.log(user);
+         return res.redirect('/admin/usersTable')
+         })
+
+        .catch(error => console.log(error))
     }
 }

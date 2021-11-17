@@ -13,13 +13,14 @@
         <section class="header-container">
             <div class="menu-hamburguesa">
                 <input type="checkbox" id="menu">
-                <label for="menu"><i class="fas fa-bars"></i></label>
+                <label class="hint--top" aria-label="Menú" for="menu"><i class="fas fa-bars"></i></label>
                 <nav class="menu-desplegable">
                     <ul>
+                        <li><a href="/">Inicio</a></li>
                         <li><a href="/admin/productCreate">Agregar producto</a></li>
                         <li><a href="/admin/productsTable">Tabla de productos</a></li>
+                        <li><a href="/admin/usersTable">Tabla de usuarios</a></li>
                         <li><a href="/admin/productsList">Todos los productos</a></li>
-                        <li><a href="/">Inicio</a></li>
                     </ul>
                 </nav>
                 
@@ -33,10 +34,12 @@
             <div class="admin-menu-derecho">
                 <nav>
                     <ul>
-                        <li><a href="/admin/productCreate">Agregar</a></li>
-                        <li><a href="/admin/productsList">Productos</a></li>
-                        <li><a href="/admin/productsTable">Tabla</a></li>
-                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/" class="hint--top" aria-label="Inicio"><i class="fas fa-home"></i></a></li>
+                        <li><a href="/admin/productCreate" class="hint--top" aria-label="Agregar Producto"><i class="fas fa-cart-plus"></i></a></li>
+                        <li><a href="/admin/productsTable" class="hint--top" aria-label="Tabla de Productos"><i class="fas fa-clipboard-list"></i></a></li>
+                        <li><a href="/admin/usersTable" class="hint--top" aria-label="Tabla de Usuarios"><i class="fas fa-users"></i></a></li>
+                        <li><a href="/admin/productsList" class="hint--top" aria-label="Todos los Productos"><i class="fab fa-product-hunt"></i></a></li>
+                        <li><a href="/users/logout" class="hint--top" aria-label="Cierra cesión"><i class="fas fa-user-lock"></i></a></li>
                         
                     </ul>
                 </nav>

@@ -252,10 +252,10 @@ window.addEventListener('load', () => {
 
     $('avatar').addEventListener('blur', (e) => {
         switch (true) {
-            case !regExFile.exec($('avatar').value):
-                $('avatar-error').innerText = "Sólo imágenes jpg, png, gif, webp"
-                $('avatar').classList.add('is-invalid')
-
+            case !$('avatar').value:
+                $('avatar').classList.remove('is-invalid')
+                $('avatar').classList.remove('is-valid')
+                $('avatar-error').innerHTML = null
                 break;
             default:
                 $('avatar').classList.remove('is-invalid');
