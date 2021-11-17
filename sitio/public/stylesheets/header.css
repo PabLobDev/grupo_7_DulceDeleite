@@ -109,7 +109,8 @@ header .menu-derecho-cart {
 
 header .menu-derecho-cart a i{
   color: sienna;
-  font-size: 30px;
+  font-size: 25px;
+  margin-top: 5px;
 }
 
 .btn-cart {
@@ -120,17 +121,17 @@ header .menu-derecho-cart a i{
 
 .btn-cart i {
   color: sienna;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   position: absolute;
   right: 8px;
-  bottom: 3px;
+  bottom: 5px;
 }
 
 .btn-cart span {
-  font-size: 15px;
+  font-size: 12px;
   position: relative;
-  bottom: 23px;
+  bottom: 21px;
 }
 
 #miCarrito {
@@ -234,6 +235,22 @@ header button {
   .btn-cart {
     margin-right: -5px;
   }
+
+  header .menu-derecho-cart a i{
+  font-size: 30px;
+  margin-top: 0;
+ }
+
+.btn-cart i {
+  font-size: 30px;
+  right: 8px;
+  bottom: 5px;
+ }
+
+.btn-cart span {
+  font-size: 14px;
+  bottom: 26px;
+ }
   
 
 @media (min-width: 1024px) {
