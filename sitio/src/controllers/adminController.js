@@ -202,6 +202,65 @@ module.exports = {
             .catch(error => console.log(error))
     },
 
+    editUserProfile: (req, res) => {
+
+        let rols = db.Rol.findAll({
+            order : [
+                ['name']
+            ]
+        })
+        let user = db.User.findByPk(req.params.id, {
+            include : ['rol']
+        })
+        Promise.all(([rols, user]))
+            .then(([rols, user]) => {
+                return res.render('admin/userEdit',{
+                    rols,
+                    user
+                    
+                })
+            })
+            .catch(error => console.log(error))
+
+    },
+
+
+    updateUserProfile: (req, res) => {
+
+            const { rol } = req.body;
+            
+            db.User.update(
+                {
+                    rolId: +rol,
+                    
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                }
+            )
+            .then(() => {
+                db.User.findAll({
+                    order : [
+                        ['name']
+                    ],
+                    include : ['rol']
+                    
+                })
+                    .then( users => {
+                        res.render("admin/usersTable",{
+                            users,
+                            title: 'Tabla de usuarios'
+                        })
+                    })
+            })
+            .catch(error => console.log(error))
+
+
+       
+    },
+
     userDestroy: (req, res) => {
 
         db.User.findByPk(req.params.id)

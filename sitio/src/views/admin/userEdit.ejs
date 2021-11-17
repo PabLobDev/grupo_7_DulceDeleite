@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head') %> 
+
+<body>
+
+<%- include('./partials/header') %> 
+
+<main class="admin">
+    <h1>Cambiar rol de usuario</h1>
+    <form action="/admin/userUpdate/<%= user.id %>?_method=PUT" method="POST" id='form-profileUpdate'>
+        <p class="text-danger text-center small" id='error-empty'></p>
+        <div class="box-form">
+            <div class="input-box-form">
+                <label for="rol">Rol:</label>
+                <input class="form-control" type="number" id="rol" name="rol" value= <%= user.rolId %> >
+                
+            </div>
+           
+            <div class="edit-guardar">
+                <button type="submit">Actualizar</button>
+            </div>
+        
+            <div class="edit-guardar">
+                <form action="/admin/userDelete/<%= user.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar usuario</button>
+                </form>
+            </div>
+        </div>
+      
+    </form>
+</main>
+<%- include('./partials/scripts') %>  
+</body>
+</html>

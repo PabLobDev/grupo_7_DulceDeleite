@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {index, create, store, edit, update, destroy, admin, adminUsers, userDestroy} = require('../controllers/adminController');
+const {index, create, store, edit, update, destroy, admin, adminUsers, userDestroy,editUserProfile,updateUserProfile} = require('../controllers/adminController');
 
 const upload = require('../middlewares/productImageStore');
 const productsCreateValidator = require('../validations/productsCreateValidator');
@@ -14,6 +14,10 @@ router
       .get('/productsList',adminUserCheck, index)
       .get('/productsTable',adminUserCheck, admin)
       .get('/usersTable',adminUserCheck, adminUsers)
+
+       //cambia el rol de usuario
+       .get('/userEdit/:id',adminUserCheck, editUserProfile)
+       .put('/userUpdate/:id',updateUserProfile)
 
       .get('/edit/:id',adminUserCheck, edit)
       .put('/update/:id',upload.single('image'),productsEditValidator, update)
