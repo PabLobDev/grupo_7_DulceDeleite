@@ -1,4 +1,3 @@
-
 .box-form{
     display: flex;
     flex-wrap: wrap;
@@ -17,10 +16,67 @@
 
 .admin h1{
     font-family: var(--font-secundaria);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     padding: 15px 100px;
     color: sienna; 
+}
+
+.admin h5{
+    font-family: var(--font-secundaria);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px 20px;
+    color: sienna; 
+}
+
+.buttons-admin{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.admin .box-form-admin{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--font-secundaria);
+    background: var(--color-amarillo);
+    border: 2px solid sienna;
+    width: 80%;
+    height: 250px;
+    gap: 5px;
+    margin: 20px auto;
+    margin-top: 10px;
+}
+
+.edit-guardar-admin form button {
+    width: 140px;
+    height: 40px;
+}
+
+.box-form-admin button {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: wheat;
+    margin: 0 auto;
+    color: sienna;
+    font-size: 1rem;
+    font-family: var(--font-secundaria);
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.box-form-admin button:hover {
+    background-color: sienna;
+    color:wheat;
+    transition: all .5s;
 }
 
 .input-box-form {
@@ -195,6 +251,10 @@ textarea.is-invalid {
     .admin h1{
         margin: 0 auto;
         text-align: center;
+    }
+
+    .admin .box-form-admin{
+        width: 50%;
     }
 
     .input-box-form {

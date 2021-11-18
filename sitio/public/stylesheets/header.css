@@ -101,7 +101,6 @@ header .menu-desplegable li a {
   min-width: 320px;
 }
 
-
 header .menu-derecho-cart {
   display: flex;
   justify-content: space-around;  
@@ -136,7 +135,13 @@ header .menu-derecho-cart a i{
 
 #miCarrito {
   background-color: #f6ebcd;
+}
 
+.modal-title{
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  color:sienna;
+  font-size: 1.8rem;
 }
 
 .modal-body{
@@ -155,9 +160,61 @@ header .menu-derecho-cart a i{
   padding: 6px;
 }
 
+#totaltitle{
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  color:sienna;
+  font-size: 1.5rem;
+}
+
 #total{
   text-align: center;
   margin: 0 auto;
+  font-family: var(--font-titulos);
+  font-weight: bold;
+  color:sienna;
+}
+
+.botones{
+  border:none;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: wheat;
+  margin: 0 auto;
+  text-align: center;
+  color: sienna;
+  font-size: 1rem;
+  font-family: var(--font-secundaria);
+  font-weight: bold;
+  padding: 8px;
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.align-middle{
+  font-family: var(--font-titulos);
+  color: sienna;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.align-middle td{
+  padding: 5px;
+}
+
+.table th{
+  font-family: var(--font-secundaria);
+  font-weight: bold;
+  color: sienna;
+  font-size: 1rem;
+}
+
+.botones:hover{
+  background-color: sienna;
+  color:wheat;
+  transition: all .5s;
 }
 
 #imgProduct {

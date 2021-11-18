@@ -50,20 +50,20 @@ const tableLoad = cart => {
             <td class="col-2">
             <img  width="90" height="65" src="/images/productos/${product.image}" id="imgProduct"> 
             </td>
-            <td class="text-center col-3 align-middle">
+            <td class="text-center col-3 align-middle p-1">
             <a class="text-danger h6" onClick="removeItem(event,${product.id})"><i class="fas fa-minus-circle"></i></a>
             <span class="h5">${product.cantidad}<span>
             <a class="text-success h6" onClick="addItem(event,${product.id})"><i class="fas fa-plus-circle"></i></a>
             </td>
-            <td class="align-middle">
+            <td class="align-middle p-1">
             ${product.name}
             </td>
            
-            <td class="align-middle">
+            <td class="align-middle p-1">
             <span>$</span><span class="float-end">${product.price}</span>
             </td>
             <td class="align-middle">
-            <span>$</span><span class="float-end">${product.subtotal}</span>
+            <span>$</span><span class="float-end ">${product.subtotal}</span>
             </td>
             `;
         cartShop.innerHTML += item
