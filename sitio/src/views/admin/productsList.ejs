@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-  
-<%- include('./partials/head') %> 
+
+<%- include('./partials/head') %>
 
   <body>
 
-    <%- include('./partials/header') %> 
-    
-    <main class="main-products">
-     
-      <section class="products-destac">
-        <h2>Administración</h2>
-        
-        <% products.forEach(product => { %>
-          <article>
-            <% if(product.celiac === 1){ %>
-                  <img class="tacc" src="/images/sin-tacc.png">
+    <%- include('./partials/header') %>
+
+      <main class="main-products">
+
+        <section class="products-destac">
+          <h2>Administración</h2>
+
+          <% products.forEach(product=> { %>
+            <article>
+              <% if(product.celiac===1){ %>
+                <img class="tacc" src="/images/sin-tacc.png">
                 <% } %>
-                <% if(product.diabetic === 1){ %>
-                  <img class="lapdi" src="/images/lapdi.png">
-                <% } %>
-              <div class="product-caja-img">
-                <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
-              </div>
-              <div class="product-info">
-                <h4><%= product.name %></h4>
-                <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                  <input type="hidden" name="_method" value="DELETE"> 
-                  <input type="hidden" name="_token" value="the_token">
-                  <button type="submit" class="btn btn-link" onclick="if (!confirm('¿Seguro quieres borrar este producto?')) { return false }">Eliminar</button>
-                  </form>
-                <a  href="/admin/edit/<%= product.id %>">Editar</a>
-              </div>
+                  <% if(product.diabetic===1){ %>
+                    <img class="lapdi" src="/images/lapdi.png">
+                    <% } %>
+                      <div class="product-caja-img">
+                        <img src="/images/productos/<%=product.image%>" height="349px" alt="" />
+                      </div>
+                      <div class="product-info">
+                        <h4>
+                          <%= product.name %>
+                        </h4>
+                        <form id="eliminar-producto" action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                          <button id="boton-borrar" type="submit">Eliminar</button>
+                        </form>
+
+                        <a href="/admin/edit/<%= product.id %>">Editar</a>
+                      </div>
             </article>
-      <% }) %>
-      
-
-      </section>
-    </main>
-
+            <% }) %>
+        </section>
+      </main>
+      <%- include('./partials/scripts') %>
+        <script src="/javascripts/productDelete.js"></script>
   </body>
+
 </html>

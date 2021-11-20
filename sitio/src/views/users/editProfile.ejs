@@ -66,12 +66,13 @@
         
     </form>
     <div class="edit-guardar">
-        <form action="/users/delete/<%= userLogin.id %>?_method=DELETE" method="POST">
+        <form id="eliminar-usuario" action="/users/delete/<%= userLogin.id %>?_method=DELETE" method="POST">
             <button type="submit">Eliminar cuenta</button>
         </form>
     </div>
 </div>
 </main>
 <%- include('./partials/scripts') %>  
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

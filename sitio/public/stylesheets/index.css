@@ -14,7 +14,16 @@
      text-align: center;
      margin-bottom: 130px;   
  }
- 
+ .swal2-styled.swal2-confirm.swalBtnColor {
+    color: sienna;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .swal2-styled.swal2-cancel.swalBtnColor{
+      color: sienna;
+      font-size: 20px;
+      font-weight: bold;
+  }
  .main-products {
      position: relative;
      width: 100%;
