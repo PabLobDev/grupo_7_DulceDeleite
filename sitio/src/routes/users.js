@@ -19,7 +19,7 @@ router
       .put('/update',avatarUserStorage.single('avatar'),profileValidator, updateProfile)
 
       .get('/logout',logout)
-      .delete('/delete', destroy);
+      .delete('/delete/:id', destroy);
 
 
 module.exports = router;

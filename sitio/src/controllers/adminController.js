@@ -50,7 +50,7 @@ module.exports = {
             })
             .then(product => {  
                 console.log(product);
-             return res.redirect('/admin/productsList')
+             return res.redirect('/admin/productsTable')
              })
             .catch(error => console.log(error))
 
@@ -160,7 +160,7 @@ module.exports = {
         )
         .then(product => {  
             console.log(product);
-         return res.redirect('/admin/productsList')
+         return res.redirect('/admin/productsTable')
          })
 
         .catch(error => console.log(error))

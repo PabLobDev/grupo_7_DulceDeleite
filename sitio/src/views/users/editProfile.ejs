@@ -64,14 +64,13 @@
                 <button type="submit">Actualizar</button>
             </div>
         
-            <div class="edit-guardar">
-                <form action="/users/delete?_method=DELETE" method="POST">
-                    <button type="submit">Eliminar cuenta</button>
-                </form>
-            </div>
-        </div>
-      
     </form>
+    <div class="edit-guardar">
+        <form action="/users/delete/<%= userLogin.id %>?_method=DELETE" method="POST">
+            <button type="submit">Eliminar cuenta</button>
+        </form>
+    </div>
+</div>
 </main>
 <%- include('./partials/scripts') %>  
 </body>
