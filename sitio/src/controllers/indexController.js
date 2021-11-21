@@ -52,5 +52,8 @@ module.exports = {
     },
     recetas : (req, res) => {
         res.render('recetas')
+    },
+    contacto : (req, res) => {
+        res.render('contacto')
     }
 }

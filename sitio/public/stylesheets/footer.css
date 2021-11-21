@@ -27,7 +27,7 @@ ul{
 	font-size: 18px;
 	color: white;
 	text-transform: capitalize;
-	margin-bottom: 35px;
+	margin-bottom: 25px;
 	font-weight: 500;
 	position: relative;
 }
@@ -73,14 +73,51 @@ ul{
 	color: #24262b;
 	background-color: white;
 }
-
-
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+.footer .tarjetas a{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	transition: all 0.5s ease;
 }
+.footer .tarjetas a:hover{
+	color: #24262b;
+	background-color: white;
 }
+.footer .tarjetas i{
+	font-size: 28px;
+	vertical-align: text-top;
+}
+.footer .copyright {
+	font-family: var(--font-secundaria);
+	color: sienna;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+.footer  p{
+	color: sienna;
+	font-size: 14px;
+	text-align: center;
+}
+.footer .ubicacion{
+	text-align: center;
+}
+.footer .ubicacion a{
+	color: sienna;
+	text-align: center;
+
+}
+.footer .ubicacion a i{
+	color: white;
+	text-align: center;
+
+}
+
 @media(max-width: 574px){
   .footer-col{
     width: 100%;

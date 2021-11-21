@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('./partials/head',{title: "Contacto" }) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main class="contacto">
+                <form action="" method="POST" id='form-contacto'>
+                    <h1>Contáctanos!!!</h1>
+                    <p class="text-danger text-center small" id='error-empty'></p>
+                    <p>Si tenes alguna duda o sugerencia! <br> No dudes en comunicarte con nosotros!!</p>
+                    <div class="contacto-container">
+                        <div class="contacto-box">
+                            <label>Nombre y Apellido</label>
+                            <input class="form-control" type="text" name="name" id="name"
+                                value="<%= locals.old && old.name ? old.name : null  %>">
+                           
+                        </div>
+                        <div class="contacto-box">
+                            <label>Email</label>
+                            <input class="form-control" type="email" name="email" id="email"
+                                value="<%= locals.old && old.email ? old.email : null  %>">
+                           
+                        </div>
+                        <div class="contacto-box-msj">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea class="form-control" name="mensaje" id="mensaje"> <%= locals.old && old.mensaje ? old.mensaje : null %> </textarea>
+                          
+                        </div>
+                       <div class="boton-contacto">
+                        <button type="reset">Cancelar</button>
+                        <button type="submit">Enviar</button>
+                    </div>
+                    </div>
+                </form>
+            </main>
+            <%- include('./partials/footer') %>
+                <%- include('./partials/scripts') %>
+    </body>
+
+</html>

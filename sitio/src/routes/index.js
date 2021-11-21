@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 
-const {home, search,nosotros,recetas} = require('../controllers/indexController');
+const {home, search,nosotros,recetas,contacto} = require('../controllers/indexController');
 
 
 /* GET home page. */
@@ -15,6 +15,9 @@ router.get('/search', search);
 router.get('/nosotros',nosotros);
 
 /* recetas */
-router.get('/recetas',recetas)
+router.get('/recetas',recetas);
+
+/* contacto */
+router.get('/contacto',contacto);
 
 module.exports = router;
