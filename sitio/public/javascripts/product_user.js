@@ -51,9 +51,9 @@ const tableLoad = cart => {
             <img  width="90" height="65" src="/images/productos/${product.image}" id="imgProduct"> 
             </td>
             <td class="text-center col-3 align-middle p-1">
-            <a class="text-danger h6" onClick="removeItem(event,${product.id})"><i class="fas fa-minus-circle"></i></a>
+            <a class="h6" onClick="removeItem(event,${product.id})"><i class="fas fa-minus-circle"></i></a>
             <span class="h5">${product.cantidad}<span>
-            <a class="text-success h6" onClick="addItem(event,${product.id})"><i class="fas fa-plus-circle"></i></a>
+            <a class="h6" onClick="addItem(event,${product.id})"><i class="fas fa-plus-circle"></i></a>
             </td>
             <td class="align-middle p-1">
             ${product.name}

@@ -112,10 +112,15 @@ header .menu-derecho-cart a i{
   margin-top: 5px;
 }
 
+.h6{
+  color:sienna;
+}
+
 .btn-cart {
   border: 0;
   background: none;
   position: relative;
+  z-index: 9;
 }
 
 .btn-cart i {

@@ -8,7 +8,7 @@
 <%- include('./partials/header') %> 
 
 <main class="admin">
-    <h1>Cambiar rol de usuario</h1>
+    <h1>Cambiar rol del usuario <%= user.name %> <%= user.surname %></h1>
     <h5>1 = User</h5>
     <h5>2 = Admin</h5>
     <form action="/admin/userUpdate/<%= user.id %>?_method=PUT" method="POST" id='form-profileUpdate'>

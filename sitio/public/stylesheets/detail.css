@@ -13,11 +13,33 @@
     font-size: 35px;
 }
 
-.detail img{
- 
+.detail .img-container{
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
     border-radius: 8px;
     object-fit: cover;
     padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.detail .img-product{
+    width: 300px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    padding-bottom: 20px;
+    object-position: center;
+    transform: scale(1);
+    transition: all .8s ease;
+    overflow: hidden;
+}
+
+.detail .img-product:hover{
+  transform: scale(3);
+  padding-bottom: 20px;
+  height: 250px;
+  
 }
 
 .detail .description{
@@ -32,7 +54,6 @@
     font-family: var(--font-secundaria);
     font-size: 1.5rem;
     background: wheat;
-
     margin: 0 auto;
     border: none;
     border-radius: 5px;
