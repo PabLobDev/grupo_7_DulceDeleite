@@ -20,4 +20,5 @@ router.get('/recetas',recetas);
 /* contacto */
 router.get('/contacto',contacto);
 
+
 module.exports = router;

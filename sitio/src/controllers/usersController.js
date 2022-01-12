@@ -137,6 +137,14 @@ module.exports = {
             })
         }
     },
+
+    //Formulario de compra con tarjeta de crédito
+    buy: (req, res) => {
+        return res.render('users/buyForm', {
+            title: "Formulario de pago"
+        })
+    },
+
     //Perfil de usuario
     profile: (req, res) => {
 
